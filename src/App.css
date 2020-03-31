@@ -31,7 +31,8 @@
 }
 
 .center-item  {
-    align-self: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .App-header {

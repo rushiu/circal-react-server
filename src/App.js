@@ -46,16 +46,29 @@ class App extends React.Component {
               <Nav.Link href="contact">contact</Nav.Link>
             </Nav>
       </Navbar>
-      <Container>
+      <Container className = "center-item">
         <h1 className = "title">
           Meetings made easy.
         </h1>
         <p className = "paragraph-header">Circal is a smart scheduling software for the workplace to<br></br>
 make lives easier and teams more efficient.</p>
-      <Button className="center-item" variant="light">sign in</Button>
+
+        <style type="text/css">
+            {`
+            .btn-flat {
+              background-color: white;
+              color: pink;
+            }
+
+            .btn-xxl {
+              padding: 1rem 1.5rem;
+              font-size: 1.5rem;
+            }
+            `}
+          </style>
+          <Button className="center-item" variant="flat">sign in</Button>
       </Container>
       </Container>
-    
     </Container>
     );
   }
