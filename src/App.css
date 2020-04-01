@@ -15,17 +15,22 @@
 }
 .color-nav {
   align-self: center;
+  font-family: 'Jost';
   background-color: transparent;
 }
 
 .title {
   color: white;
-  font-size: calc(20px + 2vmin);
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(40px + 2vmin);
   text-align: center;
 }
 
 .paragraph-header {
   color: white;
+  font-family: 'Jost';
   font-size: calc(1px + 2vmin);
   text-align: center;
 }

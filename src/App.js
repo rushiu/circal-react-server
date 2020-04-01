@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Nav, Navbar, Image, Button} from 'react-bootstrap';
-import { Container, Row} from 'react-bootstrap';
+import { Container, Row, Col} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 
 
@@ -12,11 +12,13 @@ const HeroImageContainer = {
   zIndex:0,
   width:'100%'
 };
+
 const NavBarStyle = {
   position: 'absolute',
   zIndex:1,
   width:'100%'
 };
+
 const OtherStyle = {
   position: 'absolute',
   zIndex:2,
@@ -27,7 +29,7 @@ class App extends React.Component {
   render() {
     return (
     <Container>  
-      <Image src="/assests/GradientHeader.svg" style={HeroImageContainer}/>
+      <Image src="/assests/PinkGradient.svg" style={HeroImageContainer}/>
       <Container style={NavBarStyle}>
       <Navbar className="w-100"  variant="dark">
             <img
@@ -46,18 +48,35 @@ class App extends React.Component {
               <Nav.Link href="contact">contact</Nav.Link>
             </Nav>
       </Navbar>
-      <Container className = "center-item">
-        <h1 className = "title">
+ 
+      <Row>
+        <Col></Col>
+        <Col xs={10}>
+        <h1 className="title">
           Meetings made easy.
         </h1>
-        <p className = "paragraph-header">Circal is a smart scheduling software for the workplace to<br></br>
-make lives easier and teams more efficient.</p>
+        </Col>
+        <Col></Col>
+      </Row>
 
+      <Row>
+      <Col></Col>
+        <Col xs={5}>
+        <p className = "paragraph-header">Circal is a smart scheduling software for the workplace to
+make lives easier and teams more efficient.</p>
+        </Col>
+        <Col></Col>
+      </Row>
+
+      <Row className="justify-content-md-center">
+        <Col xs lg="2"></Col>
+        <Col md="auto">
         <style type="text/css">
             {`
             .btn-flat {
               background-color: white;
               color: pink;
+              font-family: 'Jost';
             }
 
             .btn-xxl {
@@ -66,8 +85,13 @@ make lives easier and teams more efficient.</p>
             }
             `}
           </style>
-          <Button className="center-item" variant="flat">sign in</Button>
-      </Container>
+          <Button variant="flat">sign in</Button>
+          </Col>
+          <Col xs lg="2"></Col>
+        </Row>
+
+        
+
       </Container>
     </Container>
     );
