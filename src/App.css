@@ -15,24 +15,73 @@
 }
 .color-nav {
   align-self: center;
+  font-family: 'Jost';
   background-color: transparent;
+}
+
+.grey-title-header {
+  padding-top: 5rem;
+  color: darkgrey;
 }
 
 .title {
   color: white;
-  font-size: calc(20px + 2vmin);
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(40px + 2vmin);
   text-align: center;
 }
 
 .paragraph-header {
   color: white;
+  font-family: 'Jost';
   font-size: calc(1px + 2vmin);
   text-align: center;
 }
 
+
 .center-item  {
-    align-self: center;
+    margin: auto;
+    display: flex;
+    width: 100%;
 }
+
+.full-width {
+  width: 100%;
+}
+
+.banner {
+  height: 100vh;
+  /* Flexbox */
+  display: flex;
+  align-items: center;
+ }
+ 
+ .header {
+   justify-content: center;
+   align-items: center;
+   padding-top: 5rem;
+ }
+
+ .text {
+   padding-top: 30rem;
+   color: gray;
+ }
+ 
+ .subtext {
+   color: gray;
+   padding: 1rem;
+ }
+
+ .icon-sync {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  left: 192px;
+  top: 1593px;
+  
+ }
 
 .App-header {
   background-image: url("/assests/gradientpink.png");
