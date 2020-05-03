@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Nav, Navbar, Image, Button} from 'react-bootstrap';
+import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 
@@ -15,7 +15,7 @@ const HeroImageContainer = {
 
 const SectionBackground = {
   position: 'absolute',
-  left:0,
+  left:-15,
   right: 0,
   zIndex:0,
   height: '80vh',
@@ -36,10 +36,10 @@ const OtherStyle = {
 class App extends React.Component {
   render() {
     return (
-    <Container fluid>  
+  <Container fluid>  
       
-      <Image src="/assests/PinkGradient.svg" style={HeroImageContainer}/>
-      <Container style={OtherStyle} fluid>
+    <Image src="/assests/PinkGradient.svg" style={HeroImageContainer}/>
+    <Container style={OtherStyle} fluid>
         <Navbar variant="dark">
               <img
                 alt=""
@@ -58,7 +58,7 @@ class App extends React.Component {
               </Nav>
         </Navbar>
 
-    <Container className = "header">
+    <Container className = "font header">
       <Row>
         <Col></Col>
         <Col lg="mx-auto">
@@ -101,16 +101,17 @@ make lives easier and teams more efficient.</p>
       </Row>
     </Container>
 
-  <Container className = "text-center" fluid>
+  <Container className = "font text-center" fluid>
     <Row>
       <Col></Col>
       <Col lg="mx-auto">
-      <h4 className="text">The problem is in the numbers.</h4>
+      <h3 className="text">The problem is in the numbers.</h3>
       </Col>
       <Col></Col>
     </Row>
 
   <Row>
+
   <CardGroup lg="mx-auto">
     <Card border="light" style={{ width: '31rem' }}>
       <Card.Body className = "subtext">
@@ -138,62 +139,162 @@ make lives easier and teams more efficient.</p>
         </Card.Text>
       </Card.Body>
     </Card>
-    
   </CardGroup>
   </Row>
   </Container>
 
-<Container>
-  <Row fluid>
+<Container className = "font grey-header">
+  <Row>
   <Jumbotron style={SectionBackground} fluid>
-      <Col></Col>
+  <Row>
+    <Col></Col>
+    <Col lg="mx-auto">
+    <h1>Features</h1>
+    </Col>
+    <Col></Col>
+  </Row>
+
+  <Row>
       <Col>
-
         <Row>
           <Col></Col>
-          <Col lg="mx-auto">
-          <h1>Features</h1>
-          </Col>
-          <Col></Col>
-        </Row>
-        
-      </Col>
-
-        <Row>
-          <Col lg = {1}></Col>
-          <Col lg = {2} className = "text-center">
-            <Row lg = {1}>
-              <Image src="./assests/SyncIcon.svg"/>
-            </Row> 
-            <Row lg = {1}>
+          <Col className = "text-center">
+            <Row>
+                <Col lg = {1}></Col>
+                <Image src="./assests/SyncIcon.svg"/>
+                <Col></Col>
+            </Row>
+            <Row>
+              <Col lg = {1}></Col>
               <h4>2-way sync</h4>
             </Row>
             <Row>
-              <p>retrieve and add events to your calendar automatically</p>
+              <p>Retrieve and add events to your calendar automatically.</p>
             </Row>
           </Col>
+          <Col></Col>
         </Row>
 
         <Row>
-`         <Col lg = {5}>
-
-          </Col>
-          <Col lg = {1}>
-            <Image src="./assests/HomeFeaturesIcon.svg" />
-          </Col>
-          <Col></Col>`
         </Row>
 
-        <Col>
-        </Col>
+        <Row>
+        <Col></Col>
+          <Col className = "text-center">
+            <Row>
+                <Col lg = {1}></Col>
+                <Image src="./assests/StatIcon.svg"/>
+                <Col></Col>
+            </Row>
+            <Row>
+              <Col lg = {1}></Col>
+              <h4>Meeting Statistics</h4>
+            </Row>
+            <Row>
+              <p>Send anonymous meeting feedback which will be summarized into statistics for organizer.</p>
+            </Row>
+          </Col>
+          <Col></Col>
+        </Row>
+      </Col>
 
+      <Col class = "align-self-md-center" fluid>
+        <Row>
+            <Image src="./assests/HomeFeaturesIcon.svg"></Image>
+        </Row>
+      </Col>
+
+      <Col>
+        <Row>
+        <Col></Col>
+          <Col className = "text-center">
+            <Row>
+                <Col lg = {1}></Col>
+                <Image src="./assests/AgendaIcon.svg"/>
+                <Col></Col>
+            </Row>
+            <Row>
+              <Col lg = {1}></Col>
+              <h4>Meeting Agenda</h4>
+            </Row>
+            <Row>
+              <p>Pre-meeting agenda created by meeting organizer.</p>
+            </Row>
+          </Col>
+          <Col></Col>
+        </Row>
+
+        <Row>
+          <Col></Col>
+            <Col className = "text-center">
+              <Row>
+                  <Col lg = {1}></Col>
+                  <Image src="./assests/ScheduleIcon.svg"/>
+                  <Col></Col>
+              </Row>
+              <Row>
+                <Col lg = {1}></Col>
+                <h4>Smart Meeting Scheduling</h4>
+              </Row>
+              <Row>
+                <p>Automatic sync within circles (teams) and lists free times available to create meetings.</p>
+              </Row>
+            </Col>
+          <Col></Col>
+        </Row>
+      </Col>
+    </Row>
   </Jumbotron>
   </Row>
-</Container>
-  
-</Container>
+  </Container>
 
 
+  <Container className = "padding text-center">
+    <Card className = "font" bg = "light">
+        <Card.Body className = "grey-header" fluid>
+          <Card.Title  as="h2">Get your business started with Circal
+            </Card.Title>
+          <Card.Text>
+            Contact us to learn about how Circal fits your business and pricing.
+          </Card.Text>
+      
+            <ButtonToolbar>
+              <style>
+                {`
+                .btn-green {
+                  background-image: url(./assests/GreenButton.svg);
+                  color: white;
+                  background-repeat: no-repeat;
+                  background-size: 100% 100%;
+                }
+                .btn-xxl {
+                  padding: 4rem 4.5rem;
+                  white-space: nowrap;
+                  text-align: center;
+                }
+                `}
+              </style>
+               <Button variant = "green" size = "xxl">request demo</Button>
+              <style>
+                {`
+                .btn-purple {
+                  background-image: url(./assests/PurpleButton.svg);
+                  color: white;
+                  background-repeat: no-repeat;
+                  background-size: 100% 100%;
+                }
+                `}
+              </style>
+              <Button variant = "purple" size = "xxl">contact us</Button>
+              </ButtonToolbar>
+        </Card.Body>
+    </Card>
+  </Container>
+</Container>
+
+<Container style = {{position: 'absolute', 'padding-top': '100rem', left:-15, zIndex:0, width:'100%'}}>
+  <Image src = "./assests/Footer.svg"></Image>
+</Container>
 </Container>
     );
   }

@@ -51,6 +51,18 @@
   width: 100%;
 }
 
+.font {
+  font-family: 'Jost';
+}
+
+.grey-header {
+  color: grey;
+}
+
+.padding {
+  padding-top: 60rem
+}
+
 .banner {
   height: 100vh;
   /* Flexbox */
