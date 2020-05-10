@@ -33,6 +33,33 @@
   text-align: center;
 }
 
+.purple-title {
+  color: #9F82F6;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(40px + 2vmin);
+  text-align: center;
+}
+
+.pink-title {
+  color: #FD6585;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(20px + 2vmin);
+  text-align: center;
+}
+
+.black-subheading {
+  color: black;
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
 .paragraph-header {
   color: white;
   font-family: 'Jost';
