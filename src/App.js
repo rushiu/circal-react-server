@@ -6,7 +6,7 @@ import {Jumbotron} from 'react-bootstrap';
 import {Contact} from './components/Contact.js';
 import {Home} from './components/Home.js';
 import {NavigationBar} from './components/NavigationBar.js';
-import { BrowserRouter, Router, Route, Link, Switch} from 'react-router-dom';
+//import { BrowserRouter, Router, Route, Link, Switch} from 'react-router-dom';
 
 
 const HeroImageContainer = {
