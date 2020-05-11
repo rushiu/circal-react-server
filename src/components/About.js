@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './App.css';
+import './../App.css';
 import {Nav, Navbar, Image, Button} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
@@ -47,23 +47,6 @@ export class About extends React.Component {
       
       <Image src="/assests/PurpleGradient.svg" style={HeroImageContainer}/>
       <Container style={OtherStyle} fluid>
-        <Navbar variant="dark">
-              <img
-                alt=""
-                src="/assests/LogoImage.png"
-                width="35"
-                height="25"
-                className="d-inline-block align-top"
-              />
-            <Navbar.Brand href="">circal</Navbar.Brand>
-              <Nav className ="mr-auto">
-                <Nav.Link href=""></Nav.Link>
-                <Nav.Link href="features">features</Nav.Link>
-                <Nav.Link href="pricing">pricing</Nav.Link>
-                <Nav.Link href="about">about</Nav.Link>
-                <Nav.Link href="contact">contact</Nav.Link>
-              </Nav>
-        </Navbar>
 
     <Container className = "header">
       <Row>
@@ -183,10 +166,6 @@ export class About extends React.Component {
       </Col>
       
       <Col>
-        <Row><p></p></Row>
-        <Row><p></p></Row>
-        <Row><p></p></Row>
-        <Row><p></p></Row>
         <Row>
           <p className = "black-paragraph-header">We are all students at Purdue University 
           studying computer science with varying interests in entrepreneurship, 
@@ -198,12 +177,6 @@ export class About extends React.Component {
 
     </Row>
 
-    <Row><p></p></Row>
-    <Row><p></p></Row>
-    <Row><p></p></Row>
-    <Row><p></p></Row>
-    <Row><p></p></Row>
-    <Row><p></p></Row>
     <Row><p></p></Row>
     <Row><p></p></Row>
   </Container>
@@ -221,3 +194,4 @@ export class About extends React.Component {
     );
   }
 }
+export default About;
