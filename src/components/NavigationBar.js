@@ -4,14 +4,13 @@ import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
 
 const NavBarStyle = {
     position: 'absolute',
-    zIndex:1
+    zIndex:3
 };
 
 export class NavigationBar extends React.Component {
     render() {
       return (
-        <Container>
-            <Navbar variant="dark">
+            <Navbar variant="dark" style = {NavBarStyle}>
                 <img
                     alt=""
                     src="/assests/LogoImage.png"
@@ -21,14 +20,14 @@ export class NavigationBar extends React.Component {
                 />
                 <Navbar.Brand as={Nav.Link} exact to = "/" href="">circal</Navbar.Brand>
                 <Nav className ="mr-auto">
-                    <Nav.Item><Nav.Link href="/"></Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/features">features</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/pricing">pricing</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/about">about</Nav.Link></Nav.Item>
-                    <Nav.Item><Nav.Link href="/contact">contact</Nav.Link></Nav.Item>
+                    <Nav.Link href="/home"></Nav.Link>
+                    <Nav.Link href="/features">features</Nav.Link>
+                    <Nav.Link href="/pricing">pricing</Nav.Link>
+                    <Nav.Link href="/about">about</Nav.Link>
+                    <Nav.Link href="/contact">contact</Nav.Link>
                 </Nav>
             </Navbar>
-        </Container>
       );
     }
 }
+export default NavigationBar;
