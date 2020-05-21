@@ -9,7 +9,7 @@ import {About} from './components/About.js';
 import {Pricing} from './components/Pricing.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
-
+import { SignUp } from './components/SignUp';
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -37,18 +37,19 @@ const OtherStyle = {
 class App extends React.Component {
   render() {
     return (
-<BrowserRouter>
-  <Container fluid>  
-        <NavigationBar/>
-        <Switch>
-          <Route path ='/' component= {Home} exact/>
-          <Route path = '/features'/>
-          <Route path = '/pricing' component = {Pricing}/>
-          <Route path = '/about' component = {About}/>
-          <Route path = '/contact' component = {Contact}/>
-        </Switch>
-</Container>
-</BrowserRouter>
+  <BrowserRouter>
+    <Container fluid>  
+          <NavigationBar/>
+          <Switch>
+            <Route path ='/' component= {Home} exact/>
+            <Route path = '/features'/>
+            <Route path = '/pricing' component = {Pricing}/>
+            <Route path = '/about' component = {About}/>
+            <Route path = '/contact' component = {Contact}/>
+          </Switch>
+    </Container>
+  </BrowserRouter>
+
     );
   }
 }

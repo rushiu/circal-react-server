@@ -24,6 +24,20 @@
   color: darkgrey;
 }
 
+.sign-up-bg {
+  /* FIX CSS */
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: linear-gradient(141.68deg, #FAD7A1 -27.76%, #FD6585 103.99%);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .title {
   color: white;
   font-family: 'Jost';

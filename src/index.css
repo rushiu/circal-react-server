@@ -3,7 +3,7 @@ body {
   font-family: 'Jost';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: red;
+  background: white;
 }
 
 code {
