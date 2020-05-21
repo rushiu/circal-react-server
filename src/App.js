@@ -9,6 +9,7 @@ import {About} from './components/About.js';
 import {Pricing} from './components/Pricing.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
+import {SignIn} from './components/SignIn.js';
 
 
 const HeroImageContainer = {
