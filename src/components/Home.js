@@ -2,6 +2,11 @@ import React from 'react';
 import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
+import {FeaturesSection} from './FeaturesSection.js';
+import {SignUp} from './SignUp.js';
+import {Router, Route, Link} from 'react-router-dom';
+
+
 const SectionBackground = {
   position: 'absolute',
   left:-30,
@@ -88,10 +93,10 @@ export class Home extends React.Component {
             </Col>
             <Col></Col>
             </Row>
-            <Row>
 
+            <Row style = {{paddingBottom: '5%', display: 'flex', justifyContent: 'center'}}>
               <CardGroup lg="mx-auto">
-                <Card border="light" style={{ width: '31rem' }}>
+                <Card border="light">
                 <Card.Body className = "subtext">
                   <Card.Title as="h1">11</Card.Title>
                   <Card.Text>
@@ -100,20 +105,20 @@ export class Home extends React.Component {
                 </Card.Body>
                 </Card>
 
-                <Card border="light" style={{ width: '31rem' }}>
+                <Card border="light" >
                 <Card.Body className = "subtext">
                   <Card.Title as="h1">$399.1</Card.Title>
                   <Card.Text>
-                    billion loss in USA for poorly organized meetings. (Yes. Billions.)
+                    billion loss in USA for poorly <br></br> organized meetings. (Yes. Billions.)
                   </Card.Text>
                 </Card.Body>
                 </Card>
 
-                <Card border="light" style={{ width: '31rem' }}>
+                <Card border="light">
                 <Card.Body className = "subtext">
                   <Card.Title as="h1">4.8</Card.Title>
                   <Card.Text>
-                    hours/week per professional spent setting up meetings
+                    hours/week per professional <br></br> spent setting up meetings
                   </Card.Text>
                 </Card.Body>
                 </Card>
@@ -121,110 +126,7 @@ export class Home extends React.Component {
             </Row>      
           </Container>
 
-          <Container className = "font grey-header">
-            <Row>
-              <Jumbotron style={SectionBackground} fluid>
-              <Row>
-              <Col></Col>
-              <Col lg="mx-auto">
-                <h1>Features</h1>
-              </Col>
-              <Col></Col>
-            </Row>
-            <Row>
-            <Col>
-              <Row>
-                <Col></Col>
-                <Col className = "text-center">
-                  <Row>
-                      <Col lg = {1}></Col>
-                      <Image src="./assests/SyncIcon.svg"/>
-                      <Col></Col>
-                  </Row>
-                  <Row>
-                    <Col lg = {1}></Col>
-                    <h4>2-way sync</h4>
-                  </Row>
-                  <Row>
-                    <p>Retrieve and add events to your calendar automatically.</p>
-                  </Row>
-                </Col>
-                <Col></Col>
-              </Row>
-
-            <Row>
-            </Row>
-
-            <Row>
-            <Col></Col>
-              <Col className = "text-center">
-                <Row>
-                    <Col lg = {1}></Col>
-                    <Image src="./assests/StatIcon.svg"/>
-                    <Col></Col>
-                </Row>
-                <Row>
-                  <Col lg = {1}></Col>
-                  <h4>Meeting Statistics</h4>
-                </Row>
-                <Row>
-                  <p>Send anonymous meeting feedback which will be summarized into statistics for organizer.</p>
-                </Row>
-              </Col>
-              <Col></Col>
-            </Row>
-          </Col>
-
-          <Col class = "align-self-md-center" fluid>
-            <Row>
-                <Image src="./assests/HomeFeaturesIcon.svg"></Image>
-            </Row>
-          </Col>
-
-          <Col>
-            <Row>
-            <Col></Col>
-              <Col className = "text-center">
-                <Row>
-                    <Col lg = {1}></Col>
-                    <Image src="./assests/AgendaIcon.svg"/>
-                    <Col></Col>
-                </Row>
-                <Row>
-                  <Col lg = {1}></Col>
-                  <h4>Meeting Agenda</h4>
-                </Row>
-                <Row>
-                  <p>Pre-meeting agenda created by meeting organizer.</p>
-                </Row>
-              </Col>
-              <Col></Col>
-            </Row>
-
-            <Row>
-              <Col></Col>
-                <Col className = "text-center">
-                  <Row>
-                      <Col lg = {1}></Col>
-                      <Image src="./assests/ScheduleIcon.svg"/>
-                      <Col></Col>
-                  </Row>
-                  <Row>
-                    <Col lg = {1}></Col>
-                    <h4>Smart Meeting Scheduling</h4>
-                  </Row>
-                  <Row>
-                    <p>Automatic sync within circles (teams) and lists free times available to create meetings.</p>
-                  </Row>
-                </Col>
-              <Col></Col>
-            </Row>
-          </Col>
-          </Row>
-          </Jumbotron>
-          </Row>
-          </Container>
-
+          <FeaturesSection/>
 
           <Container className = "padding text-center">
           <Card className = "font shadow-sm bg-grey rounded" bg = "light">
@@ -263,7 +165,7 @@ export class Home extends React.Component {
                     `}
                   </style>
                   <Button variant = "purple" size = "xxl">contact us</Button>
-                  </ButtonToolbar>
+                </ButtonToolbar>
             </Card.Body>
           </Card>
           </Container>
@@ -277,4 +179,4 @@ export class Home extends React.Component {
     }
 }
 
-
+export default Home;
