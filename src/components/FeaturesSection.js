@@ -2,6 +2,7 @@ import React from 'react';
 import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 const SectionBackground = {
   position: 'absolute',
   left:-30,
@@ -79,10 +80,13 @@ export class FeaturesSection extends React.Component {
                         </Row>
                     </Col>
 
-                    <Col className = "align-self-lg-center" style = {{justifyContent: 'center'}}fluid>
+                    <Col className = "align-self-lg-center mx-auto" style = {{justifyContent: 'center'}}fluid>
                         <Row>
                             <Image src="./assests/HomeFeaturesIcon.svg"></Image>
                         </Row>
+                        <Link to = "/features">
+                            <Button style = {{ width: '50%', border: 'hidden', color: 'white'}} className = "btn-rounded mx-auto" size = "lg" variant = "gray">learn more</Button>
+                        </Link>
                     </Col>
 
                     <Col fluid>

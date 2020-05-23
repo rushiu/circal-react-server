@@ -5,7 +5,7 @@ export class SignInForm extends React.Component {
     render() {
         return (
             <Container fluid>
-                <Jumbotron className = "shadow-sm p-4 mb-1 rounded" style ={{'background-color': 'light-grey', width: '53%'}}>
+                <Jumbotron className = "shadow-sm p-4 mb-1 rounded" style ={{'background-color': 'light-grey', width: '60%'}}>
                     <Form>
                         <Form.Row style = {{'padding-top': '1rem'}}>
                             <Form.Group as={Col}>
@@ -28,23 +28,7 @@ export class SignInForm extends React.Component {
                         <Form.Row>
                         </Form.Row>
                         <Form.Row>
-                        <style>
-                            {`
-                            .btn-green {
-                            background-image: url(./assests/PinkButton.svg);
-                            color: white;
-                            background-repeat: no-repeat;
-                            background-size: 100% 100%;
-                            }
-                            .btn-xxl {
-                            padding-right: 4rem;
-                            padding-left: 4rem;
-                            white-space: nowrap;
-                            text-align: center;
-                            }
-                            `}
-                        </style>
-                        <Button variant="green" type="lets go" size = "xxl" className = "mx-auto"> lets go > </Button>
+                        <Button variant="primary" style = {{border: 'hidden', width: '50%'}} size = "lg" className = "btn-rounded mx-auto">lets go ></Button>
                         </Form.Row>
                     </Form>
                 </Jumbotron>

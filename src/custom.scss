@@ -1,0 +1,28 @@
+$enable-gradients: true;
+$enable-shadows: true;
+$enable-rounded: true;
+$enable-transitions: true;
+
+.bg-primary, .btn-primary {
+    background-image: linear-gradient(142.07deg, #FFD3A5 0%, #FD6585 100%);
+}
+
+$primary: #FE838E!default;
+$secondary: #9C80F5!default;
+$success: #63E3D5 !default;
+$warning: #FA742B !default;
+$light: #EEF1F5 !default;
+$gray: #B0B4C3 !default;
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "warning":    $warning,
+    "light":      $light,
+    "gray":       $gray
+) !default;
+
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import "bootstrap";
