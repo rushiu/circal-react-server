@@ -37,23 +37,7 @@ export class ContactForm extends React.Component {
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
-                        <style>
-                            {`
-                            .btn-green {
-                            background-image: url(./assests/GreenButton.svg);
-                            color: white;
-                            background-repeat: no-repeat;
-                            background-size: 100% 100%;
-                            }
-                            .btn-xxl {
-                            padding-right: 4rem;
-                            padding-left: 4rem;
-                            white-space: nowrap;
-                            text-align: center;
-                            }
-                            `}
-                        </style>
-                        <Button variant="green" type="submit" size = "xxl" className = "mx-auto"> Submit </Button>
+                        <Button  style = {{border: 'hidden', width: '40%'}} variant="success" type="submit"  size = "lg" className = "mx-auto btn-rounded"> Submit </Button>
                         </Form.Row>
                     </Form>
                 </Jumbotron>

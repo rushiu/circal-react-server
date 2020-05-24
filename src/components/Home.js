@@ -5,6 +5,8 @@ import {Jumbotron} from 'react-bootstrap';
 import {FeaturesSection} from './FeaturesSection.js';
 import {SignUp} from './SignUp.js';
 import {Router, Route, Link} from 'react-router-dom';
+import SignIn from './SignIn.js';
+import {GetStartedCard} from './GetStartedCard.js';
 
 
 const SectionBackground = {
@@ -34,6 +36,7 @@ const HeroImageContainer = {
 const BottomImageContainer = {
   position: 'absolute',
   left:-30,
+  right: 0,
   zIndex:0,
   width:'100%'
 };
@@ -62,26 +65,12 @@ export class Home extends React.Component {
               </Col>
               <Col></Col>
             </Row>
-            <Row className="justify-content-md-center">
-              <Col></Col>
-              <Col lg="mx-auto">
-              <style type="text/css">
-                  {`
-                  .btn-flat {
-                    background-color: white;
-                    color: pink;
-                    font-family: 'Jost';
-                  }
-
-                  .btn-xxl {
-                    padding: 1rem 1.5rem;
-                    font-size: 1.5rem;
-                  }
-                  `}
-                </style>
-                <Button variant="flat">sign in</Button>
-                </Col>
-                <Col></Col>
+            <Row className="justify-content-md-center" fluid>
+              <Col className = "center">
+                <Link to = "/signin">
+                  <Button variant="light" style = {{border: 'hidden', width: '160%', color: 'text-primary'}} className = "btn-rounded">sign in</Button>
+                </Link>
+              </Col>
             </Row>
           </Container>
 
@@ -94,7 +83,7 @@ export class Home extends React.Component {
             <Col></Col>
             </Row>
 
-            <Row style = {{paddingBottom: '5%', display: 'flex', justifyContent: 'center'}}>
+            <Row style = {{ display: 'flex', justifyContent: 'center'}}>
               <CardGroup lg="mx-auto">
                 <Card border="light">
                 <Card.Body className = "subtext">
@@ -127,52 +116,8 @@ export class Home extends React.Component {
           </Container>
 
           <FeaturesSection/>
-
-          <Container className = "padding text-center">
-          <Card className = "font shadow-sm bg-grey rounded" bg = "light">
-            <Card.Body className = "grey-header" fluid>
-              <Card.Title  as="h2">Get your business started with Circal
-                </Card.Title>
-              <Card.Text>
-                Contact us to learn about how Circal fits your business and pricing.
-              </Card.Text>
-
-                <ButtonToolbar>
-                  <style>
-                    {`
-                    .btn-green {
-                      background-image: url(./assests/GreenButton.svg);
-                      color: white;
-                      background-repeat: no-repeat;
-                      background-size: 100% 100%;
-                    }
-                    .btn-xxl {
-                      padding: 4rem 4.5rem;
-                      white-space: nowrap;
-                      text-align: center;
-                    }
-                    `}
-                  </style>
-                  <Button variant = "green" size = "xxl">request demo</Button>
-                  <style>
-                    {`
-                    .btn-purple {
-                      background-image: url(./assests/PurpleButton.svg);
-                      color: white;
-                      background-repeat: no-repeat;
-                      background-size: 100% 100%;
-                    }
-                    `}
-                  </style>
-                  <Button variant = "purple" size = "xxl">contact us</Button>
-                </ButtonToolbar>
-            </Card.Body>
-          </Card>
-          </Container>
-
-            <Container fluid>
-            <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
-            </Container>
+          <GetStartedCard/>
+          <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
          </Container>
         </Container>
       );
