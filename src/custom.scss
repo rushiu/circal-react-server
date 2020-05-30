@@ -1,18 +1,19 @@
 $enable-gradients: true;
-$enable-shadows: true;
 $enable-rounded: true;
 $enable-transitions: true;
-
-.bg-primary, .btn-primary {
-    background-image: linear-gradient(142.07deg, #FFD3A5 0%, #FD6585 100%);
-}
+$enable-responsive-font-sizes: true;
 
 $primary: #FE838E!default;
+$primary-hover: #FD6585 !default;
 $secondary: #9C80F5!default;
 $success: #63E3D5 !default;
-$warning: #FA742B !default;
+$warning: #FC9A49 !default;
 $light: #EEF1F5 !default;
 $gray: #B0B4C3 !default;
+
+$link-color: $primary !default;
+
+
 
 $theme-colors: (
     "primary":    $primary,

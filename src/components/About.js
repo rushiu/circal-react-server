@@ -3,6 +3,7 @@ import './../App.css';
 import {Nav, Navbar, Image, Button} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
+import {NavigationBar} from './NavigationBar.js';
 
 
 const HeroImageContainer = {
@@ -15,182 +16,86 @@ const HeroImageContainer = {
 
 const BottomImageContainer = {
   position: 'absolute',
-  left:-15,
+  left: 0,
   zIndex:0,
-  width:'100%'
-};
-
-const SectionBackground = {
-  position: 'absolute',
-  left:0,
-  right: 0,
-  zIndex:0,
-  height: '80vh',
-  width:'100%'
-};
-
-const NavBarStyle = {
-  position: 'absolute',
-  zIndex:1
-};
-
-const OtherStyle = {
-  position: 'absolute',
-  zIndex:2,
-  width:'100%',
+  minWidth:'100%'
 };
 
 export class About extends React.Component {
   render() {
     return (
     <Container fluid>  
-      
+      <NavigationBar />
       <Image src="/assests/PurpleGradient.svg" style={HeroImageContainer}/>
-      <Container style={OtherStyle} fluid>
+      <Container fluid>
 
-    <Container className = "header">
-      <Row>
-        <Col></Col>
-        <Col lg="mx-auto">
-        <h1 className="title justify-content-md-center">
-          Our Story.
-        </h1>
-        </Col>
-        <Col></Col>
-      </Row>
+        <Container className = "header">
+          <Row>
+            <h1 className="title mx-auto">Our Story.</h1>
+          </Row>
 
-      <Row lg = {10}>
-      <Col></Col>
-        <Col lg={6}>
-        <p className = "paragraph-header">Circal began as a simple project 
-        make anyone’s lives easier. As students in college, we had issues 
-        finding free time between schedules to do group projects. In our 
-        internships, scheduling meetings took a long time. So, we pivoted 
-        our idea to fit the workplace to make professionals' lives simpler, 
-        cut costs, and increase employee’s productive time.</p> 
-        </Col>
-        <Col></Col>
-      </Row>
-    </Container>
+          <Row>
+            <Col lg = {7} className = "mx-auto">
+            <p className = "paragraph-header">Circal began as a simple project 
+            make anyone’s lives easier. As students in college, we had issues 
+            finding free time between schedules to do group projects. In our 
+            internships, scheduling meetings took a long time. So, we pivoted 
+            our idea to fit the workplace to make professionals' lives simpler, 
+            cut costs, and increase employee’s productive time.</p> 
+            </Col>
+          </Row>
 
-  <Container className = "text-center" fluid>
-  
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
-  <Row><p></p></Row>
+          <Row style = {{paddingTop: '30%'}}>
+              <h1 className="purple-title mx-auto">Team</h1>
+          </Row>
 
-  <Row>
-    <Col></Col>
-    <Col lg="mx-auto">
-      <h1 className="purple-title justify-content-md-center">
-        Team
-      </h1>
-    </Col>
-    <Col></Col>
-  </Row>
+          <Row className = "font">
+            <Col>
+                <Row>
+                  <Image className = "mx-auto" src="./assests/NatashaImage.svg"/>
+                </Row>
+                <Row>
+                  <h2 className = "mx-auto" style = {{color: '#FD6585'}}>Natasha Rao</h2>
+                </Row>
+                <Row> 
+                  <h4 className = "mx-auto">CEO</h4>
+                </Row>
+            </Col>
 
-  <Row><p></p></Row>
-  <Row><p></p></Row>
+            <Col>
+              <Row>
+                <Image  className = "mx-auto" src="./assests/AarushiImage.svg"/>
+              </Row>
+              <Row>
+                <h2 className = "mx-auto" style = {{color: '#FD6585'}}>Aarushi Upadhayaya</h2>
+              </Row>
+              <Row>
+                <h4 className = "mx-auto">CTO</h4>
+              </Row>
+            </Col>
 
-  <Row>
-    <Col lg = {2}></Col>
-    <Col lg = {2} className = "text-center">
-      <Row lg = {1}>
-        <Image src="./assests/NatashaImage.svg"/>
-      </Row> 
-      <Row> </Row>
-      <Row lg = {1}>
-        <h4 className="pink-title">Natasha</h4>
-      </Row>
-      <Row lg = {1}>
-        <p className="black-subheading">CEO</p>
-      </Row>
-      <Row lg = {1}>
-        <p>LinkedIn</p>
-      </Row>
-    </Col>
-    
-    <Col lg = {1}></Col>
+            <Col>
+              <Row>
+                <Image className = "mx-auto" src="./assests/MirandaImage.svg"/>
+              </Row>
+              <Row>
+                <h2 className = "mx-auto" style = {{color: '#FD6585'}}>Miranda Chai</h2>
+              </Row>
+              <Row>
+                <h4 className = "mx-auto">CIO</h4>
+              </Row>
+            </Col>
+          </Row>
 
-    <Col lg = {2} className = "text-center">
-      <Row lg = {1}>
-        <Image src="./assests/AarushiImage.svg"/>
-      </Row> 
-      <Row> </Row>
-      <Row lg = {1}>
-        <h4 className="pink-title">Aarushi</h4>
-      </Row>
-      <Row lg = {1}>
-        <p className="black-subheading">CTO</p>
-      </Row>
-      <Row lg = {1}>
-        <p>LinkedIn</p>
-      </Row>
-    </Col>
-
-    <Col lg = {1}></Col>
-
-    <Col lg = {2} className = "text-center">
-      <Row lg = {1}>
-        <Image src="./assests/MirandaImage.svg"/>
-      </Row> 
-      <Row> </Row>
-      <Row lg = {1}>
-        <h4 className="pink-title">Miranda</h4>
-      </Row>
-      <Row lg = {1}>
-        <p className="black-subheading">CIO</p>
-      </Row>
-      <Row lg = {1}>
-        <p>LinkedIn</p>
-      </Row>
-    </Col>
-
-    <Col lg = {2}></Col>
-
-  </Row>
-  </Container>
-
-  <Container className = "header">
-    <Row lg = {10}>
-      <Col>
-        <Image width="400" src="./assests/PurdueImage.svg"/>
-      </Col>
+          <Container>
+            <Row  style = {{paddingTop: '30%'}} fluid>   
+              <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer}/>
+            </Row>
+          </Container>
       
-      <Col>
-        <Row>
-          <p className = "black-paragraph-header">We are all students at Purdue University 
-          studying computer science with varying interests in entrepreneurship, 
-          marketing, design, and artificial intelligence. We teamed up at our university's 
-          hackathon, BoilerMake, to create this simple project and, later, we were accepted 
-          to and participated in The Boiler, Purdue's Startup Accelerator run by The Anvil. </p> 
-        </Row>
-      </Col>
-
-    </Row>
-
-    <Row><p></p></Row>
-    <Row><p></p></Row>
-  </Container>
-
-<Container>
-  <Row fluid>   
-    <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer}/>
-  </Row>
-</Container>
-  
-</Container>
-
-
-</Container>
+        </Container>
+      </Container>
+    </Container>
     );
   }
 }

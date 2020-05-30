@@ -1,6 +1,5 @@
 import React from 'react';
 import {Container, Form, Col, Jumbotron, Button} from 'react-bootstrap';
-
 export class SignInForm extends React.Component {
     render() {
         return (

@@ -1,12 +1,15 @@
 import React from 'react';
-import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
+import {Nav, Navbar, Image, Button, ButtonToolbar, Table} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {FeaturesSection} from './FeaturesSection.js';
 import {SignUp} from './SignUp.js';
 import {Router, Route, Link} from 'react-router-dom';
 import SignIn from './SignIn.js';
+import '.././App.css';
 import {GetStartedCard} from './GetStartedCard.js';
+import {ProblemStats} from './ProblemStats.js';
+import {NavigationBar} from './NavigationBar.js';
 
 
 const SectionBackground = {
@@ -35,91 +38,52 @@ const HeroImageContainer = {
 
 const BottomImageContainer = {
   position: 'absolute',
-  left:-30,
+  left: -30,
   right: 0,
   zIndex:0,
-  width:'100%'
 };
 
 export class Home extends React.Component {
     render() {
       return (
       <Container fluid>
-            <Image src="/assests/PinkGradient.svg" style={HeroImageContainer}/>
+        <NavigationBar />
+        <Image src="/assests/PinkGradient.svg" style={HeroImageContainer}/>
         <Container style = {OtherStyle} fluid>
-          <Container className = "font header">
-            <Row>
-              <Col></Col>
-              <Col lg="mx-auto">
-                <h1 className="title justify-content-md-center">
-                  Meetings made easy.
-                </h1>
-              </Col>
-              <Col></Col>
-            </Row>
-            <Row lg = {10}>
-            <Col></Col>
-              <Col lg={6}>
-              <p className = "paragraph-header">Circal is a smart scheduling software for the workplace to
-            make lives easier and teams more efficient.</p> 
-              </Col>
-              <Col></Col>
-            </Row>
-            <Row className="justify-content-md-center" fluid>
-              <Col className = "center">
-                <Link to = "/signin">
-                  <Button variant="light" style = {{border: 'hidden', width: '160%', color: 'text-primary'}} className = "btn-rounded">sign in</Button>
-                </Link>
-              </Col>
-            </Row>
-          </Container>
+          <Row>
+            <Container className = "font header">
+              <Row style = {{display: 'flex', justifyContent: 'center'}}>
+                  <h1 className="title header">
+                    Meetings made easy.
+                  </h1>
+              </Row>
 
-          <Container className = "font text-center" fluid>
-            <Row>
-            <Col></Col>
-            <Col lg="mx-auto">
-              <h3 className="text">The problem is in the numbers.</h3>
-            </Col>
-            <Col></Col>
-            </Row>
+              <Row lg = {10}>
+                <Col lg={6} className = "mx-auto">
+                <p className = "paragraph-header">Circal is a smart scheduling software for the workplace to
+              make lives easier and teams more efficient.</p> 
+                </Col>
+              </Row>
 
-            <Row style = {{ display: 'flex', justifyContent: 'center'}}>
-              <CardGroup lg="mx-auto">
-                <Card border="light">
-                <Card.Body className = "subtext">
-                  <Card.Title as="h1">11</Card.Title>
-                  <Card.Text>
-                    million meetings in America everyday.
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-
-                <Card border="light" >
-                <Card.Body className = "subtext">
-                  <Card.Title as="h1">$399.1</Card.Title>
-                  <Card.Text>
-                    billion loss in USA for poorly <br></br> organized meetings. (Yes. Billions.)
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-
-                <Card border="light">
-                <Card.Body className = "subtext">
-                  <Card.Title as="h1">4.8</Card.Title>
-                  <Card.Text>
-                    hours/week per professional <br></br> spent setting up meetings
-                  </Card.Text>
-                </Card.Body>
-                </Card>
-              </CardGroup>
-            </Row>      
-          </Container>
-
-          <FeaturesSection/>
-          <GetStartedCard/>
-          <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
-         </Container>
+              <Row className="mx-auto" style = {{display: 'flex', justifyContent: 'center'}}>
+                  <Button variant="outline-light" style = {{width: '20%'}} size = "lg" className = "btn-rounded mx-auto" href = "/signin">sign in</Button>
+              </Row>
+            </Container>
+          </Row>
+          <Row>
+            <ProblemStats/>
+          </Row>
+          <Row>
+            <FeaturesSection/>
+          </Row>
+          <Row>
+            <GetStartedCard/>
+          </Row>
+          <Row>
+            <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
+          </Row>
         </Container>
+      </Container>
       );
     }
 }

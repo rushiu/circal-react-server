@@ -11,6 +11,7 @@ import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
 import {SignIn} from './components/SignIn.js';
+import CalendarPicker from './components/CalendarPicker';
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -25,14 +26,13 @@ const SectionBackground = {
   left:-15,
   right: 0,
   zIndex:0,
-  height: '80vh',
   width:'100%'
 };
 
 const OtherStyle = {
   position: 'absolute',
   zIndex:2,
-  width:'100%',
+  width:'100%'
 };
 
 class App extends React.Component {
@@ -40,7 +40,7 @@ class App extends React.Component {
     return (
   <BrowserRouter>
     <Container fluid>  
-          <NavigationBar/>
+          {/* <NavigationBar/> */}
           <Switch>
             <Route path ='/' component= {Home} exact/>
             <Route path = '/features'/>
@@ -48,6 +48,7 @@ class App extends React.Component {
             <Route path = '/about' component = {About}/>
             <Route path = '/contact' component = {Contact}/>
             <Route path = '/signin' component = {SignIn}/>
+            <Route path = '/signup' component = {SignUp}/>
           </Switch>
     </Container>
   </BrowserRouter>
