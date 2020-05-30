@@ -21,7 +21,7 @@ export class NavigationBar extends React.Component {
                     width="35"
                     height="25"
                 />
-                <Navbar.Brand as={Nav.Link} exact to = "/" href="">circal</Navbar.Brand>
+                <Navbar.Brand as={Nav.Link} exact to = "/" href="/">circal</Navbar.Brand>
                 <Nav className ="mr-auto">
                     <Nav.Link href="/home"></Nav.Link>
                     <Nav.Link href="/features">features</Nav.Link>

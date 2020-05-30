@@ -1,32 +1,69 @@
 import React from 'react';
-import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
+import {Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
-import {Jumbotron, Form} from 'react-bootstrap';
+import {Jumbotron, Form, Table} from 'react-bootstrap';
+import {SimpleNav} from './SimpleNav.js';
+import {Link} from 'react-router-dom';
+import '.././App.css';
+import '.././css/signup.css';
 
 export class SignUp extends React.Component {
     render() {
         return(
-            <Container className = "sign-up-bg" fluid>
-                <Row>
-                <h6 style = {{color: 'white', zIndex: '2', fontSize:  'calc(20px + 2vmin)',paddingTop: '5rem'}} className = "mx-auto font">Sign up</h6>
-                </Row>
-                <Row>
-                    <Jumbotron className = "shadow-sm p-4 mb-1 rounded mx-auto" style ={{'background-color': 'white', width: '40%'}}>
-                        <Form className = "font">
-                            <Form.Row>
-                                <Form.Label>Full Name</Form.Label>
-                                <Form.Control type = "full name" placeholder = "e.g. Jane Doe"/>
-                            </Form.Row>
+            <Container className = "font" fluid>
+                <SimpleNav/>
+                <Container className = "sign-up-bg" fluid>
+                    <Table>
+                        <Row>
+                            <h1 className = "title header mx-auto welcome-header">Welcome Back!</h1>
+                        </Row>
+                        <Row>
+                            <p className = "mx-auto white">Already have an account?</p>
+                        </Row>
+                        <Row>
+                            <Button href="/signin" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in">sign in</Button>
+                        </Row>
+                    </Table>
+                </Container>
 
-                            <Form.Row style = {{paddingTop: '1rem'}}>
-                                <Form.Label>Work Email</Form.Label>
-                                <Form.Control type = "work email" placeholder = "name@work-email.com"/>
-                            </Form.Row>
-                        </Form>
-                    </Jumbotron>
-                </Row>
+                <Container className = "right-container" fluid>
+                    <Table>
+                            <Row>
+                                <h1 className = "mx-auto sign-up-header">Create Account</h1>
+                            </Row>
+                            <Row>
+                                <Button className = "mx-auto" variant = "light">Sign in with Google</Button>
+                            </Row>
+                            <Row style = {{paddingTop: '1rem', color: 'gray'}}> 
+                            <p className = "mx-auto">or use your email for registration</p>
+                            </Row>
+                            <Col>
+                                <Form className = "mx-auto" style = {{width: '60%'}}>
+                                    <Form.Row>
+                                        <Form.Control type = "full name" placeholder = "Full Name"/>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Form.Control type = "work email" placeholder = "Work Email"/>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Form.Control type = "company" placeholder = "Company Name"></Form.Control>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Form.Control type = "password" placeholder = "Password"></Form.Control>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Form.Check type="checkbox" label="Agree to Terms of Service"/>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" className = "btn-rounded mx-auto">sign up</Button>
+                                    </Form.Row>
+                                </Form>
+                            </Col>
+                    </Table>
+                </Container>
             </Container>
         );
     }
 }
 export default SignUp;
+

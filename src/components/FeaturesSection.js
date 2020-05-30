@@ -3,34 +3,13 @@ import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+
 const SectionBackground = {
   position: 'absolute',
-  left:-30,
+  left: -30,
   right: 0,
   zIndex:0,
-  height: '80vh',
-  width:'100%'
-};
-
-
-const OtherStyle = {
-  position: 'absolute',
-  zIndex:2,
-  width:'100%',
-};
-
-const HeroImageContainer = {
-  position: 'absolute',
-  top:0,
-  left:0,
-  zIndex:0,
-  width:'100%'
-};
-
-const BottomImageContainer = {
-  position: 'absolute',
-  left:-30,
-  zIndex:0,
+  height: '35%',
   width:'100%'
 };
 
@@ -46,7 +25,7 @@ export class FeaturesSection extends React.Component {
                 </Row>
                 
                 <Row style = {{height: '70%', display: 'flex', justifyContent: 'center'}}>
-                    <Col fluid>
+                    <Col style = {{width: '33.33%'}} fluid>
                         <Row>
                             <Col className = "text-center">
                                 <Row>
@@ -80,7 +59,7 @@ export class FeaturesSection extends React.Component {
                         </Row>
                     </Col>
 
-                    <Col className = "align-self-lg-center mx-auto" style = {{justifyContent: 'center'}}fluid>
+                    <Col className = "align-self-lg-center mx-auto" style = {{justifyContent: 'center', width: '33.33%'}}fluid>
                         <Row>
                             <Image src="./assests/HomeFeaturesIcon.svg"></Image>
                         </Row>
@@ -89,7 +68,7 @@ export class FeaturesSection extends React.Component {
                         </Link>
                     </Col>
 
-                    <Col fluid>
+                    <Col style = {{width: '33.33%'}} fluid>
                         <Row>
                             <Col className = "text-center">
                                 <Row>
@@ -109,7 +88,7 @@ export class FeaturesSection extends React.Component {
                         <Row>
                             <Col className = "text-center">
                                 <Row>
-                                    <Col style = {{width: '50%'}}>
+                                    <Col style = {{width: '33.33%'}}>
                                         <Image src="./assests/ScheduleIcon.svg"/>
                                     </Col>
                                 </Row>

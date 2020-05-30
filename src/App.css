@@ -23,35 +23,18 @@
   padding-top: 5rem;
   color: darkgrey;
 }
-
 .center {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
-/* .btn-primary {
-  background: linear-gradient(148.63deg, #FFD3A5 -50.59%, #FD6585 110.9%) !important;
-  color: #ffffff;
-} */
-
 .btn-rounded {
   border-radius: 100rem !important;
 }
 
-.sign-up-bg {
-  /* FIX CSS */
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  height: auto;
-  background: linear-gradient(141.68deg, #FAD7A1 -27.76%, #FD6585 103.99%);
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+body.noScroll { /* ...or body.dialogShowing */
+  overflow: hidden;
 }
 
 .title {

@@ -1,0 +1,43 @@
+.sign-up-bg {
+    /* FIX CSS */
+    max-width: 50%;
+    min-height: 100%;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(141.68deg, #FAD7A1 -27.76%, #FD6585 103.99%);
+  
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+.welcome-header {
+    font-weight: bold;
+}
+
+.btn-sign-in {
+    width: 25%;
+    font-weight: bold !important;
+}
+
+.padding {
+    padding-top: 1rem;
+}
+
+.right-container {
+    right: 0;
+    max-width: 50%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.sign-up-header {
+    z-index: 2;
+    font-weight: bold;
+    color: DimGrey;
+}
