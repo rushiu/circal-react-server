@@ -1,7 +1,5 @@
 import React from 'react';
 import {Container, Form, Col, Jumbotron, Button, Nav, Image, Row} from 'react-bootstrap';
-import SignInForm from './SignInForm';
-import './../SignInUp.css';
 
 const HeroImageContainer = {
     position: 'absolute',
@@ -40,7 +38,6 @@ export class SignIn extends React.Component {
                     </Row>
                     <Row>
                         <Col className ="col-lg-11 col-md-6 col-sm-6 col-xs-6 offset-5 float-md-center" style = {{'padding-top': '8rem'}}>
-                            <SignInForm/>
                         </Col>
                     </Row>
                 </Container>
