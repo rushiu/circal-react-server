@@ -1,6 +1,8 @@
 import React from 'react';
-import {Container, Row, Col, Image} from 'react-bootstrap';
+import {Container, Form, Col, Jumbotron, Button, Nav, Image, Row} from 'react-bootstrap';
 import SignInForm from './SignInForm';
+import './../SignInUp.css';
+
 const HeroImageContainer = {
     position: 'absolute',
     top:0,
@@ -46,6 +48,9 @@ export class SignIn extends React.Component {
                 <Container>
                     <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer}/>
                 </Container>
+
+                <Container fluid>
+          </Container>
 
           </Container>
       );
