@@ -1,7 +1,11 @@
 import React from 'react';
-import {Container, Form, Col, Jumbotron, Button} from 'react-bootstrap';
+import {Container, Form, Col, Jumbotron, Button, Modal} from 'react-bootstrap';
+
 
 export class ContactForm extends React.Component {
+
+
+
     render() {
         return (
             <Container fluid>
@@ -37,7 +41,7 @@ export class ContactForm extends React.Component {
                             </Form.Group>
                         </Form.Row>
                         <Form.Row>
-                        <Button  style = {{border: 'hidden', width: '40%'}} variant="success" type="submit"  size = "lg" className = "mx-auto btn-rounded"> Submit </Button>
+                        <Button style = {{border: 'hidden', width: '40%'}} variant="success" type="submit"  size = "lg" className = "mx-auto btn-rounded"> Submit </Button> 
                         </Form.Row>
                     </Form>
                 </Jumbotron>

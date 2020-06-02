@@ -1,33 +1,20 @@
-import React from 'react';
+import React, {useState}from 'react';
+import '.././App.css';
 import ModernDatepicker from 'react-modern-datepicker';
+import "react-modern-calendar-datepicker/lib/DatePicker.css";
+import {DatePicker, Calendar} from 'react-modern-calendar-datepicker';
 import {Jumbotron, Container} from 'react-bootstrap';
 
-export class CalendarPicker extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			startDate: new Date(), // can be any of these ['dayjs()', '', null, new Date(2018,12,1)]
-		};
-		this.handleChange = this.handleChange.bind(this);
-	}
-
-	handleChange(date) {
-		this.setState({
-			startDate: date,
-		});
-	}
-
-	render() {
-		return (
-			<ModernDatepicker
-				date={this.state.startDate}
-				format={'DD-MM-YYYY'}
-				showBorder
-				onChange={date => this.handleChange(date)}
-				placeholder={'Select a date'}
-			/>
-		);
-	}
-}
-
-export default CalendarPicker;
+const CalendarPicker = () => {
+	const [selectedDay, setSelectedDay] = useState(null);
+	return (
+	  <Calendar className = "font"
+		value={selectedDay}
+		onChange={setSelectedDay}
+		colorPrimary="#9c88ff"
+		inputPlaceholder="Select a day"
+	  />
+	);
+  };
+  
+  export default CalendarPicker;

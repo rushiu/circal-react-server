@@ -1,6 +1,8 @@
 import React from 'react';
 import {Container, Row, Col, Image} from 'react-bootstrap';
 import ContactForm from './ContactForm';
+import {NavigationBar} from './NavigationBar.js';
+
 const HeroImageContainer = {
     position: 'absolute',
     top:0,
@@ -27,6 +29,7 @@ export class Contact extends React.Component {
     render() {
       return (
           <Container fluid>
+            <NavigationBar />
             <Image src = "./assests/GreenHeader.svg" style = {HeroImageContainer}/>
                 <Container style = {OtherStyle} className = "font">
                     <Row>
