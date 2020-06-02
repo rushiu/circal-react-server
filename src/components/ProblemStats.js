@@ -1,49 +1,25 @@
 import React from 'react';
 import ".././App.css";
-import {Card, CardGroup, Container, Row, Col} from 'react-bootstrap';
+import {Card, CardGroup, Container, Row, Col, Figure} from 'react-bootstrap';
 
 
 export class ProblemStats extends React.Component {
     render() {
         return(
-            <Container className = "font text-center" fluid>
-                <Row>
-                    <Col></Col>
-                    <Col lg="mx-auto">
-                    <h3 className="text">The problem is in the numbers.</h3>
-                    </Col>
-                    <Col></Col>
-                </Row>
-
-                <Row style = {{ display: 'flex', justifyContent: 'center'}}>
-                    <CardGroup lg="mx-auto">
-                        <Card border="light">
-                            <Card.Body className = "subtext">
-                                <Card.Title as="h1">11</Card.Title>
-                                <Card.Text>
-                                    million meetings in America everyday.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-
-                        <Card border="light" >
-                            <Card.Body className = "subtext">
-                                <Card.Title as="h1">$399.1</Card.Title>
-                                <Card.Text>
-                                    billion loss in USA for poorly <br></br> organized meetings. (Yes. Billions.)
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-
-                        <Card border="light">
-                            <Card.Body className = "subtext">
-                                <Card.Title as="h1">4.8</Card.Title>
-                                <Card.Text>
-                                    hours/week per professional <br></br> spent setting up meetings
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </CardGroup>
+            <Container style = {{width: '80%', paddingTop: '5%'}}className = "font text-center" fluid>
+                <Row style = {{ display: 'flex', flex: 'nowrap', justifyContent: 'center', color: 'gray'}}>
+                    <Figure style = {{width: '33.33%'}}>
+                        <h1 style = {{fontSize: '5rem'}}>11</h1>
+                        <Figure.Caption>million meetings in America everyday.</Figure.Caption>
+                    </Figure>
+                    <Figure style = {{width: '33.33%'}}>
+                        <h1 style = {{fontSize: '5rem'}}>$399.1</h1>
+                        <Figure.Caption>billion loss in USA for poorly <br></br> organized meetings.</Figure.Caption>
+                    </Figure>
+                    <Figure style = {{width: '33.33%'}}>
+                        <h1 style = {{fontSize: '5rem'}}>4.8</h1>
+                        <Figure.Caption>hours/week per professional <br></br> spent setting up meetings</Figure.Caption>
+                    </Figure>
                 </Row>      
             </Container>
 

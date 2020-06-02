@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, Button, ButtonToolbar} from 'react-bootstrap';
-import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
+import { Container, Row, Col, CardGroup, Card, Fade} from 'react-bootstrap';
 import {Jumbotron, Form, Table} from 'react-bootstrap';
 import {SimpleNav} from './SimpleNav.js';
 import {Link} from 'react-router-dom';
