@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Form, Col, Jumbotron, Button, Modal} from 'react-bootstrap';
+import {Container, Form, Col, Jumbotron, Button, Modal, Card} from 'react-bootstrap';
 
 
 export class ContactForm extends React.Component {
@@ -9,7 +9,7 @@ export class ContactForm extends React.Component {
     render() {
         return (
             <Container fluid>
-                <Jumbotron className = "shadow-sm p-4 mb-1 rounded" style ={{'background-color': 'light-grey', width: '60%'}}>
+                <Card className = "shadow-lg p-4 mb-1 rounded" style ={{width: '60%'}} border = "light">
                     <Form>
                         <Form.Row>
                             <Col>
@@ -22,16 +22,13 @@ export class ContactForm extends React.Component {
 
                         <Form.Row style = {{'padding-top': '1rem'}}>
                             <Form.Group as={Col}>
-                                <Form.Control type="company" placeholder="Enter Company" />
+                                <Form.Control type="company" placeholder="Company" />
                             </Form.Group>
                         </Form.Row>
                     
                         <Form.Row>
                             <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Control type="email" placeholder="Enter email" />
-                                <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                                </Form.Text>
+                                <Form.Control type="email" placeholder="Work Email" />
                             </Form.Group>
                         </Form.Row>
 
@@ -44,7 +41,7 @@ export class ContactForm extends React.Component {
                         <Button style = {{border: 'hidden', width: '40%'}} variant="success" type="submit"  size = "lg" className = "mx-auto btn-rounded"> Submit </Button> 
                         </Form.Row>
                     </Form>
-                </Jumbotron>
+                </Card>
             </Container>
         );
     }
