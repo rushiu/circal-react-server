@@ -6,11 +6,12 @@ import {Link} from 'react-router-dom';
 
 const SectionBackground = {
   position: 'absolute',
-  left: -30,
+  left: 0,
   right: 0,
   zIndex:0,
-  height: '35%',
-  width:'100%'
+  minWidth:'100%',
+  width: '100%',
+  height: '35%'
 };
 
 export class FeaturesSection extends React.Component {
@@ -18,13 +19,13 @@ export class FeaturesSection extends React.Component {
       return (
         <Container className = "font grey-header">
               <Jumbotron style={SectionBackground} fluid>
-                <Row style = {{height: '10%', display: 'flex', justifyContent: 'center'}}>
-                    <Col lg="mx-auto">
-                        <h1>Features</h1>
+                <Row style = {{display: 'flex', justifyContent: 'center', paddingBottom: '3rem'}}>
+                    <Col className = "center">
+                        <h1 style = {{fontSize: '3rem'}}>Features</h1>
                     </Col>
                 </Row>
                 
-                <Row style = {{height: '70%', display: 'flex', justifyContent: 'center'}}>
+                <Row style = {{height: '70%'}}>
                     <Col style = {{width: '33.33%'}} fluid>
                         <Row>
                             <Col className = "text-center">
@@ -59,13 +60,13 @@ export class FeaturesSection extends React.Component {
                         </Row>
                     </Col>
 
-                    <Col className = "align-self-lg-center mx-auto" style = {{justifyContent: 'center', width: '33.33%'}}fluid>
-                        <Row>
+                    <Col style = {{justifyContent: 'center', width: '33.33%'}} fluid>
+                        <Row className = "center" style = {{paddingBottom: '6rem'}}>
                             <Image src="./assests/HomeFeaturesIcon.svg"></Image>
                         </Row>
-                        <Link to = "/features">
-                            <Button style = {{ width: '50%', border: 'hidden', color: 'white'}} className = "btn-rounded mx-auto" size = "lg" variant = "gray">learn more</Button>
-                        </Link>
+                        <Row>
+                            <Button style = {{ width: '50%', border: 'hidden', color: 'white'}} className = "btn-rounded mx-auto" size = "lg" variant = "gray" href = "/features">learn more</Button>
+                        </Row>
                     </Col>
 
                     <Col style = {{width: '33.33%'}} fluid>

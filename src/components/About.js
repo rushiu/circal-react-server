@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './../App.css';
 import {Nav, Navbar, Image, Button} from 'react-bootstrap';
-import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
+import { Container, Row, Table, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {NavigationBar} from './NavigationBar.js';
+import {Team} from './Team.js';
 
 
 const HeroImageContainer = {
@@ -46,10 +47,16 @@ export class About extends React.Component {
           </Row>
 
           <Row style = {{paddingTop: '30%'}}>
-              <h1 className="purple-title mx-auto">Team</h1>
+              <h1 className="purple-title mx-auto">Meet the Team</h1>
           </Row>
 
-          <Row className = "font">
+          <Row style = {{paddingBottom: '5%'}}>
+            <h1 style = {{color: '#9C80F5'}} className = "mx-auto">_____</h1>
+          </Row>
+
+          <Team/>
+
+          {/* <Row className = "font">
             <Col>
                 <Row>
                   <Image className = "mx-auto" src="./assests/NatashaImage.svg"/>
@@ -85,7 +92,7 @@ export class About extends React.Component {
                 <h4 className = "mx-auto">CIO</h4>
               </Row>
             </Col>
-          </Row>
+          </Row> */}
 
           <Container>
             <Row  style = {{paddingTop: '30%'}} fluid>   
