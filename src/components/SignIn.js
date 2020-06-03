@@ -1,55 +1,62 @@
 import React from 'react';
-import {Container, Form, Col, Jumbotron, Button, Nav, Image, Row} from 'react-bootstrap';
 
-const HeroImageContainer = {
-    position: 'absolute',
-    top:0,
-    left:0,
-    zIndex:0,
-    width:'100%'
-  };
-
-const OtherStyle = {
-    position: 'absolute',
-    zIndex:2,
-    width:'100%',
-  };
-
-const BottomImageContainer = {
-    position: 'absolute',
-    left: 0,
-    zIndex:0,
-    'padding-top': '60rem',
-    width:'100%'
-};
+import {Image, Button, ButtonToolbar} from 'react-bootstrap';
+import { Container, Row, Col, CardGroup, Card, Fade} from 'react-bootstrap';
+import {Jumbotron, Form, Table} from 'react-bootstrap';
+import {SignInNav} from './SignInNav.js';
+import {Link} from 'react-router-dom';
+import '.././App.css';
+import '.././css/signin.css';
 
 export class SignIn extends React.Component {
     render() {
       return (
-          <Container fluid>
-            <Image src = "./assests/PinkGradient.svg" style = {HeroImageContainer}/>
-                <Container style = {OtherStyle} className = "font">
-                    <Row>
-                        <Col lg = {7}></Col>
-                        <Col lg = "mx-auto">
-                            <h1 className="title justify-content-md-center">Sign In</h1>
-                        </Col>
-                        <Col lg = {1}></Col>
-                    </Row>
-                    <Row>
-                        <Col className ="col-lg-11 col-md-6 col-sm-6 col-xs-6 offset-5 float-md-center" style = {{'padding-top': '8rem'}}>
-                        </Col>
-                    </Row>
+        <Container className = "font" fluid>
+            <SignInNav/>
+                <Container className = "left-container" fluid>
+                    <Table>
+                            <Row>
+                                <h1 className = "mx-auto sign-in-header">Sign In</h1>
+                            </Row>
+                            <Row>
+                                <Button className = "mx-auto" variant = "light">Sign in with Google</Button>
+                            </Row>
+                            <Row style = {{paddingTop: '1rem', color: 'gray'}}> 
+                            <p className = "mx-auto">or use your account</p>
+                            </Row>
+                            <Col>
+                                <Form className = "mx-auto" style = {{width: '60%'}}>
+                                    <Form.Row>
+                                        <Form.Control type = "email" placeholder = "Email"/>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Form.Control type = "password" placeholder = "Password"/>
+                                    </Form.Row>
+                                    <Form.Row className = "padding">
+                                        <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" className = "btn-rounded mx-auto">sign in</Button>
+                                    </Form.Row>
+                                </Form>
+                            </Col>
+                    </Table>
                 </Container>
 
-                <Container>
-                    <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer}/>
+                <Container className = "sign-in-bg" fluid>
+                    <Table>
+                        <Row>
+                            <h1 className = "title header mx-auto welcome-header">Hello, Friend!</h1>
+                        </Row>
+                        <Row>
+                            <p className = "mx-auto white">Don't have an account?</p>
+                        </Row>
+                        <Row>
+                            <p className = "mx-auto white">Click the buttom below to register!</p>
+                        </Row>
+                        <Row>
+                            <Button href="/signin" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in">sign up</Button>
+                        </Row>
+                    </Table>
                 </Container>
-
-                <Container fluid>
-          </Container>
-
-          </Container>
+            </Container>
       );
     }
 }
