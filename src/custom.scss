@@ -24,6 +24,4 @@ $theme-colors: (
     "gray":       $gray
 ) !default;
 
-
-@import '~bootstrap/scss/bootstrap.scss';
 @import "bootstrap";

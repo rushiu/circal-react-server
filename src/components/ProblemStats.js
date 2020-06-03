@@ -7,7 +7,7 @@ export class ProblemStats extends React.Component {
     render() {
         return(
             <Container style = {{width: '80%', paddingTop: '5%'}}className = "font text-center" fluid>
-                <Row style = {{ display: 'flex', flex: 'nowrap', justifyContent: 'center', color: 'gray'}}>
+                <Row style = {{ display: 'flex', flex: 'nowrap', justifyContent: 'center', color: 'silver'}}>
                     <Figure style = {{width: '33.33%'}}>
                         <h1 style = {{fontSize: '5rem'}}>11</h1>
                         <Figure.Caption>million meetings in America everyday.</Figure.Caption>
