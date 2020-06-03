@@ -8,8 +8,8 @@ export class ContactForm extends React.Component {
 
     render() {
         return (
-            <Container fluid>
-                <Card className = "shadow-lg p-4 mb-1 rounded" style ={{width: '60%'}} border = "light">
+            <Container className ="mx-auto center" fluid>
+                <Card className = "shadow-lg p-4 mb-1 rounded" style ={{width: '35%'}} border = "light">
                     <Form>
                         <Form.Row>
                             <Col>

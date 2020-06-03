@@ -5,6 +5,7 @@ import { Container, Row, Table, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {NavigationBar} from './NavigationBar.js';
 import {Team} from './Team.js';
+import {GrayFooter} from './GrayFooter';
 
 
 const HeroImageContainer = {
@@ -13,13 +14,6 @@ const HeroImageContainer = {
   left:0,
   zIndex:0,
   width:'100%'
-};
-
-const BottomImageContainer = {
-  position: 'absolute',
-  left: 0,
-  zIndex:0,
-  minWidth:'100%'
 };
 
 export class About extends React.Component {
@@ -56,48 +50,8 @@ export class About extends React.Component {
 
           <Team/>
 
-          {/* <Row className = "font">
-            <Col>
-                <Row>
-                  <Image className = "mx-auto" src="./assests/NatashaImage.svg"/>
-                </Row>
-                <Row>
-                  <h2 className = "mx-auto" style = {{color: '#FD6585'}}>Natasha Rao</h2>
-                </Row>
-                <Row> 
-                  <h4 className = "mx-auto">CEO</h4>
-                </Row>
-            </Col>
-
-            <Col>
-              <Row>
-                <Image  className = "mx-auto" src="./assests/AarushiImage.svg"/>
-              </Row>
-              <Row>
-                <h2 className = "mx-auto" style = {{color: '#FD6585'}}>Aarushi Upadhayaya</h2>
-              </Row>
-              <Row>
-                <h4 className = "mx-auto">CTO</h4>
-              </Row>
-            </Col>
-
-            <Col>
-              <Row>
-                <Image className = "mx-auto" src="./assests/MirandaImage.svg"/>
-              </Row>
-              <Row>
-                <h2 className = "mx-auto" style = {{color: '#FD6585'}}>Miranda Chai</h2>
-              </Row>
-              <Row>
-                <h4 className = "mx-auto">CIO</h4>
-              </Row>
-            </Col>
-          </Row> */}
-
-          <Container>
-            <Row  style = {{paddingTop: '30%'}} fluid>   
-              <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer}/>
-            </Row>
+          <Container style = {{paddingTop:'4rem'}}>
+              <GrayFooter/>
           </Container>
       
         </Container>
