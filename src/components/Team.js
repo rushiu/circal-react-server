@@ -16,7 +16,7 @@ export class Team extends React.Component {
                 <Table>
                 <Row>
                     <Col>
-                        <Card className = "font">
+                        <Card className = "font rounded-card">
                             <Card.Header className = "card-header-pink">
                                 <img width = "200" src = "./assests/NatashaProfile.png" className = "mx-auto image" />
                             </Card.Header>
@@ -47,7 +47,7 @@ export class Team extends React.Component {
                     </Col>
 
                     <Col>
-                        <Card className = "font">
+                        <Card className = "font rounded">
                                 <Card.Header className = "card-header-green">
                                     <img width = "200" src = "./assests/AarushiProfile.png" className = "mx-auto image" />
                                 </Card.Header>

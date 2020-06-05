@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './../App.css';
 import {Nav, Navbar, Image, Button} from 'react-bootstrap';
-import { Container, Row, Table, Col, CardGroup, Card} from 'react-bootstrap';
+import { Container, Row, Table, Col, CardGroup, Card, Fade} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {NavigationBar} from './NavigationBar.js';
 import {Team} from './Team.js';
