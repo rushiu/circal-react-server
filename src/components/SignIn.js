@@ -52,7 +52,7 @@ export class SignIn extends React.Component {
                             <p className = "mx-auto white">Click the buttom below to register!</p>
                         </Row>
                         <Row>
-                            <Button href="/signin" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in">sign up</Button>
+                            <Button href="/signin" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in" href = "/signup">sign up</Button>
                         </Row>
                     </Table>
                 </Container>
