@@ -127,10 +127,12 @@ export class Pricing extends React.Component {
 									<Row className = "center" style= {{color:'#FCAD55'}}>
               								<Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
 												contact us</Button>
-                  					</Row>
+                  					</Row>    
 									</blockquote>
 										
-								
+
+						  
+						  		
                 </Card.Body>
               </Card>
 						</Col>
