@@ -52,12 +52,12 @@ export class Pricing extends React.Component {
 											<Col>
 												<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
 													$
-                    		</p>
+                    							</p>
 											</Col>
 											<Col>
 												<p className="large-white-title mx-auto" style = {{color:'#B0B4C3'}}>
 													8
-                    		</p>
+                    							</p>
 											</Col>
 											<Col></Col>
 											<Col></Col>
@@ -68,30 +68,28 @@ export class Pricing extends React.Component {
 										<Row>
 											<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
 												{" "}user / month 
-                    	</p>
+                    						</p>
 										</Row>
 
 										<Row>
 											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
 												max 20 users 
-                    	</p>
+                    						</p>
 										</Row>
 										<Row>
 											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
 												meeting scheduling
-                    	</p>
+                    						</p>
 										</Row>
 										<Row>
 											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
 												pre-meeting agenda
-                    	</p>
+                    						</p>
 										</Row>
 
-										<Row>
-											<p className="white-title-2 mx-auto" style = {{color:'#FCAD55'}}>
-                      	BUTTON
-                    	</p>
-										</Row>
+										<Row className = "center">
+              								<Button variant="outline-light" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">free trial</Button>
+                  						</Row>
                   </blockquote>
                 </Card.Body>
               </Card>
@@ -126,14 +124,13 @@ export class Pricing extends React.Component {
 										</Row>
 									</blockquote>
 									<blockquote className="blockquote mb-0" style = {{paddingTop: '23%'}}>
-										<Row>
-											<p className="white-title-2 mx-auto">
-                      	BUTTON
-                    	</p>
-										</Row>
+									<Row className = "center" style= {{color:'#FCAD55'}}>
+              								<Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
+												contact us</Button>
+                  					</Row>
 									</blockquote>
 										
-                  
+								
                 </Card.Body>
               </Card>
 						</Col>
