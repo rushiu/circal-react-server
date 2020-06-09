@@ -12,8 +12,8 @@ export class SignUp extends React.Component {
         return(
             <Container className = "font" fluid>
                 <SimpleNav/>
-                <Container className = "sign-up-bg" fluid>
-                    <Table>
+                <Container className = "sign-up-bg animate__animated animate__slideInRight" fluid>
+                    <Table className = "animate__animated animate__fadeIn">
                         <Row>
                             <h1 className = "title header mx-auto welcome-header">Welcome Back!</h1>
                         </Row>
@@ -26,8 +26,8 @@ export class SignUp extends React.Component {
                     </Table>
                 </Container>
 
-                <Container className = "right-container" fluid>
-                    <Table>
+                <Container className = "right-container animate__animated animate__slideInLeft" fluid>
+                    <Table className = "animate__animated animate__fadeIn animate__delay-1s">
                             <Row>
                                 <h1 className = "mx-auto sign-up-header">Create Account</h1>
                             </Row>

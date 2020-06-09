@@ -12,6 +12,7 @@ import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
 import {SignIn} from './components/SignIn.js';
 import CalendarPicker from './components/CalendarPicker';
+import UserDashboard from './components/User/UserDashboard';
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -49,6 +50,7 @@ class App extends React.Component {
             <Route path = '/contact' component = {Contact}/>
             <Route path = '/signin' component = {SignIn}/>
             <Route path = '/signup' component = {SignUp}/>
+            <Route path = '/user_dashboard' component = {UserDashboard}/>
           </Switch>
     </Container>
   </BrowserRouter>
