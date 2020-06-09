@@ -10,15 +10,15 @@ export class ProblemStats extends React.Component {
                 <Row style = {{ display: 'flex', flex: 'nowrap', justifyContent: 'center', color: 'silver'}}>
                     <Figure style = {{width: '33.33%'}}>
                         <h1 style = {{fontSize: '5rem'}}>11</h1>
-                        <Figure.Caption>million meetings in America everyday.</Figure.Caption>
+                        <Figure.Caption><h6>million meetings in <br></br> America everyday.</h6></Figure.Caption>
                     </Figure>
                     <Figure style = {{width: '33.33%'}}>
                         <h1 style = {{fontSize: '5rem'}}>$399.1</h1>
-                        <Figure.Caption>billion loss in USA for poorly <br></br> organized meetings.</Figure.Caption>
+                        <Figure.Caption><h6>billion loss in USA for poorly <br></br> organized meetings.</h6></Figure.Caption>
                     </Figure>
                     <Figure style = {{width: '33.33%'}}>
                         <h1 style = {{fontSize: '5rem'}}>4.8</h1>
-                        <Figure.Caption>hours/week per professional <br></br> spent setting up meetings</Figure.Caption>
+                        <Figure.Caption><h6>hours/week per professional <br></br> spent setting up meetings</h6></Figure.Caption>
                     </Figure>
                 </Row>      
             </Container>
