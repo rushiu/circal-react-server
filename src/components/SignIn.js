@@ -13,8 +13,8 @@ export class SignIn extends React.Component {
       return (
         <Container className = "font" fluid>
             <SignInNav/>
-                <Container className = "left-container" fluid>
-                    <Table>
+                <Container className = "left-container animate__animated animate__slideInRight" fluid>
+                    <Table className = "animate__animated animate__fadeIn animate__delay-1s">
                             <Row>
                                 <h1 className = "mx-auto sign-in-header">Sign In</h1>
                             </Row>
@@ -33,15 +33,15 @@ export class SignIn extends React.Component {
                                         <Form.Control type = "password" placeholder = "Password"/>
                                     </Form.Row>
                                     <Form.Row className = "padding">
-                                        <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" className = "btn-rounded mx-auto">sign in</Button>
+                                        <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" href = "/user_dashboard" className = "btn-rounded mx-auto">sign in</Button>
                                     </Form.Row>
                                 </Form>
                             </Col>
                     </Table>
                 </Container>
 
-                <Container className = "sign-in-bg" fluid>
-                    <Table>
+                <Container className = "sign-in-bg animate__animated animate__slideInLeft" fluid>
+                    <Table className = "animate__animated animate__fadeIn">
                         <Row>
                             <h1 className = "title header mx-auto welcome-header">Hello, Friend!</h1>
                         </Row>
@@ -49,7 +49,7 @@ export class SignIn extends React.Component {
                             <p className = "mx-auto white">Don't have an account?</p>
                         </Row>
                         <Row>
-                            <p className = "mx-auto white">Click the buttom below to register!</p>
+                            <p className = "mx-auto white">Click the button below to register!</p>
                         </Row>
                         <Row>
                             <Button href="/signin" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in" href = "/signup">sign up</Button>

@@ -5,14 +5,15 @@ export class SignInNav extends React.Component {
     render() {
         return(
             <Navbar variant = "light" sticky = "top" style = {{width: '50%', left: '0'}}>
+            <a href = "/">
             <img
                 alt=""
-                src="/assests/BlackLogo.png"
+                src="./assests/GradientLogo.svg"
                 className="d-inline-block align-top"
-                width="35"
-                height="35"
+                width="300"
+                height="60"
             />
-            <Navbar.Brand variant = "light" exact to = "/" href="/" style = {{fontSize: '2rem'}}>circal</Navbar.Brand>
+            </a>
             </Navbar>
         );
     }
