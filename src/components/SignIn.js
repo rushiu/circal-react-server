@@ -37,7 +37,7 @@ export class SignIn extends React.Component {
                                     </Form.Row>
                                     <Nav className="justify-content-center" activeKey="/home">
                                         <Nav.Item>
-                                            <Nav.Link href="/password">Forgot Password?</Nav.Link>
+                                            <Nav.Link href="/signup">Forgot Password?</Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                 </Form>
