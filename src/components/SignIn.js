@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {Image, Button, ButtonToolbar} from 'react-bootstrap';
-import { Container, Row, Col, CardGroup, Card, Fade} from 'react-bootstrap';
+import { Container, Row, Col, CardGroup, Card, Fade, Nav} from 'react-bootstrap';
 import {Jumbotron, Form, Table} from 'react-bootstrap';
 import {SignInNav} from './SignInNav.js';
 import {Link} from 'react-router-dom';
@@ -35,6 +35,11 @@ export class SignIn extends React.Component {
                                     <Form.Row className = "padding">
                                         <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" href = "/user_dashboard" className = "btn-rounded mx-auto">sign in</Button>
                                     </Form.Row>
+                                    <Nav className="justify-content-center" activeKey="/home">
+                                        <Nav.Item>
+                                            <Nav.Link href="/signup">Forgot Password?</Nav.Link>
+                                        </Nav.Item>
+                                    </Nav>
                                 </Form>
                             </Col>
                     </Table>

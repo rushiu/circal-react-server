@@ -11,6 +11,7 @@ import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
 import {SignIn} from './components/SignIn.js';
+import {Password} from './components/Password.js';
 import CalendarPicker from './components/CalendarPicker';
 import UserDashboard from './components/User/UserDashboard';
 
@@ -50,6 +51,7 @@ class App extends React.Component {
             <Route path = '/contact' component = {Contact}/>
             <Route path = '/signin' component = {SignIn}/>
             <Route path = '/signup' component = {SignUp}/>
+            <Route path = '/password' component = {Password}/>
             <Route path = '/user_dashboard' component = {UserDashboard}/>
           </Switch>
     </Container>
