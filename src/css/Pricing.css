@@ -92,7 +92,7 @@
   }
 
   .rounded {
-    border-radius:.5rem
+    border-radius: 50px;
 }
 
 .paragraph-text {
@@ -100,6 +100,13 @@
     font-family: 'Jost';
     font-size: calc(5px + 2vmin);
     text-align: center;
+  }
+
+  .paragraph-text-grey {
+    color: '#837E7E';
+    font-family: 'Jost';
+    font-size: calc(5px + 2vmin);
+    text-align: left;
   }
 
   .paragraph-text-2 {
