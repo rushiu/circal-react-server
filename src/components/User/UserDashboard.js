@@ -4,6 +4,8 @@ import './SideNavigation.js'
 import { SideNavigation } from './SideNavigation.js';
 import {SignInNav} from '.././SignInNav.js';
 import './dashboard.css';
+import {TopNav} from './TopNav'
+import NavigationBar from '../NavigationBar.js';
 
 
 const NavBarStyle = {
@@ -35,17 +37,9 @@ export class UserDashboard extends React.Component {
     render() {
         return(
             <Container className = "dashboard-bg font" fluid>
-                        <Col className = "mr-5 mr-md-3 mr-sm-3 mr-xs-3">
-                            <SideNavigation/>
-                        </Col>
+                        <TopNav/>
+                        <SideNavigation/>
                         <Container className = "pr-0 pl-0">
-                            <Row>
-                                <Col>
-                                    <Navbar className = "font shadow-sm bg-light nav-title-bar" fluid>
-                                        <h4 className = "col-lg-3 col-md-2 col-xs-1 mx-auto my-auto">Home</h4>
-                                    </Navbar>
-                                </Col>
-                            </Row>
                             <Row className = "pt-4 pl-5 clearfix" style = {{display: 'flex', justifyContent: 'end'}}>
                                 <Col className = "col-lg-9 float-left">
                                     <h2 className = "grey-title">This Week</h2>
