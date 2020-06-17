@@ -135,6 +135,7 @@ export class Pricing extends React.Component {
 
 									</blockquote>
 									<blockquote className="blockquote mb-0">
+
 									  <Row className = "center" style= {{color:'#FCAD55'}}>
               			  <Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
 										  contact us</Button>
@@ -162,6 +163,7 @@ export class Pricing extends React.Component {
 						<h1 className="title mx-auto" style = {{color:'#FCAD55'}}>FAQs</h1>
 					</Row>
 					<Row style = {{paddingTop: '5%'}}>
+
             <Col lg={1}></Col>
 						<Col>
 						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
@@ -174,17 +176,20 @@ export class Pricing extends React.Component {
           </Row>
           
           <Row style = {{paddingTop: '5%'}}>
+
             <Col lg={1}></Col>
 						<Col>
 						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
 							Q: What payment methods do you accept?</h1>
             <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
 							A: filler answer till we find payment gateway</h1>   
+
 						</Col>
             <Col lg={1}></Col>
           </Row>
 
           <Row style = {{paddingTop: '5%'}}>
+
             <Col lg={1}></Col>
 						<Col>
 						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
