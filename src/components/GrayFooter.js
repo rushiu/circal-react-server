@@ -28,8 +28,15 @@ export class GrayFooter extends React.Component {
                 <Container style = {{zIndex: '1', display: 'flex', alignSelf: 'flex-end'}}>
                     <Navbar variant = "light" className = "font" sticky="bottom" fluid>
                         <Navbar.Brand className = "mx-auto" style = {{fontSize: '2rem', paddingLeft: '1rem'}} href="/">
-                            <Row>
-                                <Col style = {{paddingRight: '0'}}>
+                            <Row style={{justifyContent: 'center'}}>
+                                <Col lg={7}></Col>
+                                <Col lg={7}></Col>
+                                <Col lg={7}></Col>
+                                <Col lg={7}></Col>
+                                <Col lg={7}></Col>
+                                <Col lg={7}></Col>
+
+                                <Col lg={1} >
                                 <img
                                 alt=""
                                 src="/assests/GrayLogo.svg"
@@ -37,9 +44,13 @@ export class GrayFooter extends React.Component {
                                 height = "40"
                                 />
                                 </Col>
-                                <Col style = {{paddingLeft: '0'}}>
+                                <Col lg={1}></Col>
+                                <Col lg={2}>
                                     <h1 style = {{color: 'lightgray'}}>circal</h1>
                                 </Col>
+                                
+                                <Col lg={7}></Col>
+
                             </Row>
                         </Navbar.Brand>
                     </Navbar>

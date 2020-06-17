@@ -2,6 +2,8 @@ import React from 'react';
 import {Container, Row, Col, Image} from 'react-bootstrap';
 import ContactForm from './ContactForm';
 import {NavigationBar} from './NavigationBar.js';
+import {GrayFooter} from './GrayFooter';
+
 
 const HeroImageContainer = {
     position: 'absolute',
@@ -44,11 +46,14 @@ export class Contact extends React.Component {
                     <Row style = {{'padding-top': '8rem'}}>
                         <ContactForm/>
                     </Row>
+                    <Container style = {{paddingTop:'4rem'}}>
+                        <GrayFooter/>
+                    </Container>
                 </Container>
-                <Container>
-                    <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer}/>
-                </Container>
+                
+                
           </Container>
+
       );
     }
 }
