@@ -6,6 +6,7 @@ import {NavigationBar} from './NavigationBar.js';
 import './../css/Pricing.css';
 import './../App.css';
 import {GrayFooter} from './GrayFooter';
+import Accordion from 'react-bootstrap/Accordion'
 
 
 
@@ -47,51 +48,33 @@ export class Pricing extends React.Component {
 								</Card.Header>
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
+
 										<Row>
-											<Col></Col>
-											<Col></Col>
-											<Col></Col>
-											<Col>
-												<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-													$
-                    							</p>
+											<Col style={{paddingLeft:'30%'}}>
+												<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>$</p>
 											</Col>
-											<Col>
-												<p className="large-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-													8
-                    							</p>
+											<Col style={{paddingRight:'40%'}}>
+												<p className="large-white-title mx-auto" style = {{color:'#B0B4C3'}}>8</p>
 											</Col>
-											<Col></Col>
-											<Col></Col>
-											<Col></Col>
-											<Col></Col>
 										</Row>
 										
 										<Row>
-											<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-												{" "}user / month 
-                    						</p>
+											<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>{" "}user / month </p>
 										</Row>
 
 										<Row>
-											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
-												max 20 users 
-                    						</p>
+											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>max 20 users </p>
 										</Row>
 										<Row>
-											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
-												meeting scheduling
-                    						</p>
+											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>meeting scheduling</p>
 										</Row>
 										<Row>
-											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
-												pre-meeting agenda
-                    						</p>
+											<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>pre-meeting agenda</p>
 										</Row>
 
 										<Row className = "center">
-              								<Button variant="outline-light" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">free trial</Button>
-                  						</Row>
+              				<Button variant="outline-light" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">free trial</Button>
+                  	</Row>
                   </blockquote>
                 </Card.Body>
               </Card>
@@ -105,37 +88,27 @@ export class Pricing extends React.Component {
 									</Card.Title>
                   <blockquote className="blockquote mb-0">
 
-				  	<Row>
-						<p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
-					</Row>
-					<Row>
-						<p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
-					</Row>
-					<Row>
-						<p className="paragraph-text-2 mx-auto">Unlimited users</p>
+				  	        <Row>
+						          <p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
+					          </Row>
+					          <Row>
+						          <p className="paragraph-text-2 mx-auto">Unlimited users</p>
 										</Row>
 										<Row>
-											<p className="paragraph-text-2 mx-auto">
-                      	meeting scheduling
-                    	</p>
+											<p className="paragraph-text-2 mx-auto">meeting scheduling</p>
 										</Row>
 										<Row>
-											<p className="paragraph-text-2 mx-auto">
-                      	pre meeting agenda
-                    	</p>
+											<p className="paragraph-text-2 mx-auto">pre meeting agenda</p>
 										</Row>
 										<Row>
-											<p className="paragraph-text-2 mx-auto">
-                      	post meeting feedback
-                    	</p>
+											<p className="paragraph-text-2 mx-auto">post meeting feedback</p>
 										</Row>
 										<Row>
-						<p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
-					</Row>
+						          <p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
+					          </Row>
 
 									</blockquote>
 									<blockquote className="blockquote mb-0">
-
 									  <Row className = "center" style= {{color:'#FCAD55'}}>
               			  <Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
 										  contact us</Button>
@@ -162,83 +135,72 @@ export class Pricing extends React.Component {
           <Row>
 						<h1 className="title mx-auto" style = {{color:'#FCAD55'}}>FAQs</h1>
 					</Row>
-					<Row style = {{paddingTop: '5%'}}>
 
-            <Col lg={1}></Col>
-						<Col>
-						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							Q: How many teams can I create in the “team” package?</h1>
-            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							A: As many or as less as you want. But, only a max of 20 people can be signed up
-              with your organization. Ex. 4 teams of 5 or 2 teams of 10</h1>   
-						</Col>
-            <Col lg={1}></Col>
-          </Row>
-          
-          <Row style = {{paddingTop: '5%'}}>
+					<Accordion className='faqs' style={{backgroundColor:'white !important'}, {paddingTop:'5%'}}>
+            <Card className='faqs'>
+              <Accordion.Toggle as={Card.Header} eventKey="0">
+                How many teams can I create in the 'team' package?
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="0">
+                <Card.Body>
+                  As many or as less as you want. But, only a max of 20 people can be signed up
+                      with your organization. Ex. 4 teams of 5 or 2 teams of 10
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
 
-            <Col lg={1}></Col>
-						<Col>
-						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							Q: What payment methods do you accept?</h1>
-            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							A: filler answer till we find payment gateway</h1>   
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="1">
+                What payment methods do you accept?
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="1">
+                <Card.Body>
+                  Filler answer till we find payment gateway
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
 
-						</Col>
-            <Col lg={1}></Col>
-          </Row>
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="2">
+                When does the trial end and what happens at the end of it?
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="2">
+                <Card.Body>
+                  The Trial ends after 7 days of usage. After your trial is over, your features will be locked and you will have to choose a plan (listed above) to continue.
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
 
-          <Row style = {{paddingTop: '5%'}}>
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="3">
+                Will my data be private and safe?
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="3">
+                <Card.Body>
+                  Security is of the upmost important to Circal! We keep your and your teams’ data secure.   
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
 
-            <Col lg={1}></Col>
-						<Col>
-						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							Q: When does the trial end and what happens at the end of it?</h1>
-            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							A: The Trial ends after 7 days of usage. After your trial is over, your features will be locked and you will have to choose a plan (listed above) to continue.</h1>   
-						</Col>
-            <Col lg={1}></Col>
-          </Row>
+            <Card>
+              <Accordion.Toggle as={Card.Header} eventKey="4">
+                Can I cancel my account at any time?
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey="4">
+                <Card.Body>
+                  Yes you can cancel your account or payment plan at any time through the dashboard in account settings. 
+                </Card.Body>
+              </Accordion.Collapse>
+            </Card>
 
-		  <Row style = {{paddingTop: '5%'}}>
-            <Col lg={1}></Col>
-						<Col>
-						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							Q: Will my data be private and safe?</h1>
-            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							A: Security is of the upmost important to Circal! We keep your and your teams’ data secure.</h1>   
-						</Col>
-            <Col lg={1}></Col>
-          </Row>
+          </Accordion>
+					
 
-		  <Row style = {{paddingTop: '5%'}}>
-            <Col lg={1}></Col>
-						<Col>
-						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							Q: Can I cancel my account at any time? </h1>
-            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							A: Yes you can cancel your account or payment plan at any time through the dashboard in account settings.</h1>   
-						</Col>
-            <Col lg={1}></Col>
-          </Row>
-
-		  <Row style = {{paddingTop: '5%'}}>
-            <Col lg={1}></Col>
-						<Col>
-						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							Q: When does the trial end and what happens at the end of it?</h1>
-            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
-							A: The trial ends after 1 month, and after you can choose to continue'
-              using Circal and use the paid version or stop using it.</h1>   
-						</Col>
-            <Col lg={1}></Col>
-          </Row>
-
-		  <Container style = {{paddingTop:'4rem'}}>
-              <GrayFooter/>
+		      <Container style = {{paddingTop:'4rem'}}>
+            <GrayFooter/>
           </Container>
         </Container>
-	</Container>
+	    </Container>
   	</Container>
   	);
   }

@@ -4,7 +4,7 @@ import {Image, Button, Container, Navbar, Row, Col} from 'react-bootstrap';
 
 const BottomImageContainer = {
     position: 'absolute',
-    left: 0,
+    left: -50,
     zIndex:-1,
     minWidth:'100%',
     width: '100%'
