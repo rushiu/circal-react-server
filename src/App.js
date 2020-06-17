@@ -10,7 +10,6 @@ import {Pricing} from './components/Pricing.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
-import {SignInNext} from './components/SignInNext.js';
 import {Password} from './components/Password.js';
 import { PersonalInfo } from './components/PersonalInfo';
 import {SignIn} from './components/SignIn.js';
