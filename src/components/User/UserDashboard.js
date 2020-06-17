@@ -8,8 +8,10 @@ import './dashboard.css';
 
 const NavBarStyle = {
     position: 'absolute',
-    right: '0',
-    minWidth: '96%',
+    left: 0,
+    right: 0,
+    width: '100%',
+    paddingTop: '0.5rem',
     height: '8%',
     zIndex:1
 };
