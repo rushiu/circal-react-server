@@ -51,11 +51,8 @@ class App extends React.Component {
             <Route path = '/pricing' component = {Pricing}/>
             <Route path = '/about' component = {About}/>
             <Route path = '/contact' component = {Contact}/>
-<<<<<<< HEAD
-=======
             <Route path = '/signin' component = {SignInNext}/>
             <Route path = '/signup' component = {SignUp}/>
->>>>>>> added missing files
             <Route path = '/password' component = {Password}/>
             <Route path = '/signin' component = {SignIn}/>
             <Route path = '/signup' component = {SignUpNext}/>
