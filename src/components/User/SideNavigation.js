@@ -8,7 +8,6 @@ const SideBarStyle = {
     position: 'fixed',
     left: '0', 
     bottom: '0',
-    height: 'calc(100vh - 90px)',
     width: '230px',
     position: 'fixed',
     top: '0',
