@@ -45,7 +45,6 @@ class App extends React.Component {
     return (
   <BrowserRouter>
     <Container fluid>  
-          {/* <NavigationBar/> */}
           <Switch>
             <Route path ='/' component= {Home} exact/>
             <Route path = '/features'/>
