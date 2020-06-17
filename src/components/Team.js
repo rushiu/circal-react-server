@@ -16,7 +16,7 @@ export class Team extends React.Component {
                 <Table>
                 <Row>
                     <Col>
-                        <Card className = "font rounded-card">
+                        <Card className = "font">
                             <Card.Header className = "card-header-pink">
                                 <img width = "200" src = "./assests/NatashaProfile.png" className = "mx-auto image" />
                             </Card.Header>
