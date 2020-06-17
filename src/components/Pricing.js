@@ -31,7 +31,7 @@ export class Pricing extends React.Component {
       <NavigationBar />
       <Image src = "./assests/OrangeGradient.svg" style = {HeroImageContainer}/>
       <Container fluid>
-        <Container className = "header">
+        <Container className = "header font">
           <Row>
             <h1 className="title mx-auto">Pricing</h1>
           </Row>
@@ -40,36 +40,27 @@ export class Pricing extends React.Component {
           </Row>
 
           <Row>
-						<Col>
-            	<Card className="rounded">
-                <Card.Header  style = {{background: '#FCAD55'}}>
-									<p className = "white-title-2 mx-auto">TEAMS</p>
-								</Card.Header>
+			<Col>
+            	<Card className = "rounded">
+                <Card.Header className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>TEAMS</Card.Header>
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
 										<Row>
-											<Col></Col>
-											<Col></Col>
-											<Col></Col>
-											<Col>
+											<Col lg = {4}>
 												<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
 													$
                     							</p>
 											</Col>
-											<Col>
+											<Col lg = {5}>
 												<p className="large-white-title mx-auto" style = {{color:'#B0B4C3'}}>
 													8
                     							</p>
 											</Col>
-											<Col></Col>
-											<Col></Col>
-											<Col></Col>
-											<Col></Col>
 										</Row>
 										
 										<Row>
 											<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-												{" "}user / month 
+												user / month 
                     						</p>
 										</Row>
 
@@ -90,7 +81,7 @@ export class Pricing extends React.Component {
 										</Row>
 
 										<Row className = "center">
-              								<Button variant="outline-light" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">free trial</Button>
+              								<Button variant="warning" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">free trial</Button>
                   						</Row>
                   </blockquote>
                 </Card.Body>
