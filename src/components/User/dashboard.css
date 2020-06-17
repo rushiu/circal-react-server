@@ -22,18 +22,26 @@
     padding-right: 40%;
 }
 
-.nav-title-bar {
-    position: absolute;
-    right: 0vw;
-    left: -3vw;
-    top: 0vh;
+.title-nav {
+    position: fixed;
+    left: -1vw;
+    right: 0;
     max-width: 100%;
     min-width: 100vw;
-    height: 9vh;
-    z-index: 1;
+    height: 10%;
+    z-index: 3;
     color: #B1B6C6;
 }
 
+.logo-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 13.1%;
+    min-height: 10%;
+    height: 100%;
+    background: #FBAD97;
+}
 
 .grey-title {
     color: #B1B6C6;
