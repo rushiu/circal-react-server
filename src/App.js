@@ -10,7 +10,7 @@ import {Pricing} from './components/Pricing.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
-import {SignIn} from './components/SignIn.js';
+import {SignInNext} from './components/SignInNext.js';
 import {Password} from './components/Password.js';
 import CalendarPicker from './components/CalendarPicker';
 import UserDashboard from './components/User/UserDashboard';
@@ -49,7 +49,7 @@ class App extends React.Component {
             <Route path = '/pricing' component = {Pricing}/>
             <Route path = '/about' component = {About}/>
             <Route path = '/contact' component = {Contact}/>
-            <Route path = '/signin' component = {SignIn}/>
+            <Route path = '/signin' component = {SignInNext}/>
             <Route path = '/signup' component = {SignUp}/>
             <Route path = '/password' component = {Password}/>
             <Route path = '/user_dashboard' component = {UserDashboard}/>
