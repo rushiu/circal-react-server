@@ -23,9 +23,9 @@ const OtherStyle = {
 
 const BottomImageContainer = {
     position: 'absolute',
-    left: 0,
+    left: -15,
     zIndex:0,
-    'padding-top': '60rem',
+    paddingTop: '5%',
     width:'100%'
 };
 
@@ -43,16 +43,18 @@ export class Contact extends React.Component {
                         <p className="paragraph-header mx-auto">Interested in Circal for your business or 
                             have a question?<br></br> Send us a message below!</p>
                     </Row>
-                    <Row style = {{'padding-top': '8rem'}}>
+                    <Row style = {{'padding-top': '8rem'}, {paddingBottom:'5%'}}>
                         <ContactForm/>
                     </Row>
-                    <Container style = {{paddingTop:'4rem'}}>
+                    <Container style = {{BottomImageContainer}, {left: -15}, {float: 'left'}}>
                         <GrayFooter/>
                     </Container>
+                    
                 </Container>
                 
                 
           </Container>
+          
 
       );
     }
