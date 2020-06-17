@@ -5,6 +5,7 @@ import './dashboard.css'
 import { faSmile } from '@fortawesome/free-solid-svg-icons';
 
 const SideBarStyle = {
+<<<<<<< HEAD
     position: 'absolute',
     left: '0', 
     bottom: '0',
@@ -13,6 +14,17 @@ const SideBarStyle = {
     top: '0',
     left: '0',
     zIndex: '0',
+=======
+    position: 'fixed',
+    left: '0', 
+    bottom: '0',
+    height: 'calc(100vh - 90px)',
+    width: '230px',
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    zIndex: '1',
+>>>>>>> Started sign up flow and adjusted spacing and started dashboard
     minHeight: '100%',
     fontSize: '1.5rem',
     background: 'linear-gradient(141.68deg, #FAD7A1 -27.76%, #FD6585 103.99%)',
@@ -23,8 +35,14 @@ const SideBarStyle = {
 export class SideNavigation extends React.Component {
     render(){
         return(
+<<<<<<< HEAD
                 <Navbar variant="dark"  expand="lg" style = {SideBarStyle}>
                     {/* <Container style = {{position: 'absolute', top: '2%', paddingRight: '1%'}}>
+=======
+            <Container className = "font" style = {{zIndex: '3', position: 'fixed'}}fluid>
+                <Navbar variant="dark"  expand="lg" style = {SideBarStyle}>
+                    <Container style = {{position: 'absolute', top: '2%', paddingRight: '1%'}}>
+>>>>>>> Started sign up flow and adjusted spacing and started dashboard
                         <img
                         alt=""
                         src="/assests/LogoImage.png"
@@ -33,7 +51,11 @@ export class SideNavigation extends React.Component {
                         height="50"
                         />
                         <Navbar.Brand className = "font" variant = "dark" style = {{left: '30%', position: 'absolute'}}><h1>circal</h1></Navbar.Brand>
+<<<<<<< HEAD
                     </Container> */}
+=======
+                    </Container>
+>>>>>>> Started sign up flow and adjusted spacing and started dashboard
                     <Row style = {{position: 'absolute', left: '1.5rem', right: '0', justifyContent: 'center', display: 'flex'}}>
                         <Nav className = "flex-column">
                             <Nav.Link href = "/user_dashboard"><h5 className = "center-nav-link">home</h5></Nav.Link>
