@@ -26,7 +26,6 @@ const MainContainerStyle = {
     zIndex: 2,
     background: 'yellow'
 }
-
 const ProfileFiller = {
     backgroundColor: 'gray',
     borderRadius: '50%',
