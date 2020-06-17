@@ -5,6 +5,8 @@ import {Jumbotron} from 'react-bootstrap';
 import {NavigationBar} from './NavigationBar.js';
 import './../css/Pricing.css';
 import './../App.css';
+import {GrayFooter} from './GrayFooter';
+
 
 
 const HeroImageContainer = {
@@ -16,9 +18,9 @@ const HeroImageContainer = {
 };
 
 const OtherStyle = {
-    position: 'absolute',
-    zIndex:2,
-    width:'100%',
+  position: 'absolute',
+  zIndex:2,
+  width:'100%',
 };
 
 
@@ -33,11 +35,11 @@ export class Pricing extends React.Component {
           <Row>
             <h1 className="title mx-auto">Pricing</h1>
           </Row>
-					<Row>
+					<Row style={{paddingBottom: '40%'}}>
             <p className="paragraph-header mx-auto">A plan for everyone.</p>
           </Row>
 
-          <Row style = {{paddingTop: '40%'}}>
+          <Row>
 						<Col>
             	<Card className="rounded">
                 <Card.Header  style = {{background: '#FCAD55'}}>
@@ -101,11 +103,16 @@ export class Pricing extends React.Component {
 									<Card.Title>
 										<p className = "white-title-2 mx-auto">ENTERPRISE</p>
 									</Card.Title>
-                  <blockquote className="blockquote mb-0" style = {{paddingTop: '20%'}}>
-                    <Row>
-											<p className="paragraph-text-2 mx-auto">
-                      	Unlimited users
-                    	</p>
+                  <blockquote className="blockquote mb-0">
+
+				  	<Row>
+						<p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
+					</Row>
+					<Row>
+						<p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
+					</Row>
+					<Row>
+						<p className="paragraph-text-2 mx-auto">Unlimited users</p>
 										</Row>
 										<Row>
 											<p className="paragraph-text-2 mx-auto">
@@ -122,40 +129,116 @@ export class Pricing extends React.Component {
                       	post meeting feedback
                     	</p>
 										</Row>
-									</blockquote>
-									<blockquote className="blockquote mb-0" style = {{paddingTop: '23%'}}>
-									<Row className = "center" style= {{color:'#FCAD55'}}>
-              								<Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
-												contact us</Button>
-                  					</Row>    
-									</blockquote>
-										
+										<Row>
+						<p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
+					</Row>
 
-						  
-						  		
+									</blockquote>
+									<blockquote className="blockquote mb-0">
+
+									  <Row className = "center" style= {{color:'#FCAD55'}}>
+              			  <Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
+										  contact us</Button>
+                    </Row>    
+									</blockquote>
                 </Card.Body>
               </Card>
 						</Col>
-
         	</Row>
 
 					<Row>
-						<h1 className="title mx-auto" style = {{color:'#B0B4C3'}}>Affected by Covid-19?</h1>
+						<h1 className="title mx-auto" style = {{color:'#FCAD55'}}>Affected by Covid-19?</h1>
 					</Row>
-					<Row style = {{paddingTop: '5%'}, {paddingBottom: '30%'}}>
+					<Row style = {{paddingTop: '5%'}}>
 						<Col lg={1}></Col>
 						<Col>
-						<h1 className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
+						<h1 className="paragraph-text mx-auto" style = {{color:'#837E7E'}}>
 							Circal understands how Covid-19 has affected businesses. Contact us along 
 							with a message of how your business was affected and how Circal can help.</h1>
 						</Col>
 						<Col lg={1}></Col>
-
 					</Row>
 
+          <Row>
+						<h1 className="title mx-auto" style = {{color:'#FCAD55'}}>FAQs</h1>
+					</Row>
+					<Row style = {{paddingTop: '5%'}}>
 
+            <Col lg={1}></Col>
+						<Col>
+						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							Q: How many teams can I create in the “team” package?</h1>
+            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							A: As many or as less as you want. But, only a max of 20 people can be signed up
+              with your organization. Ex. 4 teams of 5 or 2 teams of 10</h1>   
+						</Col>
+            <Col lg={1}></Col>
+          </Row>
+          
+          <Row style = {{paddingTop: '5%'}}>
+
+            <Col lg={1}></Col>
+						<Col>
+						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							Q: What payment methods do you accept?</h1>
+            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							A: filler answer till we find payment gateway</h1>   
+
+						</Col>
+            <Col lg={1}></Col>
+          </Row>
+
+          <Row style = {{paddingTop: '5%'}}>
+
+            <Col lg={1}></Col>
+						<Col>
+						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							Q: When does the trial end and what happens at the end of it?</h1>
+            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							A: The Trial ends after 7 days of usage. After your trial is over, your features will be locked and you will have to choose a plan (listed above) to continue.</h1>   
+						</Col>
+            <Col lg={1}></Col>
+          </Row>
+
+		  <Row style = {{paddingTop: '5%'}}>
+            <Col lg={1}></Col>
+						<Col>
+						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							Q: Will my data be private and safe?</h1>
+            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							A: Security is of the upmost important to Circal! We keep your and your teams’ data secure.</h1>   
+						</Col>
+            <Col lg={1}></Col>
+          </Row>
+
+		  <Row style = {{paddingTop: '5%'}}>
+            <Col lg={1}></Col>
+						<Col>
+						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							Q: Can I cancel my account at any time? </h1>
+            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							A: Yes you can cancel your account or payment plan at any time through the dashboard in account settings.</h1>   
+						</Col>
+            <Col lg={1}></Col>
+          </Row>
+
+		  <Row style = {{paddingTop: '5%'}}>
+            <Col lg={1}></Col>
+						<Col>
+						<h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							Q: When does the trial end and what happens at the end of it?</h1>
+            <h1 className="paragraph-text-grey mx-auto" style={{color: '#837E7E'}}>
+							A: The trial ends after 1 month, and after you can choose to continue'
+              using Circal and use the paid version or stop using it.</h1>   
+						</Col>
+            <Col lg={1}></Col>
+          </Row>
+
+		  <Container style = {{paddingTop:'4rem'}}>
+              <GrayFooter/>
+          </Container>
         </Container>
-			</Container>
+	</Container>
   	</Container>
   	);
   }

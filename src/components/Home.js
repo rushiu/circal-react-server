@@ -12,6 +12,7 @@ import {ProblemStats} from './ProblemStats.js';
 import {NavigationBar} from './NavigationBar.js';
 
 
+
 const OtherStyle = {
   position: 'absolute',
   zIndex:2,
@@ -80,6 +81,7 @@ export class Home extends React.Component {
               </Row>
               <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
             </Container>
+            
           </Container>
         </Container>
       );

@@ -56,7 +56,7 @@ export class About extends React.Component {
       
         </Container>
       </Container>
-    </Container>
+    </Container> 
     );
   }
 }
