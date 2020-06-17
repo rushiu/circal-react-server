@@ -1,17 +1,17 @@
 import React from 'react';
-import {Container, Nav, Navbar, Button, Card, Image, NavbarBrand, Row, Col} from 'react-bootstrap';
+import {Container, Nav, Navbar, Button, Card, Image, CardDeck, Row, Table, Col, CardColumns} from 'react-bootstrap';
 import './SideNavigation.js'
 import { SideNavigation } from './SideNavigation.js';
 import {SignInNav} from '.././SignInNav.js';
 import './dashboard.css';
+import {TopNav} from './TopNav'
+import NavigationBar from '../NavigationBar.js';
 
 
 const NavBarStyle = {
     position: 'absolute',
-    left: 0,
-    right: 0,
-    width: '100%',
-    paddingTop: '0.5rem',
+    right: '0',
+    minWidth: '96%',
     height: '8%',
     zIndex:1
 };
@@ -26,28 +26,45 @@ const MainContainerStyle = {
     zIndex: 2,
     background: 'yellow'
 }
-
+const ProfileFiller = {
+    backgroundColor: 'gray',
+    borderRadius: '50%',
+    width:'100',
+    height:'100',
+    zIndex: 2
+}
 export class UserDashboard extends React.Component {
     render() {
         return(
-            <Container className = "dashboard-bg" fluid>
-                    <Navbar bg = "light" style = {NavBarStyle} className = "font shadow-sm" fluid>
-                        <Navbar.Brand fluid>
-                            <Row>
-                            <img
-                            alt=""
-                            src="/assests/GradientLogo.svg"
-                            width = "361"
-                            height = "46"
-                            />
+            <Container className = "dashboard-bg font" fluid>
+                        <TopNav/>
+                        <SideNavigation/>
+                        <Container className = "pr-0 pl-0">
+                            <Row className = "pt-4 pl-5 clearfix" style = {{display: 'flex', justifyContent: 'end'}}>
+                                <Col className = "col-lg-9 float-left">
+                                    <h2 className = "grey-title">This Week</h2>
+                                </Col>
+                                <Col className = "my-auto pr-0 col-lg-3 float-right" >
+                                    <Row className = "mx-auto">
+                                        <Button variant="gray" style = {{border: 'hidden', color: 'white'}} size = "lg" href = "/create_meeting" className = "btn-rounded mx-auto">create a meeting +</Button>
+                                    </Row>
+                                    <Row className = "center pt-5 mt-5">
+                                        <Card style = {{border: 'hidden', background: 'linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%)', boxShadow: '1px 1px 15px #FE838E', borderRadius: '0.5rem', width: '17rem', height: '8rem'}}>
+                                            <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold', paddingTop: '2%'}}><h3>meetings</h3></Card.Text>
+                                        </Card>
+                                    </Row>
+                                    <Row className = "center pt-4">
+                                        <Card style = {{border: 'hidden', background: 'linear-gradient(124.44deg, #90F7EC 0%, #32CCBC 100%)', boxShadow: '1px 1px 15px #63E3D5', borderRadius: '0.5rem',  width: '17rem', height: '8rem'}}>
+                                            <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold', paddingTop: '2%'}}><h3>messages</h3></Card.Text>
+                                        </Card>
+                                    </Row>
+                                    <Row className = "center pt-4">
+                                        <Card style = {{border: 'hidden', background: 'linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%)', boxShadow: '1px 1px 15px #9C80F5', borderRadius: '0.5rem',  width: '17rem', height: '8rem'}}>
+                                            <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold', paddingTop: '2%'}}><h3>notifications</h3></Card.Text>
+                                        </Card>
+                                    </Row>
+                                </Col>
                             </Row>
-                        </Navbar.Brand>
-                    </Navbar>
-                    <SideNavigation/>
-                    <Container className = "col-xl-8 col-md-9 col-12" fluid>
-                            <Navbar bg = "light" style = {{NavBarStyle}} className = "font shadow-sm" fluid>
-                                <h3 className = "font">Dashboard</h3>
-                            </Navbar>
                     </Container>
             </Container>
         );

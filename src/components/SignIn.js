@@ -37,7 +37,7 @@ export class SignIn extends React.Component {
                                     </Form.Row>
                                     <Nav className="justify-content-center" activeKey="/home">
                                         <Nav.Item>
-                                            <Nav.Link href="/signup">Forgot Password?</Nav.Link>
+                                            <Nav.Link href="/password">Forgot Password?</Nav.Link>
                                         </Nav.Item>
                                     </Nav>
                                 </Form>
@@ -46,7 +46,7 @@ export class SignIn extends React.Component {
                 </Container>
 
                 <Container className = "sign-in-bg animate__animated animate__slideInLeft" fluid>
-                    <Table className = "animate__animated animate__fadeIn">
+                    <Table className = "animate__animated animate__slideInRight">
                         <Row>
                             <h1 className = "title header mx-auto welcome-header">Hello, Friend!</h1>
                         </Row>

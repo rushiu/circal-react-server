@@ -13,6 +13,18 @@ $gray: #B0B4C3 !default;
 
 $link-color: $primary !default;
 
+.btn-primary, .btn-success, .btn-secondary, .btn-warning {
+    color: white !important;
+}
+
+.btn-outline-light:hover {
+    color: $primary !important;
+}
+
+
+.btn-outline-primary:hover {
+    color: white !important;
+} 
 .card:hover {
     box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.15);
 }
@@ -26,4 +38,5 @@ $theme-colors: (
     "gray":       $gray
 ) !default;
 
+@import '~bootstrap/scss/bootstrap';
 @import "bootstrap";
