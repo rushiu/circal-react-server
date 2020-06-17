@@ -10,6 +10,7 @@ import {Pricing} from './components/Pricing.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
+import {SignInNext} from './components/SignInNext.js';
 import {Password} from './components/Password.js';
 import { PersonalInfo } from './components/PersonalInfo';
 import {SignIn} from './components/SignIn.js';
@@ -50,6 +51,11 @@ class App extends React.Component {
             <Route path = '/pricing' component = {Pricing}/>
             <Route path = '/about' component = {About}/>
             <Route path = '/contact' component = {Contact}/>
+<<<<<<< HEAD
+=======
+            <Route path = '/signin' component = {SignInNext}/>
+            <Route path = '/signup' component = {SignUp}/>
+>>>>>>> added missing files
             <Route path = '/password' component = {Password}/>
             <Route path = '/signin' component = {SignIn}/>
             <Route path = '/signup' component = {SignUpNext}/>
