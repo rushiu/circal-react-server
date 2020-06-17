@@ -10,9 +10,11 @@ import {Pricing} from './components/Pricing.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
+import { PersonalInfo } from './components/PersonalInfo';
 import {SignIn} from './components/SignIn.js';
 import CalendarPicker from './components/CalendarPicker';
 import UserDashboard from './components/User/UserDashboard';
+import SignUpNext from './components/SignUpNext';
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -49,8 +51,12 @@ class App extends React.Component {
             <Route path = '/about' component = {About}/>
             <Route path = '/contact' component = {Contact}/>
             <Route path = '/signin' component = {SignIn}/>
-            <Route path = '/signup' component = {SignUp}/>
+            <Route path = '/signup' component = {SignUpNext}/>
+            <Route path = '/signup-personalinfo' component = {PersonalInfo}/>
             <Route path = '/user_dashboard' component = {UserDashboard}/>
+            <Route path = '/my_team'/>
+            <Route path = '/my_messages'/>
+            <Route path = '/my_account'/>
           </Switch>
     </Container>
   </BrowserRouter>

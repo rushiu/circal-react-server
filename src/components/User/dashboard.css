@@ -5,10 +5,36 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: whitesmoke;
+    background:#F1F3F8;
   
     position: fixed;
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.center-nav-link {
+    position: relative;
+    justify-content: center;
+    display: flex;
+
+    padding-left: 30%;
+    padding-right: 40%;
+}
+
+.nav-title-bar {
+    position: absolute;
+    right: 0vw;
+    left: -3vw;
+    top: 0vh;
+    max-width: 100%;
+    min-width: 100vw;
+    height: 9vh;
+    z-index: 1;
+    color: #B1B6C6;
+}
+
+
+.grey-title {
+    color: #B1B6C6;
 }
