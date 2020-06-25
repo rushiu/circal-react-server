@@ -140,8 +140,8 @@ export class Pricing extends React.Component {
 						<h1 className="title mx-auto" style = {{color:'#FCAD55'}}>FAQs</h1>
 					</Row>
 
-					<Accordion className='faqs' style={{backgroundColor:'white !important'}, {paddingTop:'5%'}}>
-            <Card className='faqs'>
+			<Accordion className="faqs" style={{backgroundColor:'white !important'}, {paddingTop:'5%'}}>
+            <Card className="faqs">
               <Accordion.Toggle as={Card.Header} eventKey="0">
                 How many teams can I create in the 'team' package?
               </Accordion.Toggle>
@@ -164,7 +164,7 @@ export class Pricing extends React.Component {
               </Accordion.Collapse>
             </Card>
 
-            <Card>
+            <Card> 
               <Accordion.Toggle as={Card.Header} eventKey="2">
                 When does the trial end and what happens at the end of it?
               </Accordion.Toggle>

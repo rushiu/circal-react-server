@@ -13,14 +13,19 @@ $gray: #B0B4C3 !default;
 
 $link-color: $primary !default;
 
+
+
 .btn-primary, .btn-success, .btn-secondary, .btn-warning {
     color: white !important;
 }
 
 .btn-outline-light:hover {
-    color: $primary !important;
+    color: $gray !important;
 }
 
+.btn-outline-gray:hover {
+    color: white !important;
+}
 
 .btn-outline-primary:hover {
     color: white !important;
