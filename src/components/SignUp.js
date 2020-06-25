@@ -14,14 +14,16 @@ export class SignUp extends React.Component {
         e.preventDefault();
         this.props.nextStep();
         try {
-            const response = await axios.post('http://localhost:8080/company', {name: values.company, licenseId: "someid1234"});
+            const response = await axios.post('http://localhost:8080/company', {name: "name", licenseId: "someid12344"});
             console.log('returned data:', response)
         } catch (e) {
             console.log(`creating company failed: ${e}`);
         }
     };
     render() {
+
         const {values, inputChange} = this.props;
+
         return(
             <Container className = "font" fluid>
                 <SimpleNav/>
