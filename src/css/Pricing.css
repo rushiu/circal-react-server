@@ -7,7 +7,7 @@
     border: none;
     border-radius: 1rem;
     transition: all 0.2s;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
   }
   
   .pricing hr {
@@ -99,6 +99,7 @@
     color: white;
     font-family: 'Jost';
     font-size: calc(5px + 2vmin);
+    padding: 3px;
     text-align: center;
   }
 
@@ -129,7 +130,13 @@
     outline-color: white;
     border: solid 1px white;
     text-decoration-color:'#FCAD55'
+  }
 
+  .faqsTitle {
+    background-color: white !important;
+    outline-color: white;
+    border: solid 1px white;
+    text-decoration-color: #FCAD55
   }
 
   
