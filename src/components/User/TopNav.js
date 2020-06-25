@@ -1,5 +1,11 @@
 import React from 'react'
-import {Container, Nav, Navbar, Image} from 'react-bootstrap'
+import {Container, Nav, Navbar, Image, Col, Row, Button, Link, Media} from 'react-bootstrap'
+import { faBars, faBell, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import ProfileNav from './ProfileNav';
+
+library.add(faBars, faBell, faSignOutAlt)
 
 const NavBarStyle = {
     position: 'absolute',
@@ -16,18 +22,27 @@ export class TopNav extends React.Component {
     render() {
         return(
                 <Navbar variant = "dark" expand = "lg" className = "title-nav shadow-sm bg-light w-100">
-                                <div className = "logo-bg">
+                            <Container className = "logo-bg mr-0" style = {{width: '13.1%'}}>
                                 <img
                                 alt=""
                                 src="/assests/LogoImage.png"
-                                className="d-inline-block align-top mt-3 ml-4"
-                                width="70"
-                                height="50"
+                                className="d-inline-block align-top mt-2 ml-3"
+                                width="55"
+                                height="40"
                                 style = {{zIndex: '3'}}
                                 />
-                                <Navbar.Brand className = "font" variant = "dark" className = "w-25 mt-2" style = {{zIndex: '3'}}><h1>circal</h1></Navbar.Brand>
-                                </div>
-                        <h4 className = "col-lg-1 col-md-2 col-xs-1 mx-auto my-auto w-50">Home</h4>
+                                <Col className = "pl-0 pt-2">
+                                    <Navbar.Brand className = "font" variant = "dark" className = "w-25 mt-2" style = {{zIndex: '3'}}><h1>circal</h1></Navbar.Brand>
+                                </Col>
+                            </Container>
+                            <Container style = {{width: '86.9%', left: '14%', position: 'fixed'}}>
+                                <Row className = "w-75">
+                                        <Button className = "toggle-btn" variant = "link" data-toggle = "collapse" 
+                                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                                        aria-expanded="false" aria-label="Toggle navigation"><FontAwesomeIcon icon = "bars"/></Button>
+                                        <h5 className = "my-auto pl-2">Home</h5>
+                                </Row>
+                            </Container>
                 </Navbar>
         );
     }

@@ -125,6 +125,9 @@
     text-decoration-color: '#FCAD55';
   }
 
+  .accordian {
+    background: white;
+  }
   .faqs {
     background-color: white !important;
     outline-color: white;
