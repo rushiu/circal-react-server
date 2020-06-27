@@ -7,6 +7,7 @@ import {Contact} from './components/Contact.js';
 import {Home} from './components/Home.js';
 import {About} from './components/About.js';
 import {Pricing} from './components/Pricing.js';
+import {Features} from './components/Features.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import { SignUp } from './components/SignUp';
@@ -46,7 +47,7 @@ class App extends React.Component {
     <Container fluid>  
           <Switch>
             <Route path ='/' component= {Home} exact/>
-            <Route path = '/features'/>
+            <Route path = '/features' component = {Features}/>
             <Route path = '/pricing' component = {Pricing}/>
             <Route path = '/about' component = {About}/>
             <Route path = '/contact' component = {Contact}/>
