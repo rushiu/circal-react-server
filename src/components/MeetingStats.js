@@ -15,14 +15,14 @@ const SectionBackground = {
   height: '35%'
 };
 
-export class TwoWaySync extends React.Component {
+export class MeetingStats extends React.Component {
     render() {
       return (
-        <Container className = "font grey-header">
+        <Container className = "font grey-header" rounded>
               <Jumbotron style={SectionBackground} fluid>
                 <Row style = {{display: 'flex', justifyContent: 'center', paddingBottom: '3rem'}}>
                     <Col className = "center">
-                        <h1 style = {{fontSize: '3rem'}}>2-Way Sync</h1>
+                        <h1 style = {{fontSize: '3rem'}}>Meeting Statistics</h1>
                     </Col>
                 </Row>
                 
@@ -42,7 +42,7 @@ export class TwoWaySync extends React.Component {
                     </Col>
 
                     <Col style = {{float: 'center'}}>
-                      <img width="600" height="400" src="./assests/Synch.svg" />
+                      <img width="600" height="400" src="./assests/MeetingStats.svg" />
                     </Col>
             </Row>
           </Jumbotron>
@@ -51,4 +51,4 @@ export class TwoWaySync extends React.Component {
     }
 }
 
-export default TwoWaySync;
+export default MeetingStats;

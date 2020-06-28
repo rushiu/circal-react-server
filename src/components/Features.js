@@ -13,8 +13,8 @@ import {FourFeatures} from './FourFeatures.js';
 import {NavigationBar} from './NavigationBar.js';
 import {TwoWaySync} from './TwoWaySync.js';
 import {MeetingAgenda} from './MeetingAgenda.js';
-
-
+import {MeetingStats} from './MeetingStats.js';
+import {SmartMeeting} from './SmartMeeting.js';
 
 const OtherStyle = {
   position: 'absolute',
@@ -75,12 +75,19 @@ export class Features extends React.Component {
               <Row style = {{marginBottom: '5%'}}>
                 <FourFeatures/>
               </Row>
-              <Row style = {{marginBottom: '35%'}}>
+              <Row style = {{marginBottom: '15%', paddingBottom: '25rem'}}>
                 <TwoWaySync/>
               </Row>
-              <Row style = {{marginTop: '50%'}}>
+              <Row style = {{marginTop: '0%', marginBottom: '44%'}}>
                 <MeetingAgenda/>
               </Row>
+              <Row style = {{marginTop: '40%', marginBottom: '44%'}}>
+                <MeetingStats/>
+              </Row>
+              <Row style = {{marginTop: '40%'}}>
+                <SmartMeeting/>
+              </Row>
+
               <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
             </Container>
             

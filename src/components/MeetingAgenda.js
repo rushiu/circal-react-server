@@ -25,23 +25,21 @@ export class MeetingAgenda extends React.Component {
                     </Col>
                 </Row>
                 
-                <Row style = {{height: '70%'}}>
-                    <Col style = {{justifyContent: 'center', width: '50%'}} fluid>
-                        <Row className = "center" style = {{paddingBottom: '6rem'}}>
-                            
-                        </Row>
+                <Row style = {{height: '70%', paddingLeft: '5rem'}}>
+                    <Col style = {{float: 'center'}}>
+                      <img width="600" height="400" src="./assests/MeetingAgenda.svg" />
                     </Col>
-
+                    
                     <Col style = {{width: '50%'}} fluid>
                         <Row>
                             <Col className = "text-center">
                                 <Row>
-									<p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
+									              <p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
                                     Circal includes the option to include meeting agendas for maximized 
                                     productivity. Pre meeting agendas encompass a schedule of the upcoming 
                                     meeting, while post meeting summaries allow for anonymous feedback on 
                                     the presentation and the content delivered.</p>
-									</Row>
+									              </Row>
                             </Col>
                         </Row>
                     </Col>
