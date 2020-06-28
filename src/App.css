@@ -14,6 +14,18 @@
   }
 }
 
+.stats {
+  font-size: 5rem;
+}
+.stats:hover {
+  color: #FC9A49 !important;
+}
+
+.bg-light.scrolled {
+  background-color: white!important;
+  transition:500ms ease;
+}
+
 .color-nav {
   align-self: center;
   font-family: 'Jost';

@@ -33,26 +33,23 @@ export class Contact extends React.Component {
     render() {
       return (
           <Container fluid>
-            <NavigationBar />
+            <NavigationBar/>
             <Image src = "./assests/GreenHeader.svg" style = {HeroImageContainer}/>
-                <Container style = {OtherStyle} className = "font">
+                <Container className = "font w-100">
                     <Row>
-                        <h1 className="title mx-auto">Contact Us</h1>
+                        <h1 className="mt-5 title mx-auto">Contact Us</h1>
                     </Row>
                     <Row>
-                        <p className="paragraph-header mx-auto">Interested in Circal for your business or 
+                        <p className="mx-auto white text-center"  style = {{zIndex: '2'}}>Interested in Circal for your business or 
                             have a question?<br></br> Send us a message below!</p>
                     </Row>
-                    <Row style = {{'padding-top': '8rem'}, {paddingBottom:'5%'}}>
+                    <Row className = "mt-5 pt-5 w-100">
                         <ContactForm/>
                     </Row>
-                    <Container style = {{BottomImageContainer}, {left: -15}, {float: 'left'}}>
+                    <Row className = "mb-0 pb-0" fluid>
                         <GrayFooter/>
-                    </Container>
-                    
+                    </Row>
                 </Container>
-                
-                
           </Container>
           
 

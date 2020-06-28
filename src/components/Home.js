@@ -24,27 +24,24 @@ const OtherStyle = {
 
 const HeroImageContainer = {
   position: 'absolute',
-  top:0,
   left:0,
-  zIndex:0,
-  minWidth: '100%',
-  width:'100%',
+  zIndex:0
 };
 
 const BottomImageContainer = {
   position: 'absolute',
   left: 0,
   right: 0,
-  zIndex:0,
+  zIndex:0
 };
 
 export class Home extends React.Component {
     render() {
       return (
-        <Container fluid>
+        <Container className = "min-vw-100" fluid>
           <NavigationBar />
           <Container style = {HeroImageContainer} sm = {12} md = {12} fluid>
-            <Image src="/assests/PinkGradient.svg" style={HeroImageContainer} fluid/>
+            <Image src="/assests/PinkGradient.svg" style={HeroImageContainer} className = "min-vw-100 w-100 mx-0 px-0 sticky-top" fluid/>
             <Container style = {OtherStyle} fluid>
               <Row>
                 <Container className = "font header">
@@ -61,7 +58,7 @@ export class Home extends React.Component {
                   </Row>
 
                   <Row className = "center">
-                      <Button variant="outline-light" style = {{width: '20%'}} size = "lg" className = "btn-rounded" href = "/signin">sign in</Button>
+                      <Button variant="outline-light" style = {{width: '20%'}} className = "btn-rounded" href = "/signin">sign in</Button>
                   </Row>
                 </Container>
               </Row>
@@ -79,7 +76,8 @@ export class Home extends React.Component {
               <Row style = {{marginTop: '50%'}}>
                 <GetStartedCard/>
               </Row>
-              <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
+              
+              <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg"></Image>
             </Container>
             
           </Container>

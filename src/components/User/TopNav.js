@@ -26,13 +26,11 @@ export class TopNav extends React.Component {
                                 <img
                                 alt=""
                                 src="/assests/LogoImage.png"
-                                className="d-inline-block align-top mt-2 ml-3"
-                                width="55"
-                                height="40"
-                                style = {{zIndex: '3'}}
+                                className="d-inline-block align-top mt-2 ml-3 pl-0"
+                                style = {{zIndex: '3', height: '55%'}}
                                 />
                                 <Col className = "pl-0 pt-2">
-                                    <Navbar.Brand className = "font" variant = "dark" className = "w-25 mt-2" style = {{zIndex: '3'}}><h1>circal</h1></Navbar.Brand>
+                                    <Navbar.Brand className = "font" variant = "dark" className = "w-25 mt-2" style = {{zIndex: '3'}}>circal</Navbar.Brand>
                                 </Col>
                             </Container>
                             <Container style = {{width: '86.9%', left: '14%', position: 'fixed'}}>

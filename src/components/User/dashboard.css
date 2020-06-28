@@ -20,6 +20,13 @@
 
     padding-left: 30%;
     padding-right: 40%;
+
+}
+
+.center-nav-link:hover {
+    border-width: 15rem;
+    border-left: 15rem;
+    border-color: #F1F3F8;
 }
 
 .title-nav {
@@ -87,3 +94,4 @@
     background-color: transparent !important;
     border: hidden !important;
 }
+
