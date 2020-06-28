@@ -87,7 +87,6 @@ export class Features extends React.Component {
               <Row style = {{marginTop: '40%'}}>
                 <SmartMeeting/>
               </Row>
-
               <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
             </Container>
             

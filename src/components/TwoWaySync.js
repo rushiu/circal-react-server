@@ -32,15 +32,16 @@ export class TwoWaySync extends React.Component {
                             <Col className = "text-center">
                             <Row>
 										          <p className="paragraph-text mx-auto" style = {{color:'#B0B4C3'}}>
+
                                         Circal utilizes 2-way syncing to provide calendar integrations<br></br> 
                                         with other services. iCal, GoogleCal, and Outlook calendars<br></br>
                                         can beimported forefficiency. When a meeting is accepted, the<br></br> 
                                         user’s personal calendar is also updated.</p>
 									          </Row>
+
                             </Col>
                         </Row>
                     </Col>
-
                     <Col style = {{float: 'center'}}>
                       <img width="600" height="400" src="./assests/Synch.svg" />
                     </Col>

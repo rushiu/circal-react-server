@@ -24,12 +24,10 @@ export class MeetingAgenda extends React.Component {
                         <h1 style = {{fontSize: '3rem'}}>Meeting Agenda</h1>
                     </Col>
                 </Row>
-                
                 <Row style = {{height: '70%', paddingLeft: '5rem'}}>
                     <Col style = {{float: 'center'}}>
                       <img width="600" height="400" src="./assests/MeetingAgenda.svg" />
                     </Col>
-                    
                     <Col style = {{width: '50%'}} fluid>
                         <Row>
                             <Col className = "text-center">
