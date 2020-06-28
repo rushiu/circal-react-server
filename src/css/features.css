@@ -1,0 +1,22 @@
+.paragraph-text {
+    color: white;
+    font-family: 'Jost';
+    font-size: calc(5px + 2vmin);
+    text-align: center;
+    padding: 80px;
+  }
+
+  .paragraph-text-grey {
+    color: '#837E7E';
+    font-family: 'Jost';
+    font-size: calc(5px + 2vmin);
+    text-align: left;
+  }
+
+  .paragraph-text-2 {
+    color: white;
+    font-family: 'Jost';
+    font-size: calc(10px + 2vmin);
+    padding: 6px;
+    text-align: center;
+  }
