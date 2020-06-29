@@ -26,7 +26,6 @@ const HeroImageContainer = {
   position: 'absolute',
   left:0,
   zIndex:0,
-  minHeight: '50%'
 };
 
 const BottomImageContainer = {
@@ -47,19 +46,19 @@ export class Home extends React.Component {
               <Row>
                 <Container className = "font header">
                   <Row style = {{display: 'flex', justifyContent: 'center'}}>
-                      <h1 className="title header">
+                      <h1 className="title header animate__animated animate__fadeInDown">
                         Meetings made easy.
                       </h1>
                   </Row>
 
                   <Row>
                     <Col lg = {5} className = "mx-auto">
-                      <p className = "paragraph-header">Circal is a smart scheduling software for the workplace to make lives easier and teams more efficient.</p> 
+                      <p className = "paragraph-header animate__animated animate__fadeInDown">Circal is a smart scheduling software for the workplace to make lives easier and teams more efficient.</p> 
                     </Col>
                   </Row>
 
                   <Row className = "center">
-                      <Button variant="outline-light" style = {{width: '20%'}} className = "btn-rounded" href = "/signin">sign in</Button>
+                      <Button variant="outline-light" style = {{width: '20%'}} className = "btn-rounded animate__animated animate__fadeIn" href = "/signin">sign in</Button>
                   </Row>
                 </Container>
               </Row>

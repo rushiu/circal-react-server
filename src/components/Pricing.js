@@ -1,6 +1,6 @@
 import React from 'react';
-import {Nav, Navbar, Image, Button, ButtonToolbar} from 'react-bootstrap';
-import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
+import {Nav, Navbar, Image, Button, ButtonToolbar, ListGroup, ResponsiveEmbed} from 'react-bootstrap';
+import { Container, Row, Col, CardGroup, Card, Table} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {NavigationBar} from './NavigationBar.js';
 import './../css/Pricing.css';
@@ -164,7 +164,7 @@ export class Pricing extends React.Component {
     <Container fluid>
       <NavigationBar />
       <Image src = "./assests/OrangeGradient.svg" style = {HeroImageContainer}/>
-      <Container fluid>
+      <Container style = {{zIndex: '3'}} fluid>
         <Container className = "header font">
           <Row>
             <h1 className="title mx-auto">Pricing</h1>
@@ -174,36 +174,35 @@ export class Pricing extends React.Component {
           </Row>
 
           <Row>
-          <Col style={{paddingLeft: '5%'}}>
-            	<Card className = "rounded pricing card" >
-                <Card.Header className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>STUDENT</Card.Header>
+          <Col>
+            	<Card style = {{border: 'hidden', borderRadius: '15px'}} className = "shadow-lg">
+                <h1 className = "mx-auto text-center w-100 rounded-lg pt-3" style = {{background: 'white', color: 'orange'}} as="h2">Student</h1>
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
 
 										<Row>
 											<Col>
-												<p className="large-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-													FREE
-                    							</p>
+												<h1 className="mx-auto text-center font-weight-bold pb-2" style = {{color:'orange'}}>$0</h1>
 											</Col>
 										</Row>
-
-										<Row>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>max 5 users </p>
-                    </Row>
-										<Row>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>meeting scheduling</p>
-										</Row>
-										<Row>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>sync with 1 external calendar</p>
-										</Row>
-                    <Row style={{marginBottom: '13px'}}>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>meeting agenda + notes</p>
-										</Row>
+                    <ListGroup variant = "flush">
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                      max 5 users
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        meeting scheduling
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        sync with 1 external calendar
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        meeting agenda + notes
+                      </ListGroup.Item>
+                    </ListGroup>
                     
 
-										<Row className = "center" style={{paddingTop:'30px'}}>
-              								<Button variant="warning" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">sign up</Button>
+										<Row className = "center pt-3">
+              				<Button variant="warning" style = {{backgroundColor: '#FCAD55'}} className = "btn-rounded w-50" href = "/signin">sign up</Button>
                   	</Row>
                   </blockquote>
                 </Card.Body>
@@ -212,80 +211,69 @@ export class Pricing extends React.Component {
 
 
 			      <Col>
-            	<Card className = "rounded pricing card">
-                <Card.Header className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>TEAMS</Card.Header>
+            <Card style = {{border: 'hidden', borderRadius: '15px', background: 'white'}} className = "shadow-lg">
+                <h1 className = "mx-auto text-center white w-100 rounded-top pt-3" style = {{background: 'white', color: 'orange', borderTop: '25px'}} as="h2">Teams</h1>
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
-
-										<Row>
-											<Col lg = {4}>
-												<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-													$
-                    							</p>
-											</Col>
-											<Col lg = {5}>
-												<p className="large-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-													8
-                    							</p>
+                  <Row>
+											<Col className = "pl-0">
+												<h1 className="text-center font-weight-bold" style = {{color:'orange'}}>$8</h1>
 											</Col>
 										</Row>
-										
-										<Row>
-											<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
-												user / month 
-                    						</p>
-										</Row>
+                    <ListGroup variant = "flush">
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        max 20 users
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        meeting scheduling
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        multiple calendar integration
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        pre-meeting agenda
+                      </ListGroup.Item>
+                      <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
+                        meeting agenda + notes
+                      </ListGroup.Item>
+                    </ListGroup>
+                    
 
-										<Row>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>max 20 users </p>
-										</Row>
-										<Row>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>meeting scheduling</p>
-										</Row>
-										<Row style={{marginBottom: '10px'}}>
-											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>pre-meeting agenda</p>
-										</Row>
-
-                   
-
-										<Row className = "center">
-              								<Button variant="warning" style = {{width: '40%'}, {backgroundColor: '#FCAD55'}} size = "lg" className = "btn-rounded" href = "/signin">free trial</Button>
+										<Row className = "center pt-3">
+              								<Button variant="warning" style = {{backgroundColor: '#FCAD55'}} className = "btn-rounded w-50" href = "/signin">sign up</Button>
                   	</Row>
                   </blockquote>
                 </Card.Body>
               </Card>
 						</Col>
 
-						<Col style={{paddingRight: '5%'}}>
-            	<Card className="rounded pricing card" style = {{background: '#FCAD55'}} >
+						<Col>
+            	<Card style = {{border: 'hidden', borderRadius: '15px', background: '#FCAD55'}} className = "shadow-lg">
+                <h1 className = "white mx-auto text-center pb-3 pt-3" >Enterprise</h1>
                 <Card.Body >
-									<Card.Title>
-										<p className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>ENTERPRISE</p>
-									</Card.Title>
                   <blockquote className="blockquote mb-0">
-
-				  	        <Row>
-						          <p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
-					          </Row>
-					          <Row>
-						          <p className="paragraph-text-2 mx-auto">Unlimited users</p>
-										</Row>
-										<Row>
-											<p className="paragraph-text-2 mx-auto">meeting scheduling</p>
-										</Row>
-										<Row>
-											<p className="paragraph-text-2 mx-auto">pre meeting agenda</p>
-										</Row>
-										<Row style={{marginBottom: '55px'}}>
-											<p className="paragraph-text-2 mx-auto">post meeting feedback</p>
-										</Row>
-										
+                  <Table>
+					          <tr>
+						          <p className="white text-center">Unlimited users</p>
+                    </tr>
+                    <td></td>
+										<tr>
+											<p className="white text-center">meeting scheduling</p>
+										</tr>
+                    <td></td>
+										<tr>
+											<p className="white text-center">pre meeting agenda</p>
+										</tr>
+                    <td></td>
+										<tr>
+											<p className="white text-center">post meeting feedback</p>
+										</tr>
+                  </Table>
 
 									</blockquote>
 									<blockquote className="blockquote mb-0">
-									  <Row className = "center" style= {{color:'#FCAD55'}}>
-              			  <Button variant="outline-light" size = "lg" className = "btn-rounded-2" href = "/signin">
-										  contact us</Button>
+									  <Row className = "center pt-3" style= {{color:'#FCAD55'}}>
+              			  <Button variant="outline-light" className = "btn-rounded-2 w-50" href = "/signin">contact us</Button>
                     </Row>    
 									</blockquote>
                 </Card.Body>
@@ -296,14 +284,12 @@ export class Pricing extends React.Component {
 					<Row>
 						<h1 className="title mx-auto" style = {{color:'#FCAD55'}}>Affected by Covid-19?</h1>
 					</Row>
-					<Row style = {{paddingTop: '5%'}}>
-						<Col lg={1}></Col>
+					<Row>
 						<Col>
-						<h1 className="paragraph-text mx-auto" style = {{color:'#837E7E'}}>
-							Circal understands how Covid-19 has affected businesses. Contact us along 
-							with a message of how your business was affected and how Circal can help.</h1>
+						<h2 className="paragraph-text mx-auto pt-2" style = {{color:'#837E7E'}}>
+							Circal understands how Covid-19 has affected businesses. <a style = {{color: 'orange'}} href="/contact">Contact us</a> along<br></br>
+							with a message of how your business was affected and how Circal can help.</h2>
 						</Col>
-						<Col lg={1}></Col>
 					</Row>
 
           <Row>
