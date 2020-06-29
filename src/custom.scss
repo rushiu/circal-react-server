@@ -13,14 +13,27 @@ $gray: #B0B4C3 !default;
 
 $link-color: $primary !default;
 
+
+$embed-responsive-aspect-ratios: (
+(20, 5),
+  (21 9),
+  (16 9),
+  (4 3),
+  (1 1)
+) !default;
+
+
 .btn-primary, .btn-success, .btn-secondary, .btn-warning {
     color: white !important;
 }
 
 .btn-outline-light:hover {
-    color: $primary !important;
+    color: $gray !important;
 }
 
+.btn-outline-gray:hover {
+    color: white !important;
+}
 
 .btn-outline-primary:hover {
     color: white !important;

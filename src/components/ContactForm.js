@@ -9,7 +9,7 @@ export class ContactForm extends React.Component {
     render() {
         return (
             <Container className ="mx-auto center" fluid>
-                <Card className = "shadow-lg p-4 mb-1 rounded" style ={{width: '35%'}} border = "light">
+                <Card className = "shadow-lg p-4 rounded w-50" border = "light">
                     <Form>
                         <Form.Row>
                             <Col>
@@ -20,7 +20,7 @@ export class ContactForm extends React.Component {
                             </Col>
                         </Form.Row>
 
-                        <Form.Row style = {{'padding-top': '1rem'}}>
+                        <Form.Row className = "pt-3">
                             <Form.Group as={Col}>
                                 <Form.Control type="company" placeholder="Company" />
                             </Form.Group>
@@ -34,11 +34,12 @@ export class ContactForm extends React.Component {
 
                         <Form.Row>
                             <Form.Group as= {Col} controlId="exampleForm.ControlTextarea1" fluid>
-                                <Form.Control className = "form-control" as="textarea" rows="5"/>
+                                <Form.Control className = "form-control" as="textarea" rows="5" placeholder = "Type here..."/>
                             </Form.Group>
                         </Form.Row>
+                        
                         <Form.Row>
-                        <Button style = {{border: 'hidden', width: '40%'}} variant="success" type="submit"  size = "lg" className = "mx-auto btn-rounded"> Submit </Button> 
+                            <Button style = {{border: 'hidden', width: '15vw'}} variant="success" type="submit"  size = "lg" className = "mx-auto btn-rounded"> Submit </Button> 
                         </Form.Row>
                     </Form>
                 </Card>

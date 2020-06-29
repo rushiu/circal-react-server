@@ -6,11 +6,19 @@ import {SimpleNav} from './SimpleNav.js';
 import {Link} from 'react-router-dom';
 import '.././App.css';
 import '.././css/signup.css';
+import axios from 'axios';
+
 
 export class SignUp extends React.Component {
-    continue = e => {
+    continue = async e => {
         e.preventDefault();
         this.props.nextStep();
+        try {
+            const response = await axios.post('http://localhost:8080/company', {name: "name", licenseId: "someid12344"});
+            console.log('returned data:', response)
+        } catch (e) {
+            console.log(`creating company failed: ${e}`);
+        }
     };
     render() {
 

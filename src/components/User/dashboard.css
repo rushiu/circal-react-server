@@ -20,15 +20,22 @@
 
     padding-left: 30%;
     padding-right: 40%;
+
+}
+
+.center-nav-link:hover {
+    border-width: 15rem;
+    border-left: 15rem;
+    border-color: #F1F3F8;
 }
 
 .title-nav {
-    position: fixed;
-    left: -1vw;
+    position: absolute;
     right: 0;
+    left: -1vw;
     max-width: 100%;
     min-width: 100vw;
-    height: 10%;
+    height: 8%;
     z-index: 3;
     color: #B1B6C6;
 }
@@ -43,6 +50,48 @@
     background: #FBAD97;
 }
 
+.toggle-btn {
+    cursor: pointer;
+    border: hidden;
+    border-radius: 20px !important;
+    color: #B1B6C6 !important;
+}
+
+.toggle-btn:hover {
+    color: #FE838E !important;
+}
+
+.toggle-btn:active{
+    left: '-40vw';
+}
+
+
+.sidebar-links {
+    position: absolute;
+     left: 1.5rem;
+    right: 0;
+    justify-content: center;
+    display: flex;
+}
 .grey-title {
     color: #B1B6C6;
 }
+
+.rounded-card {
+    background: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%) !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    border-radius: 10px !important;
+    color: white;
+    width: 15vw;
+    height: 30vh;
+}
+
+.card-header-todo {
+    border: hidden !important;
+}
+
+.todo-list-bg {
+    background-color: transparent !important;
+    border: hidden !important;
+}
+

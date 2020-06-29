@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, Navbar, Image, Button, ButtonToolbar, Table} from 'react-bootstrap';
+import {Nav, Navbar, Image, Button, ButtonToolbar, Table, ResponsiveEmbed} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {FeaturesSection} from './FeaturesSection.js';
@@ -24,27 +24,25 @@ const OtherStyle = {
 
 const HeroImageContainer = {
   position: 'absolute',
-  top:0,
   left:0,
   zIndex:0,
-  minWidth: '100%',
-  width:'100%',
+  minHeight: '50%'
 };
 
 const BottomImageContainer = {
   position: 'absolute',
   left: 0,
   right: 0,
-  zIndex:0,
+  zIndex:0
 };
 
 export class Home extends React.Component {
     render() {
       return (
-        <Container fluid>
+        <Container className = "min-vw-100" fluid>
           <NavigationBar />
           <Container style = {HeroImageContainer} sm = {12} md = {12} fluid>
-            <Image src="/assests/PinkGradient.svg" style={HeroImageContainer} fluid/>
+            <Image src="/assests/PinkGradient.svg" style={HeroImageContainer} className = "min-vw-100 w-100 mx-0 px-0 sticky-top" fluid/>
             <Container style = {OtherStyle} fluid>
               <Row>
                 <Container className = "font header">
@@ -61,7 +59,7 @@ export class Home extends React.Component {
                   </Row>
 
                   <Row className = "center">
-                      <Button variant="outline-light" style = {{width: '20%'}} size = "lg" className = "btn-rounded" href = "/signin">sign in</Button>
+                      <Button variant="outline-light" style = {{width: '20%'}} className = "btn-rounded" href = "/signin">sign in</Button>
                   </Row>
                 </Container>
               </Row>
@@ -73,13 +71,14 @@ export class Home extends React.Component {
               <Row style = {{marginBottom: '5%'}}>
                 <ProblemStats/>
               </Row>
-              <Row style = {{marginBottom: '35%'}}>
+              <Row className = "pl-0 ml-0 mr-0 pr-0">
                 <FeaturesSection/>
               </Row>
-              <Row style = {{marginTop: '50%'}}>
+              <Row style = {{marginTop: '10%'}}>
                 <GetStartedCard/>
               </Row>
-              <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
+              
+              <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg"></Image>
             </Container>
             
           </Container>
