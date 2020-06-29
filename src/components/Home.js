@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, Navbar, Image, Button, ButtonToolbar, Table} from 'react-bootstrap';
+import {Nav, Navbar, Image, Button, ButtonToolbar, Table, ResponsiveEmbed} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {FeaturesSection} from './FeaturesSection.js';
@@ -25,7 +25,8 @@ const OtherStyle = {
 const HeroImageContainer = {
   position: 'absolute',
   left:0,
-  zIndex:0
+  zIndex:0,
+  minHeight: '50%'
 };
 
 const BottomImageContainer = {
@@ -70,10 +71,10 @@ export class Home extends React.Component {
               <Row style = {{marginBottom: '5%'}}>
                 <ProblemStats/>
               </Row>
-              <Row style = {{marginBottom: '35%'}}>
+              <Row className = "pl-0 ml-0 mr-0 pr-0">
                 <FeaturesSection/>
               </Row>
-              <Row style = {{marginTop: '50%'}}>
+              <Row style = {{marginTop: '10%'}}>
                 <GetStartedCard/>
               </Row>
               
