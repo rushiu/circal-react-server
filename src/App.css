@@ -18,7 +18,7 @@
   font-size: 5rem;
 }
 .stats:hover {
-  color: #FC9A49 !important;
+  color: rgb(250, 127, 164)!important;
 }
 
 .bg-light.scrolled {
