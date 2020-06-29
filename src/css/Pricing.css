@@ -7,7 +7,7 @@
     border: none;
     border-radius: 1rem;
     transition: all 0.2s;
-    box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   }
   
   .pricing hr {
@@ -67,7 +67,7 @@
     z-index: 2;
     font-style: normal;
     font-weight: 500;
-    font-size: calc(35px + 2vmin);
+    font-size: calc(30px + 2vmin);
     text-align: center;
   }
 
@@ -93,13 +93,13 @@
 
   .rounded {
     border-radius: 50px;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .paragraph-text {
     color: white;
     font-family: 'Jost';
     font-size: calc(5px + 2vmin);
-    padding: 3px;
     text-align: center;
   }
 
@@ -107,6 +107,7 @@
     color: '#837E7E';
     font-family: 'Jost';
     font-size: calc(5px + 2vmin);
+    padding: 1px;
     text-align: left;
   }
 
