@@ -7,6 +7,10 @@ import './../css/Pricing.css';
 import './../App.css';
 import {GrayFooter} from './GrayFooter';
 import Accordion from 'react-bootstrap/Accordion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import {faEnvelope, faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 
 
@@ -29,15 +33,15 @@ export class Pricing extends React.Component {
   constructor() {
     super()
     this.state = {
-      arrow1: 'ʌ',
+      arrow1:  <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
       arrowState1: '',
-      arrow2: 'ʌ',
+      arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
       arrowState2: '',
-      arrow3: 'ʌ',
+      arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
       arrowState3: '',
-      arrow4: 'ʌ',
+      arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
       arrowState4: '',
-      arrow5: 'ʌ',
+      arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
       arrowState5: ''
     }
   }
@@ -46,22 +50,22 @@ export class Pricing extends React.Component {
       console.log ('1st acc')
       const opt = this.state.arrowState1
       if (opt.length == 0) {
-        this.setState({arrow1: 'v'})
+        this.setState({arrow1: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
         this.setState({arrowState1: 'on'})
       } else {
-        this.setState({arrow1: 'ʌ'})
+        this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
         this.setState({arrowState1: ''})
       }
-      this.setState({arrow2: 'ʌ'})
+      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow3: 'ʌ'})
+      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow4: 'ʌ'})
+      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState4: ''})
 
-      this.setState({arrow5: 'ʌ'})
+      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState5: ''})
   }
 
@@ -69,22 +73,22 @@ export class Pricing extends React.Component {
       console.log ('2 acc')
       const opt = this.state.arrowState2
       if (opt.length == 0) {
-        this.setState({arrow2: 'v'})
+        this.setState({arrow2: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
         this.setState({arrowState2: 'on'})
       } else {
-        this.setState({arrow2: 'ʌ'})
+        this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
         this.setState({arrowState2: ''})
       }
-      this.setState({arrow1: 'ʌ'})
+      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow3: 'ʌ'})
+      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow4: 'ʌ'})
+      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState4: ''})
 
-      this.setState({arrow5: 'ʌ'})
+      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState5: ''})
   }
 
@@ -92,22 +96,22 @@ export class Pricing extends React.Component {
       console.log ('3 acc')
       const opt = this.state.arrowState3
       if (opt.length == 0) {
-        this.setState({arrow3: 'v'})
+        this.setState({arrow3: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
         this.setState({arrowState3: 'on'})
       } else {
-        this.setState({arrow3: 'ʌ'})
+        this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
         this.setState({arrowState3: ''})
       }
-      this.setState({arrow1: 'ʌ'})
+      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow2: 'ʌ'})
+      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow4: 'ʌ'})
+      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState4: ''})
 
-      this.setState({arrow5: 'ʌ'})
+      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState5: ''})
   }
 
@@ -115,23 +119,23 @@ export class Pricing extends React.Component {
       console.log ('4 acc')
       const opt = this.state.arrowState4
       if (opt.length == 0) {
-        this.setState({arrow4: 'v'})
+        this.setState({arrow4: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
         this.setState({arrowState4: 'on'})
       } else {
-        this.setState({arrow4: 'ʌ'})
+        this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
         this.setState({arrowState4: ''})
       }
 
-      this.setState({arrow1: 'ʌ'})
+      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow2: 'ʌ'})
+      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow3: 'ʌ'})
+      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow5: 'ʌ'})
+      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState5: ''})
   }
 
@@ -139,23 +143,23 @@ export class Pricing extends React.Component {
       console.log ('5 acc')
       const opt = this.state.arrowState5
       if (opt.length == 0) {
-        this.setState({arrow5: 'v'})
+        this.setState({arrow5: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
         this.setState({arrowState5: 'on'})
       } else {
-        this.setState({arrow5: 'ʌ'})
+        this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
         this.setState({arrowState5: ''})
       }
 
-      this.setState({arrow1: 'ʌ'})
+      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow2: 'ʌ'})
+      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow3: 'ʌ'})
+      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow4: 'ʌ'})
+      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
       this.setState({arrowState4: ''})  
   }
 
@@ -299,7 +303,8 @@ export class Pricing extends React.Component {
 					<Accordion className='faqs' style={{paddingTop:'5%'}}>
             <Card >
               <Accordion.Toggle as={Card.Header} eventKey="0" className='faqsTitle' onClick={this.accordionArrowOnChange1.bind(this)} >
-                <span style = {{fontSize: '20px'}, {float: 'right'}}>{this.state.arrow1} </span>How many teams can I create in the 'team' package?
+              {this.state.arrow1}
+                How many teams can I create in the 'team' package?
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
