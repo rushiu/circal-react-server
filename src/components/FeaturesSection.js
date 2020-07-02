@@ -14,7 +14,7 @@ const SectionBackground = {
 export class FeaturesSection extends React.Component {
     render() {
       return (
-        <Container className = "font grey-header min-vw-100 min-vh-50 mr-0 ml-n2 pl-0 ml-0" style={SectionBackground}>
+        <Container className = "font grey-header min-vw-100 min-vh-50 ml-0 pl-0" style={SectionBackground}>
               <Jumbotron className = "min-vw-100 min-vh-100" fluid>
                 <Row style = {{display: 'flex', justifyContent: 'center', paddingBottom: '3rem'}}>
                     <Col className = "center">

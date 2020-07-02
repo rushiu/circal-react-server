@@ -41,7 +41,9 @@ export class Home extends React.Component {
         <Container className = "min-vw-100" fluid>
           <NavigationBar />
           <Container style = {HeroImageContainer} sm = {12} md = {12} fluid>
-            <Image src="/assests/PinkGradient.svg" style={HeroImageContainer} className = "min-vw-100 w-100 mx-0 px-0 sticky-top" fluid/>
+            <source media="(min-width: 1440px)" srcset="./assests/PinkGradient.svg"/>
+            <source media="(min-width: 780px)" srcset="./assests/PinkHeader.svg"/>
+             <img src="/assests/PinkGradient.svg" style={HeroImageContainer} className = "min-vw-100 mx-0 px-0 sticky-top"/>
             <Container style = {OtherStyle} fluid>
               <Row>
                 <Container className = "font header">
@@ -52,8 +54,8 @@ export class Home extends React.Component {
                   </Row>
 
                   <Row>
-                    <Col lg = {5} className = "mx-auto">
-                      <p className = "paragraph-header animate__animated animate__fadeInDown">Circal is a smart scheduling software for the workplace to make lives easier and teams more efficient.</p> 
+                    <Col lg = {5} md = {5} sm = {6} xs={6} className = "mx-auto">
+                      <p className = "paragraph-header text-center animate__animated animate__fadeInDown">Circal is a smart scheduling software for the workplace to make lives easier and teams more efficient.</p> 
                     </Col>
                   </Row>
 

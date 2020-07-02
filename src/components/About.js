@@ -26,12 +26,12 @@ export class About extends React.Component {
 
         <Container className = "header">
           <Row>
-            <h1 className="title mx-auto">Our Story.</h1>
+            <h1 className="title mx-auto  animate__animated animate__fadeInDown">Our Story.</h1>
           </Row>
 
           <Row>
-            <Col lg = {7} className = "mx-auto">
-            <p className = "paragraph-header font">Circal began as a simple project 
+            <Col lg = {7} className = "mx-auto ">
+            <p className = "paragraph-header font  animate__animated animate__fadeInDown">Circal began as a simple project 
             make anyone’s lives easier. As students in college, we had issues 
             finding free time between schedules to do group projects. In our 
             internships, scheduling meetings took a long time. So, we pivoted 
