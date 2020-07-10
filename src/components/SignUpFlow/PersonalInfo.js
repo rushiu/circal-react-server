@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Button, Form, Row, Col, ProgressBar, Image} from 'react-bootstrap'
+import {Container, Button, Form, Row, Col, ProgressBar, Image, Pagination} from 'react-bootstrap'
 
 export class PersonalInfo extends React.Component {
     continue = e => {
@@ -15,7 +15,7 @@ export class PersonalInfo extends React.Component {
     render() {
         const {values, inputChange} = this.props;
         return(
-            <Container className = "w-100 font"    fluid>
+            <Container className = "w-100 font" fluid>
                 <Row className = "w-25 pt-5 pl-5 mx-auto">
                     <Image src="./assests/GradientLogo.svg" className = "mx-auto pl-3" />
                 </Row>
@@ -45,12 +45,14 @@ export class PersonalInfo extends React.Component {
                 </Row>
                 <Row className = "w-75 pt-5 mx-auto">
                     <Col className = "w-25">
-                    <Button style = {{fontWeight: 'bold'}} size = "lg" variant = "outline-primary" 
-                    className = "mx-auto btn-rounded" onClick = {this.back}>previous</Button>
+                        <Pagination>
+                            <Pagination.Prev className = "font-weight-bold mx-auto" onClick = {this.back}>Previous</Pagination.Prev>
+                        </Pagination>
                     </Col>
                     <Col className = "w-25">
-                        <Button style = {{fontWeight: 'bold'}} size = "lg" variant = "outline-primary" 
-                        className = "mx-auto btn-rounded" onClick = {this.continue}>next</Button>
+                        <Pagination>
+                            <Pagination.Next className = "font-weight-bold mx-auto" onClick = {this.continue}>Next</Pagination.Next>
+                        </Pagination>
                     </Col>
                 </Row>
             </Container>

@@ -3,7 +3,7 @@ import {Nav, Navbar, Image, Button, ButtonToolbar, Table, ResponsiveEmbed} from 
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {FeaturesSection} from './FeaturesSection.js';
-import {SignUp} from './SignUp.js';
+import {SignUp} from './SignUpFlow/SignUp.js';
 import {Router, Route, Link} from 'react-router-dom';
 import SignIn from './SignIn.js';
 import '.././App.css';
@@ -25,6 +25,7 @@ const OtherStyle = {
 const HeroImageContainer = {
   position: 'absolute',
   left:0,
+  right: 0,
   zIndex:0,
 };
 
@@ -32,6 +33,7 @@ const BottomImageContainer = {
   position: 'absolute',
   left: 0,
   right: 0,
+  marginBottom: 0,
   zIndex:0
 };
 
@@ -72,14 +74,15 @@ export class Home extends React.Component {
               <Row style = {{marginBottom: '5%'}}>
                 <ProblemStats/>
               </Row>
-              <Row className = "pl-0 ml-0 mr-0 pr-0">
+              <Row className = "pb-5">
                 <FeaturesSection/>
               </Row>
-              <Row style = {{marginTop: '10%'}}>
+              <Row className = "pt-5">
                 <GetStartedCard/>
               </Row>
-              
+              <Row>
               <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg"></Image>
+              </Row>
             </Container>
             
           </Container>

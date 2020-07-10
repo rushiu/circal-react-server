@@ -2,10 +2,9 @@ import React, {useState} from 'react';
 import {Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card, Fade} from 'react-bootstrap';
 import {Jumbotron, Form, Table} from 'react-bootstrap';
-import {SimpleNav} from './SimpleNav.js';
+import {SimpleNav} from '../SimpleNav.js';
 import {Link} from 'react-router-dom';
-import '.././App.css';
-import '.././css/signup.css';
+import '../../css/signup.css';
 import axios from 'axios';
 
 
@@ -62,9 +61,6 @@ export class SignUp extends React.Component {
                                     </Form.Row>
                                     <Form.Row className = "pt-3">
                                         <Form.Control type = "work email" placeholder = "Work Email" onChange = {inputChange('email')} value = {values.email}/>
-                                    </Form.Row>
-                                    <Form.Row className = "pt-3">
-                                        <Form.Control type = "company" placeholder = "Company Name" onChange = {inputChange('company')} value = {values.company}/>
                                     </Form.Row>
                                     <Form.Row className = "pt-3">
                                         <Form.Check type="checkbox" label="Agree to Terms of Service"/>

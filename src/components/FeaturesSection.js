@@ -14,7 +14,7 @@ const SectionBackground = {
 export class FeaturesSection extends React.Component {
     render() {
       return (
-        <Container className = "font grey-header min-vw-100 min-vh-50 ml-0 pl-0" style={SectionBackground}>
+        <Container className = "font grey-header min-vw-100 w-100 ml-0 pl-0 pr-0" style={SectionBackground}>
               <Jumbotron className = "min-vw-100 min-vh-100" fluid>
                 <Row style = {{display: 'flex', justifyContent: 'center', paddingBottom: '3rem'}}>
                     <Col className = "center">
@@ -67,9 +67,6 @@ export class FeaturesSection extends React.Component {
                             <Image src="./assests/HomeFeaturesIcon.svg"></Image>
                         </ResponsiveEmbed>
                         </Row>
-                        <Row>
-                            <Button style = {{ width: '50%', border: 'hidden', color: 'white'}} className = "btn-rounded mx-auto" size = "lg" variant = "gray" href = "/features">learn more</Button>
-                        </Row>
                     </Col>
 
                     <Col style = {{width: '33.33%'}} fluid>
@@ -109,6 +106,9 @@ export class FeaturesSection extends React.Component {
                             </Col>
                         </Row>
                     </Col>
+            </Row>
+            <Row className = "mx-auto w-50">
+                            <Button style = {{border: 'hidden', color: 'white'}} className = "btn-rounded w-25 mx-auto" size = "lg" variant = "gray" href = "/features">learn more</Button>
             </Row>
           </Jumbotron>
         </Container>

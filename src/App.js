@@ -10,13 +10,12 @@ import {Pricing} from './components/Pricing.js';
 import {Features} from './components/Features.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
-import { SignUp } from './components/SignUp';
 import {Password} from './components/Password.js';
-import { PersonalInfo } from './components/PersonalInfo';
+import { PersonalInfo } from './components/SignUpFlow/PersonalInfo';
 import {SignIn} from './components/SignIn.js';
 import CalendarPicker from './components/CalendarPicker';
 import UserDashboard from './components/User/UserDashboard';
-import SignUpNext from './components/SignUpNext';
+import SignUpNext from './components/SignUpFlow/SignUpNext';
 
 const HeroImageContainer = {
   position: 'absolute',
