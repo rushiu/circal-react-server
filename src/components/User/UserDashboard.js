@@ -5,7 +5,11 @@ import { SideNavigation } from './SideNavigation.js';
 import {SignInNav} from '.././SignInNav.js';
 import './dashboard.css';
 import {TopNav} from './TopNav'
-import NavigationBar from '../NavigationBar.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faSquareFull);
 
 
 const NavBarStyle = {
@@ -43,6 +47,7 @@ export class UserDashboard extends React.Component {
                         <SideNavigation/>
                         <Container className = "pr-0 pl-0">
                             <Row className = "pt-4 pl-5 clearfix" style = {{display: 'flex', justifyContent: 'end'}}>
+                                
                                 <Col className = "col-lg-9 float-left">
                                     <h2 className = "grey-title">This Week</h2>
                                 </Col>
@@ -50,9 +55,17 @@ export class UserDashboard extends React.Component {
                                     <Row className = "mx-auto">
                                         <Button variant="gray" style = {{border: 'hidden', color: 'white'}} size = "lg" href = "/create_meeting" className = "btn-rounded mx-auto">create a meeting +</Button>
                                     </Row>
-                                    <Row className = "center pt-5 mt-5">
-                                        <Card style = {{border: 'hidden', background: 'linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%)', boxShadow: '1px 1px 15px #FE838E', borderRadius: '0.5rem', width: '17rem', height: '8rem'}}>
-                                            <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold', paddingTop: '2%'}}><h3>meetings</h3></Card.Text>
+
+                                    <Row className = "center pt-5 mt-5">           
+                                        <Card style = {{border: 'hidden', background: 'linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%)', borderRadius: '0.5rem', width: '17rem', height: '8rem'}}>
+                                            <Row lg = {12}>
+                                                <Col lg = {1}>
+                                                    <FontAwesomeIcon icon = "square-full" className = "white" style ={{opacity: '40%', fontSize: '4rem'}}/>
+                                                </Col>
+                                                <Col lg = {11}>
+                                                    <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold'}}><h5>meetings</h5></Card.Text>
+                                                </Col>
+                                            </Row>
                                         </Card>
                                     </Row>
                                     <Row className = "center pt-4">

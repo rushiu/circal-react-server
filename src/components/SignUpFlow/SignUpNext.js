@@ -39,7 +39,7 @@ export class SignUpNext extends React.Component {
         const values = {firstName, lastName, company, role, email, password}
 
         switch(step) {
-            case 3:
+            case 1:
                 return(
                     <SignUp nextStep = {this.nextStep} inputChange = {this.inputChange} values = {values}/>
                 );
@@ -47,11 +47,11 @@ export class SignUpNext extends React.Component {
                     return(
                         <ChooseFlow nextStep = {this.nextStep} prevStep = {this.prevStep}  inputChange = {this.inputChange} values = {values}/>
                     );
-            case 4:
+            case 3:
                 return(
                     <PersonalInfo nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
                     );
-            case 1:
+            case 4:
                 return (
                 <BillingInfo nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
                 );

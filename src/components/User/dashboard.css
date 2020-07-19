@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background:#F1F3F8;
+    background:white;
   
     position: fixed;
     top: 0;
@@ -47,7 +47,7 @@
     min-width: 13.1%;
     min-height: 10%;
     height: 100%;
-    background: #FBAD97;
+    color: white !important;
 }
 
 .toggle-btn {
@@ -67,15 +67,51 @@
 
 
 .sidebar-links {
-    position: absolute;
-     left: 1.5rem;
-    right: 0;
-    justify-content: center;
-    display: flex;
+    font-size: large;
+    text-align: center;
+    color: lightgrey !important;
+    justify-content: space-between;
+    right: -15px;
+    min-width: 13vw;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color:  #FE838E!important;
+    background: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%) !important;
+    background: rgba(254,131,142,.2) !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1) !important;
+    border-radius: 0px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05) !important;
+}
+
 .grey-title {
     color: #B1B6C6;
 }
+
+.circle {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+ .circle:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+  }
+.circle:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+  }
+  
 
 .rounded-card {
     background: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%) !important;

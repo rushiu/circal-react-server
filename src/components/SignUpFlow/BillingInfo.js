@@ -1,14 +1,11 @@
-import {React, useState} from 'react'
-import {Container, Button, Row, Col, Image, CardDeck, Card, ResponsiveEmbed, Pagination} from 'react-bootstrap'
+import React from 'react'
+import {Container, Button, Form, Row, Col, ProgressBar, Image, CardDeck, Card, ToggleButtonGroup, ResponsiveEmbed, Pagination} from 'react-bootstrap'
 import '../../css/signup.css'
 
 const WhiteBackground = {
     minHeight: '100vh',
     minWidth: '100vw',
     width: '100vw',
-    left: '-15px',
-    right: '-15px',
-    position: 'fixed',
     backgroundColor: 'white'
 }
 export class BillingInfo extends React.Component {
@@ -23,8 +20,6 @@ export class BillingInfo extends React.Component {
     };
     render() {
         const {values, inputChange} = this.props;
-        const [value, setValue] = useState([1, 3]);
-        const handleChange = (val) => setValue(val);
         return(
             <Container className = "sign-up-full-bg animate__animated animate__fadeInUp font" fluid>
                 <Container className = "min-vw-100 pl-0 ml-0" style = {WhiteBackground} fluid>

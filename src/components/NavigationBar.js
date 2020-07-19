@@ -17,7 +17,7 @@ export class NavigationBar extends React.Component {
     render() {
         
       return (
-            <Navbar expand="lg" scrolling light variant="dark" style = {NavBarStyle} className = "font navbar-fixed-top" fluid>
+            <Navbar expand="lg" scrolling light variant="dark" style = {NavBarStyle} className = "font fixed-top" fluid>
                 <Navbar.Brand style = {{fontSize: '2rem', paddingLeft: '1rem'}} href="/">
                     <Row>
                     <img
