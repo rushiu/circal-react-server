@@ -16,9 +16,7 @@ const BottomImageContainer = {
     left: 0,
     minWidth:'100%',
     width: '100%',
-    backgroundColor: '#B0B4C3',
-    zIndex:0
-
+    zIndex: 0
   };
 
   const NavBarStyle = {
@@ -27,44 +25,47 @@ const BottomImageContainer = {
     right: 0,
     marginTop: '1rem',
     width: '100%',
+    zIndex: 1
 };
 
-export class GrayFooter extends React.Component {
+
+
+export class PinkFooter extends React.Component {
     render() {
         return(
-            <Container style={{border: 'black solid'}, {backgroundColor: '#EEF1F5'}, {fontFamily: 'Jost'}}>
-                <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer} sticky='bottom'/>
-                    <Row style={{paddingTop:'5%'}}>
-                        <Col lg={2} md={2} xs={1}>
+            <Container style={BottomImageContainer} style={{paddingTop:'15%'}}>
+                <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg" sticky='bottom'/>
+                    <Row style={{marginTop: '65%'}}>
+                        <Col lg={2} md={3} xs={2}>
                         <Row>
-                            <Col>
+                            <Col style={{marginLeft: '5%'}}>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: 'black'}}  href="/features"> features </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/features"> features </a>
                                 </Row>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: 'black'}}  href="/pricing"> pricing </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/pricing"> pricing </a>
                                 </Row>
                                 <Row style={{marginBottom: '7px'}}>
-                                    <a style={{fontSize: '10px'}, {color: 'black'}}  href="/about"> about </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/about"> about </a>
                                 </Row>
                             </Col>
                             <Col>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: 'black'}}  href="/contact"> contact </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/contact"> contact </a>
                                 </Row>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: 'black'}}  href="/signin"> login </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/signin"> login </a>
                                 </Row>
                                 <Row style={{marginBottom: '7px'}}>
-                                    <a style={{fontSize: '10px'}, {color: 'black'}}  href="/signup"> signup </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/signup"> signup </a>
                                 </Row>
                             </Col>
                         </Row>
                         </Col>
                         <Col style={{float:'right'}, {textAlign: 'right'}, {alignContent: 'right'}, {paddingLeft: '23%'}}>
                             <Row>
-                                <a className='logo' style={{marginTop: '7px'}}  href="/">o</a>
-                                <a className='logoTitle' style={{fontSize: '40px'}, {color: 'black'}}  href="/">circal</a>
+                                <p className='logoWhite' style={{marginTop: '7px'}}  href="/">o</p>
+                                <a className='logoTitle' style={{fontSize: '40px'}, {color: 'white'}}  href="/">circal</a>
                             </Row>
                                                             
 
@@ -77,16 +78,16 @@ export class GrayFooter extends React.Component {
                                 </Col>
                                 <Col style={{padding:'3px'}, {alignContent: 'center'}, {float: 'center'}, {textAlign: 'center'}}>
                                     <a href ="https://www.linkedin.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faLinkedin} size='2x'/>
+                                        <FontAwesomeIcon icon={faLinkedin} style={{color: 'white'}} size='2x'/>
                                     </a>
                                     <a href = "https://instagram.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faFacebookSquare} size='2x'/>
+                                        <FontAwesomeIcon icon={faFacebookSquare} style={{color: 'white'}} size='2x'/>
                                     </a>
                                     <a href = "https://facebook.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faTwitterSquare} size='2x'/>
+                                        <FontAwesomeIcon icon={faTwitterSquare} style={{color: 'white'}} size='2x'/>
                                     </a>
                                     <a href = "https://twitter.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faInstagram} size='2x'/>
+                                        <FontAwesomeIcon icon={faInstagram} style={{color: 'white'}} size='2x'/>
                                     </a>
                                 </Col>
                             </Row>
@@ -94,11 +95,11 @@ export class GrayFooter extends React.Component {
                                 <Col lg={4} md={2} xs={1}>
                                     
                                 </Col>
-                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'black'}}  href="/"> copyright </a>
-                                <p style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'black'}}  href="/"> - </p>
-                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'black'}}  href="/"> security </a>
-                                <p style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'black'}}  href="/"> - </p>
-                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'black'}}  href="/"> terms </a>
+                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'white'}}  href="/"> copyright </a>
+                                <p style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'3px'}, {color: 'white'}}  href="/"> - </p>
+                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'white'}}  href="/"> security </a>
+                                <p style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'3px'}, {color: 'white'}}  href="/"> - </p>
+                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'white'}}  href="/"> terms </a>
                                      
                             </Row>
                         </Col>
@@ -110,4 +111,4 @@ export class GrayFooter extends React.Component {
     }
 }
 
-export default GrayFooter;
+export default PinkFooter;

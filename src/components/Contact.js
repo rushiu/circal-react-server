@@ -46,7 +46,7 @@ export class Contact extends React.Component {
                     <Row className = "mt-5 pt-5 w-100">
                         <ContactForm/>
                     </Row>
-                    <Row className = "mb-0 pb-0" fluid>
+                    <Row className = "mb-0 pb-0" style={{marginTop: '5%'}} fluid>
                         <GrayFooter/>
                     </Row>
                 </Container>

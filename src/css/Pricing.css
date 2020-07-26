@@ -143,4 +143,28 @@
     text-decoration-color: #FCAD55
   }
 
+  @font-face {
+    font-family: 'Lovelo';
+    src: local('Lovelo'), url(../fonts/Lovelo-LineLight.ttf) format('truetype');
+  }
   
+  .logo {
+    font-family: 'Lovelo';
+    float: right;
+    font-size: 40px;
+    padding: 5px;
+    color: black;
+  }
+  .logoTitle {
+    float: right;
+    font-size: 40px;
+    padding: 5px;
+  }
+
+  .logoWhite {
+    font-family: 'Lovelo';
+    float: right;
+    font-size: 40px;
+    padding: 5px;
+    color: white;
+  }

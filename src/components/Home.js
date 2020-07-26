@@ -10,6 +10,8 @@ import '.././App.css';
 import {GetStartedCard} from './GetStartedCard.js';
 import {ProblemStats} from './ProblemStats.js';
 import {NavigationBar} from './NavigationBar.js';
+import {PinkFooter} from './PinkFooter';
+
 
 
 
@@ -77,7 +79,9 @@ export class Home extends React.Component {
                 <GetStartedCard/>
               </Row>
               
-              <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg"></Image>
+              <Row style = {{marginTop: '50%'}}>
+                <PinkFooter/>
+              </Row>
             </Container>
             
           </Container>
