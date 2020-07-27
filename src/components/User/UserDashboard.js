@@ -8,54 +8,45 @@ import {TopNav} from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from "@fullcalendar/interaction";
+import timeGridPlugin from '@fullcalendar/timegrid';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 library.add(faSquareFull);
 
-
-const NavBarStyle = {
-    position: 'absolute',
-    right: '0',
-    minWidth: '96%',
-    height: '8%',
-    zIndex:1
-};
-
-const MainContainerStyle = {
-    position: 'absolute',
-    paddingTop: '8rem',
-    right: '0',
-    bottom: '0',
-    minWidth: '85%',
-    minHeight: '92%',
-    zIndex: 2,
-    background: 'yellow'
-}
-
-const ProfileFiller = {
-    backgroundColor: 'gray',
-    borderRadius: '50%',
-    width:'100',
-    height:'100',
-    zIndex: 2
-}
 export class UserDashboard extends React.Component {
+    handleDateClick = (arg) => { // bind with an arrow function
+        alert(arg.dateStr)
+      }
     render() {
-
         return(
             <Container className = "dashboard-bg font" fluid>
                         <TopNav/>
                         <SideNavigation/>
                         <Container className = "pr-0 pl-0">
                             <Row className = "pt-4 pl-5 clearfix" style = {{display: 'flex', justifyContent: 'end'}}>
-                                
                                 <Col className = "col-lg-9 float-left">
-                                    <h2 className = "grey-title">This Week</h2>
+                                    <FullCalendar
+                                        style = {{zIndex: '3'}}
+                                        themeSystem = 'bootstrap4'
+                                        className = "ml-5 cyborg"
+                                        plugins={[ timeGridPlugin, dayGridPlugin]}
+                                        headerToolbar = {{
+                                            left: 'prev,next today',
+                                            center: 'title',
+                                            right: 'timeGridWeek,timeGridDay'
+                                        }}
+                                        initialView="timeGridDay"
+                                        dateClick = {this.handleDateClick}
+                                    />
                                 </Col>
+                                
                                 <Col className = "my-auto pr-0 col-lg-3 float-right" >
                                     <Row className = "mx-auto">
                                         <Button variant="gray" style = {{border: 'hidden', color: 'white'}} size = "lg" href = "/create_meeting" className = "btn-rounded mx-auto">create a meeting +</Button>
                                     </Row>
-
                                     <Row className = "center pt-5 mt-5">           
                                         <Card style = {{border: 'hidden', background: 'linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%)', borderRadius: '0.5rem', width: '17rem', height: '8rem'}}>
                                             <Row lg = {12}>
