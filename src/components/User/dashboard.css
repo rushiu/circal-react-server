@@ -13,6 +13,49 @@
     z-index: -1;
 }
 
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+    color: #B1B6C6;
+  }
+
+  .fc .fc-timegrid-slot {
+    height: 1.5em;
+    border-bottom: 0;
+    color: #B1B6C6;
+}
+
+.fc .fc-button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0.2em 0.65em !important;
+    font-size: 1em;
+    line-height: 1.5;
+    border-radius: 0.25em;
+    border: hidden !important;
+    background-color: transparent !important;
+    font-weight: bolder !important;
+    color: #7367F0 !important;
+}
+
+.fc .fc-timegrid-col.fc-day-today {
+    background-color: #ffffff !important;
+    background-color: var(--fc-today-bg-color, #ffffff) !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: #ffffff !important;
+    background-color: var(--fc-today-bg-color, #ffffff) !important;
+}
+
+.fc .fc-toolbar-title {
+    font-size: 1.2em !important;
+    color: #B1B6C6;
+    margin: 0;
+}
 
 
 .center-nav-link {
@@ -133,3 +176,26 @@
     border: hidden !important;
 }
 
+.pink-meeting-count-card {
+    border: hidden !important;
+    background: linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%);
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 100px;
+}
+
+.green-notifications-card {
+    border: hidden !important;
+    background: linear-gradient(158.55deg, #90F7EC 0%, #32CCBC 100%);
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 100px;
+}
+
+.purple-tasks-left-card {
+    border: hidden !important;
+    background: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%);
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 100px;
+}

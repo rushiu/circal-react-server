@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Nav, Navbar, Button, Card, Image, CardDeck, Row, Table, Col, CardColumns} from 'react-bootstrap';
+import {Container, Nav, Navbar, Button, Card, Image, CardDeck, Row, Table, Col, Badge, Media} from 'react-bootstrap';
 import './SideNavigation.js'
 import { SideNavigation } from './SideNavigation.js';
 import {SignInNav} from '.././SignInNav.js';
@@ -8,66 +8,48 @@ import {TopNav} from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import interactionPlugin from "@fullcalendar/interaction";
-import timeGridPlugin from '@fullcalendar/timegrid';
-import '@fortawesome/fontawesome-free/css/all.css';
+import CalendarHome from './CalendarHome.js';
 
 library.add(faSquareFull);
 
 export class UserDashboard extends React.Component {
-    handleDateClick = (arg) => { // bind with an arrow function
-        alert(arg.dateStr)
-      }
     render() {
         return(
             <Container className = "dashboard-bg font" fluid>
                         <TopNav/>
                         <SideNavigation/>
-                        <Container className = "pr-0 pl-0">
+                        <Container className = "pr-0 pl-5">
                             <Row className = "pt-4 pl-5 clearfix" style = {{display: 'flex', justifyContent: 'end'}}>
-                                <Col className = "col-lg-9 float-left">
-                                    <FullCalendar
-                                        style = {{zIndex: '3'}}
-                                        themeSystem = 'bootstrap4'
-                                        className = "ml-5 cyborg"
-                                        plugins={[ timeGridPlugin, dayGridPlugin]}
-                                        headerToolbar = {{
-                                            left: 'prev,next today',
-                                            center: 'title',
-                                            right: 'timeGridWeek,timeGridDay'
-                                        }}
-                                        initialView="timeGridDay"
-                                        dateClick = {this.handleDateClick}
-                                    />
+                                <Col lg = {9} md = {5} sm = {3} className = "pt-3">
+                                    <CalendarHome/>
                                 </Col>
                                 
-                                <Col className = "my-auto pr-0 col-lg-3 float-right" >
+                                <Col className = "mr-n5 pt-2 pl-5 float-right" lg = {3} md = {5} sm = {9}>
                                     <Row className = "mx-auto">
-                                        <Button variant="gray" style = {{border: 'hidden', color: 'white'}} size = "lg" href = "/create_meeting" className = "btn-rounded mx-auto">create a meeting +</Button>
+                                        <Button variant="gray"style = {{border: 'hidden', color: 'white'}} href = "/create_meeting" className = "btn-rounded mx-auto">create a meeting +</Button>
                                     </Row>
-                                    <Row className = "center pt-5 mt-5">           
-                                        <Card style = {{border: 'hidden', background: 'linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%)', borderRadius: '0.5rem', width: '17rem', height: '8rem'}}>
-                                            <Row lg = {12}>
-                                                <Col lg = {1}>
-                                                    <FontAwesomeIcon icon = "square-full" className = "white" style ={{opacity: '40%', fontSize: '4rem'}}/>
-                                                </Col>
-                                                <Col lg = {11}>
-                                                    <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold'}}><h5>meetings</h5></Card.Text>
-                                                </Col>
+                                    <Row className = "center pt-5 mt-5">
+                                        <Card className = "pink-meeting-count-card">
+                                            <Row>
+                                                <Media>
+                                                    <Row>
+                                                        <Col>
+                                                            <FontAwesomeIcon icon = "square-full" className = "pt-3 mt-1 ml-4 mr-3" color = "white" size = "5x" style = {{opacity: '40%'}}/>
+                                                            <h2 className = "white mt-n5 ml-5 pl-1">5</h2>
+                                                        </Col>
+                                                        <Media.Body className = "pt-4 pl-4">
+                                                            <p className = "white">Meetings<br></br>this week</p>
+                                                        </Media.Body>
+                                                    </Row>
+                                                </Media>
                                             </Row>
                                         </Card>
                                     </Row>
-                                    <Row className = "center pt-4">
-                                        <Card style = {{border: 'hidden', background: 'linear-gradient(124.44deg, #90F7EC 0%, #32CCBC 100%)', boxShadow: '1px 1px 15px #63E3D5', borderRadius: '0.5rem',  width: '17rem', height: '8rem'}}>
-                                            <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold', paddingTop: '2%'}}><h3>messages</h3></Card.Text>
-                                        </Card>
+                                    <Row className = "center pt-2 mt-2">
+                                        <Card className = "green-notifications-card"/>
                                     </Row>
-                                    <Row className = "center pt-4">
-                                        <Card style = {{border: 'hidden', background: 'linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%)', boxShadow: '1px 1px 15px #9C80F5', borderRadius: '0.5rem',  width: '17rem', height: '8rem'}}>
-                                            <Card.Text className = "font mx-auto" style = {{color: 'white', fontWeight: 'bold', paddingTop: '2%'}}><h3>notifications</h3></Card.Text>
-                                        </Card>
+                                    <Row className = "center pt-2 mt-2">
+                                        <Card className = "purple-tasks-left-card"/>
                                     </Row>
                                 </Col>
                             </Row>
