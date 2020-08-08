@@ -2,13 +2,13 @@ import React from 'react';
 import {Container, Nav, Navbar, Button, Card, Image, CardDeck, Row, Table, Col, Badge, Media} from 'react-bootstrap';
 import './SideNavigation.js'
 import { SideNavigation } from './SideNavigation.js';
-import {SignInNav} from '.././SignInNav.js';
 import './dashboard.css';
 import {TopNav} from './TopNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 import CalendarHome from './CalendarHome.js';
+import Todo from './Todo.js';
 
 library.add(faSquareFull);
 
@@ -17,40 +17,62 @@ export class UserDashboard extends React.Component {
         return(
             <Container className = "dashboard-bg font" fluid>
                         <TopNav/>
-                        <SideNavigation/>
-                        <Container className = "pr-0 pl-5">
-                            <Row className = "pt-4 pl-5 clearfix" style = {{display: 'flex', justifyContent: 'end'}}>
-                                <Col lg = {9} md = {5} sm = {3} className = "pt-3">
+                        <SideNavigation style = {{position: 'fixed'}}/>
+                        <Container className = "pr-0 mr-0" style = {{marginLeft: '12%', minWidth: '85vw'}}>
+                            <Row className = "clearfix w-100 min-vh-100" style = {{padding: '-15px'}}>
+                                <Col lg = {7} md = {12} sm = {12} className = "pt-5 mx-auto min-vh-100">
                                     <CalendarHome/>
                                 </Col>
                                 
-                                <Col className = "mr-n5 pt-2 pl-5 float-right" lg = {3} md = {5} sm = {9}>
-                                    <Row className = "mx-auto">
-                                        <Button variant="gray"style = {{border: 'hidden', color: 'white'}} href = "/create_meeting" className = "btn-rounded mx-auto">create a meeting +</Button>
-                                    </Row>
-                                    <Row className = "center pt-5 mt-5">
-                                        <Card className = "pink-meeting-count-card">
-                                            <Row>
-                                                <Media>
-                                                    <Row>
-                                                        <Col>
-                                                            <FontAwesomeIcon icon = "square-full" className = "pt-3 mt-1 ml-4 mr-3" color = "white" size = "5x" style = {{opacity: '40%'}}/>
-                                                            <h2 className = "white mt-n5 ml-5 pl-1">5</h2>
-                                                        </Col>
-                                                        <Media.Body className = "pt-4 pl-4">
-                                                            <p className = "white">Meetings<br></br>this week</p>
-                                                        </Media.Body>
+                                <Col className = "border-left-divider mr-n5 pr-0 pt-5 min-vh-100" lg = {5} md = {12} sm = {12}>
+                                    <Container className = "mr-n5 pt-2 pl-5 w-100 mx-auto" >
+                                        <Row className = "mx-auto">
+                                            <Button variant="success" style = {{border: 'hidden', color: 'white', width: '40%'}} href = "/create_meeting" className = "btn-rounded mx-auto">create meeting +</Button>
+                                        </Row>
+                                        <Row className = "mx-auto pt-5 center">
+                                            <h5 className = "grey-header">This Week</h5>
+                                        </Row>
+                                        <Row>
+                                            <Card className = "dashboard-small-card mx-auto">
+                                                <Card.Text>
+                                                    <Row className = "center mx-auto pt-3 grey-header">
+                                                        <Row className = "w-100">
+                                                            <Col lg = {4} className = "border-right-divider">
+                                                                <h5 className = "center mx-auto">5</h5>
+                                                            </Col>
+                                                            <Col lg = {4} className = "border-right-divider">
+                                                                <h5 className = "center mx-auto">6</h5>
+                                                            </Col>
+                                                            <Col lg = {4}>
+                                                                <h5 className = "center mx-auto">3</h5>
+                                                            </Col>
+                                                        </Row>
+                                                        <Row className = "w-100">
+                                                            <Col lg = {4} className = "border-right-divider">
+                                                                <p className = "center mx-auto">meetings</p>
+                                                            </Col>
+                                                            <Col lg = {4} className = "border-right-divider">
+                                                                <p className = "center mx-auto">tasks</p>
+                                                            </Col>
+                                                            <Col lg = {4}>
+                                                                <Button variant="link" className = "center mx-auto pt-0" style = {{color: 'grey'}}><p>agendas</p></Button>
+                                                            </Col>
+                                                        </Row>
                                                     </Row>
-                                                </Media>
-                                            </Row>
-                                        </Card>
-                                    </Row>
-                                    <Row className = "center pt-2 mt-2">
-                                        <Card className = "green-notifications-card"/>
-                                    </Row>
-                                    <Row className = "center pt-2 mt-2">
-                                        <Card className = "purple-tasks-left-card"/>
-                                    </Row>
+                                                </Card.Text>
+                                            </Card>
+                                        </Row>
+                                        <Row className = "pt-4">
+                                            <Todo/>
+                                            {/* <Card className = "dashboard-basic-card mx-auto">
+                                                <h6 className = "mx-auto pt-4 grey-header">Tasks Today</h6>
+                                                <Card.Body>
+
+                                                </Card.Body>
+                                                <Button  variant = "gray" style = {{border: 'hidden', color: 'grey', background: '#F1F3F8', fontSize: '.9em'}} href = "/tasks" className = "btn-rounded mx-auto mb-4">View All</Button>
+                                            </Card> */}
+                                        </Row>
+                                    </Container>
                                 </Col>
                             </Row>
                     </Container>

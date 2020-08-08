@@ -11,7 +11,7 @@ library.add(faHome, faPeopleCarry, faComment, faCalendar);
 const SideBarStyle = {
     left: '0', 
     bottom: '0',
-    width: '13%',
+    width: '13vw',
     position: 'fixed',
     minHeight: '100vh',
     background: 'white',
@@ -22,7 +22,7 @@ const SideBarStyle = {
 export class SideNavigation extends React.Component {
     render() {
         return(
-                <Navbar variant="light"  expand="lg" id ="navbarSupportedContent"  style = {SideBarStyle}>
+                <Navbar variant="light" expand="lg" id ="navbarSupportedContent"  style = {SideBarStyle}>
                     <Row>
                         <Nav className = "flex-column sidebar-links" variant = "pills" defaultActiveKey="/user_dashboard">
                             <Nav.Item className = "pb-3">
@@ -37,7 +37,7 @@ export class SideNavigation extends React.Component {
                             </Nav.Item>
                             <Nav.Item className = "pb-3">
                                 <Nav.Link href = "/my_messages" className = "font h6">
-                                    messages
+                                    agendas
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item className = "pb-3">
