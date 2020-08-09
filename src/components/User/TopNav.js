@@ -20,15 +20,13 @@ export class TopNav extends React.Component {
                                 <Row className = "w-100">
                                     <Col lg = {8}>
                                         <Row>
-                                            <Button className = "toggle-btn" variant = "link" aria-label="Toggle navigation">
-                                                <FontAwesomeIcon icon = "bars"/>
-                                            </Button>
-                                            <h5 className = "my-auto pl-2">Home</h5>
+                                            <h5 className = "my-auto pt-2 mt-1 pl-3">Home</h5>
                                         </Row>
                                     </Col>
                                     <Col lg = {2}>
-                                        <Row className="justify-content-end">
-                                            <Media className = "pl-5">
+                                        <Row className="justify-content-end ">
+                                            <ProfileNav/>
+                                            {/* <Media className = "pl-5">
                                                 <Row lg = {12}>
                                                     <Col lg = {2} className = "pt-2 pl-0">
                                                         <FontAwesomeIcon icon = "bell"/>
@@ -46,7 +44,7 @@ export class TopNav extends React.Component {
                                                 width = "50px"
                                                 height = "50px"
                                                 />
-                                            </Media>
+                                            </Media> */}
                                         </Row>
                                     </Col>
                                 </Row>

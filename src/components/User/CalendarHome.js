@@ -9,11 +9,12 @@ import '@fortawesome/fontawesome-free/css/all.css';
 export default class CalendarHome extends React.Component {
     render() {
         return(
-            <Container className = "w-75 ml-0 mx-auto">
+            <Container className = "w-100 ml-0 mx-auto">
                     <FullCalendar
                     style = {{zIndex: '3', display: 'inline-block'}}
                     plugins={[ timeGridPlugin, dayGridPlugin]}
                     contentHeight = '630px'
+                    
                     headerToolbar = {{
                         left: 'prev,next today',
                         center: 'title',

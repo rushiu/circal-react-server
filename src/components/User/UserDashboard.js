@@ -34,7 +34,7 @@ export class UserDashboard extends React.Component {
                                         </Row>
                                         <Row>
                                             <Card className = "dashboard-small-card mx-auto">
-                                                <Card.Text>
+                                                <Card.Text className = "my-auto">
                                                     <Row className = "center mx-auto pt-3 grey-header">
                                                         <Row className = "w-100">
                                                             <Col lg = {4} className = "border-right-divider">
@@ -47,7 +47,7 @@ export class UserDashboard extends React.Component {
                                                                 <h5 className = "center mx-auto">3</h5>
                                                             </Col>
                                                         </Row>
-                                                        <Row className = "w-100">
+                                                        <Row className = "w-100 pt-0 mt-n2">
                                                             <Col lg = {4} className = "border-right-divider">
                                                                 <p className = "center mx-auto">meetings</p>
                                                             </Col>
@@ -64,13 +64,6 @@ export class UserDashboard extends React.Component {
                                         </Row>
                                         <Row className = "pt-4">
                                             <Todo/>
-                                            {/* <Card className = "dashboard-basic-card mx-auto">
-                                                <h6 className = "mx-auto pt-4 grey-header">Tasks Today</h6>
-                                                <Card.Body>
-
-                                                </Card.Body>
-                                                <Button  variant = "gray" style = {{border: 'hidden', color: 'grey', background: '#F1F3F8', fontSize: '.9em'}} href = "/tasks" className = "btn-rounded mx-auto mb-4">View All</Button>
-                                            </Card> */}
                                         </Row>
                                     </Container>
                                 </Col>
