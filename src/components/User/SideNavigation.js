@@ -2,15 +2,16 @@ import React from 'react';
 import {Container, Nav, Navbar, Button, Row, Col, Image} from 'react-bootstrap'
 import {SimpleNav} from '.././SimpleNav.js'
 import './dashboard.css'
-import { faHome, faPeopleCarry, faComment, faCalendar} from '@fortawesome/free-solid-svg-icons';
+import { faHome, faPeopleCarry, faComment, faCalendar, faStickyNote, faNotesMedical} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {TransitionGroup} from 'react-transition-group';
-library.add(faHome, faPeopleCarry, faComment, faCalendar);
+library.add(faHome, faPeopleCarry, faComment, faCalendar, faStickyNote, faNotesMedical);
 
 const SideBarStyle = {
     left: '0', 
     bottom: '0',
+    paddingLeft: '15px',
     width: '13vw',
     position: 'fixed',
     minHeight: '100vh',
@@ -19,40 +20,40 @@ const SideBarStyle = {
     zIndex: '0'
 }
 
-export class SideNavigation extends React.Component {
-    render() {
+function SideNavigation({activeURL}) {
         return(
                 <Navbar variant="light" expand="lg" id ="navbarSupportedContent"  style = {SideBarStyle}>
-                    <Row>
-                        <Nav className = "flex-column sidebar-links" variant = "pills" defaultActiveKey="/user_dashboard">
-                            <Nav.Item className = "pb-3">
-                                <Nav.Link href = "/user_dashboard" className = "h6">
-                                    home
+                    <Row className = "my-auto">
+                        <Nav className = "flex-column sidebar-links font" variant = "pills" defaultActiveKey={activeURL}>
+                            <Nav.Item className = "pb-4">
+                                <Nav.Link href = "/user_dashboard">
+                                        DASHBOARD
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className = "pb-3">
-                                <Nav.Link href = "/my_team" className = "font h6"> 
-                                    team  
+                            <Nav.Item className = "pb-4">
+                                <Nav.Link href = "/my_team"> 
+                                        TEAM
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className = "pb-3">
-                                <Nav.Link href = "/my_messages" className = "font h6">
-                                    agendas
+                            <Nav.Item className = "pb-4">
+                                <Nav.Link href = "/my_messages">
+                                        AGENDAS
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className = "pb-3">
-                                <Nav.Link href = "/my_account" className = "font h6">
-                                    calendar
+                            <Nav.Item className = "pb-5 mb-5">
+                                <Nav.Link href = "/my_account">
+                                        CALENDAR
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Button href="/" variant = "primary" style = {{boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.15)', color: 'primary'}} className = "mx-auto w-75">
-                                    logout
+                                <Button href="/" className = "mx-auto logout-button w-100">
+                                   <p style = {{color: 'gray', fontWeight: '600'}} className = "my-auto">LOGOUT</p>
                                 </Button>
                             </Nav.Item>
                         </Nav>
                     </Row>
                 </Navbar>
         );
-    }
 }
+
+export default SideNavigation;

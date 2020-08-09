@@ -6,8 +6,14 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faBars, faBell, faSignOutAlt, faAngleDown)
 
-export class ProfileNav extends React.Component {
-    render() {
+function ProfileNav({userFirstName}) {
+        function checkName() {
+            if (userFirstName) {
+                return userFirstName
+            } else {
+                return "firstName"
+            }
+        }
         return(
         <Container className = "pl-0 pr-0 mr-0 w-100">
             <Media className = "pl-5">
@@ -17,7 +23,7 @@ export class ProfileNav extends React.Component {
                     </Col>
                     <Col lg = {10}>
                         <Media.Body className = "pr-4">
-                                <h6  className = "pb-0 mb-0">FirstName</h6>
+                                <h6  className = "pb-0 mb-0">{checkName()}</h6>
                                 <Button variant = "link" className = "pt-1 mt-0" style = {{fontSize: '0.1rem'}} block>My Settings</Button>
                         </Media.Body>
                     </Col>
@@ -31,7 +37,6 @@ export class ProfileNav extends React.Component {
             </Media>
         </Container>
         );
-    }
 }
 
 export default ProfileNav
