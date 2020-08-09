@@ -36,7 +36,7 @@ function SideNavigation({activeURL}) {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item className = "pb-4">
-                                <Nav.Link href = "/my_messages">
+                                <Nav.Link href = "/my_agendas">
                                         AGENDAS
                                 </Nav.Link>
                             </Nav.Item>

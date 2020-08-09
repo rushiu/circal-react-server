@@ -23,8 +23,8 @@ function TopNav({pageActive}) {
                                             <h5 className = "my-auto pt-2 mt-1 pl-3">{pageActive}</h5>
                                         </Row>
                                     </Col>
-                                    <Col lg = {2}>
-                                        <Row className="justify-content-end ">
+                                    <Col lg = {4}>
+                                        <Row className="justify-content-end">
                                             <ProfileNav/>
                                         </Row>
                                     </Col>

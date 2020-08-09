@@ -17,6 +17,7 @@ import CalendarPicker from './components/CalendarPicker';
 import UserDashboard from './components/User/Home/UserDashboard.js';
 import SignUpNext from './components/SignUpFlow/SignUpNext';
 import TeamDashboard from './components/User/TeamDashboard.js'
+import AgendaDashboard from './components/User/AgendaDashboard';
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -57,7 +58,7 @@ class App extends React.Component {
             <Route path = '/signup-personalinfo' component = {PersonalInfo}/>
             <Route path = '/user_dashboard' component = {UserDashboard}/>
             <Route path = '/my_team' component = {TeamDashboard}/>
-            <Route path = '/my_messages'/>
+            <Route path = '/my_agendas' component = {AgendaDashboard}/>
             <Route path = '/my_account'/>
           </Switch>
     </Container>
