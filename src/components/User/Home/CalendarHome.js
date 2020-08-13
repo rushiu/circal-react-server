@@ -18,11 +18,11 @@ export default class CalendarHome extends React.Component {
                     headerToolbar = {{
                         left: 'prev,next today',
                         center: 'title',
-                        right: 'timeGridWeek,timeGridDay'
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
                     }}
                     titleFormat = {{ year: 'numeric', month: 'short', day: 'numeric' }}
                     nowIndicator = {true}
-                    initialView="timeGridWeek"
+                    initialView="timeGridDay"
                     dateClick = {this.handleDateClick}
                     />
             </Container>

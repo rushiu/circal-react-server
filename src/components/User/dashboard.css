@@ -34,12 +34,29 @@
     padding: 0.2em 0.65em !important;
     font-size: 1em;
     line-height: 1.5;
-    border-radius: 0.25em;
     border: hidden !important;
     background-color: transparent !important;
-    font-weight: bolder !important;
+    font-weight: bold !important;
     color: #7367F0 !important;
 }
+.fc-now-indicator.fc-now-indicator-arrow::before {
+    background-color: #ef6c00;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: -7px;
+  }
+  
+  .fc-now-indicator.fc-now-indicator-arrow {
+    left: 44px !important;
+    right: 0;
+    background-color: #ef6c00;
+    height: 2px;
+    margin: 0;
+    border: none;
+  }
 
 .fc .fc-timegrid-col.fc-day-today {
     background-color: #F1F3F8 !important;
@@ -75,7 +92,7 @@
 .center-nav-link:hover {
     border-width: 15rem;
     border-left: 15rem;
-    border-color: #F1F3F8;
+    border-color: #F8F9FE;
 }
 
 .title-nav {
@@ -207,7 +224,7 @@
 }
 .border-left-divider {
     border-left: 1px solid;
-    background-color: #F1F3F8;
+    background-color: #F8F9FE;
     border-color: rgb(233, 233, 235);
 }
 
@@ -220,7 +237,7 @@
     border: hidden !important;
     background: white;
     border-radius: 20px !important;
-    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15);
     width: 350px !important;
     height: 400px;
 }
@@ -242,4 +259,6 @@
     font-weight: 500 !important;
 }
 
-.dropdown-toggle:after { content: none }
+.dropdown-item:active {
+    color: white;
+}

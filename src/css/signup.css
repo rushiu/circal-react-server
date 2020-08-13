@@ -55,3 +55,13 @@
     font-weight: bold;
     color: DimGrey;
 }
+
+.input-borders:focus {
+    color: #FD6585 !important;
+}
+
+.input-borders {
+    border: 0px !important;
+    border-radius: 0px !important;
+    border-bottom: 0.01em solid #B1B6C6 !important;
+}

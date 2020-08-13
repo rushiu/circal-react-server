@@ -38,9 +38,11 @@ function ProfileNav({userFirstName}) {
                                     <h6>{checkName()}</h6>
                                 </Col>
                                 <Col className = "pl-0 mt-n2 ml-n3">
-                                <DropdownButton variant = "link" size = "sm" id="dropdown-menu-align-right" className = "mt-1" alignRight>
-                                    <Dropdown.Item style = {{color: 'gray', fontSize: '0.9rem'}}>Account</Dropdown.Item>
-                                    <Dropdown.Item style = {{color: 'gray', fontSize: '0.9rem'}}>Settings</Dropdown.Item>
+                                <DropdownButton variant = "link" size = "sm" id="profile-nav-dropdown-menu" className = "mt-1" alignRight>
+                                    <Dropdown.Item id="profile-nav-item" style = {{color: 'gray', fontSize: '0.9rem'}}>Account</Dropdown.Item>
+                                    <Dropdown.Item id="profile-nav-item" style = {{color: 'gray', fontSize: '0.9rem'}}>Settings</Dropdown.Item>
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item id="profile-nav-item" style = {{color: 'gray', fontSize: '1rem'}} href = "/">Logout</Dropdown.Item>
                                 </DropdownButton>
 
                                 </Col>

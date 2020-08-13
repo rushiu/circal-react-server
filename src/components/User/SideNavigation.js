@@ -41,14 +41,9 @@ function SideNavigation({activeURL}) {
                                 </Nav.Link>
                             </Nav.Item>
                             <Nav.Item className = "pb-5 mb-5">
-                                <Nav.Link href = "/my_account">
+                                <Nav.Link href = "/my_calendar">
                                         CALENDAR
                                 </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Button href="/" className = "mx-auto logout-button w-100">
-                                   <p style = {{color: 'gray', fontWeight: '600'}} className = "my-auto">LOGOUT</p>
-                                </Button>
                             </Nav.Item>
                         </Nav>
                     </Row>
