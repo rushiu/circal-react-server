@@ -165,6 +165,7 @@ export class Pricing extends React.Component {
 
   render() {
     return (
+    <Container>
     <Container fluid>
       <NavigationBar />
       <Image src = "./assests/OrangeGradient.svg" style = {HeroImageContainer}/>
@@ -359,14 +360,14 @@ export class Pricing extends React.Component {
             </Card>
 
           </Accordion>
-					
-
-		      <Container style = {{paddingTop:'4rem'}}>
-            <GrayFooter/>
-          </Container>
+				
         </Container>
 	    </Container>
   	</Container>
+    <Container style = {{paddingTop:'4rem'}}>
+      <GrayFooter/>
+    </Container>
+    </Container>
   	);
   }
 }

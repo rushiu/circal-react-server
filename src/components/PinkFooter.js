@@ -14,8 +14,9 @@ library.add(fab, faEnvelope);
 const BottomImageContainer = {
     position: 'absolute',
     left: 0,
-    minWidth:'100%',
-    width: '100%',
+    minHeight: '25%',
+    //minWidth:'100%',
+    //width: '100%',
     zIndex: 0
   };
 
@@ -28,14 +29,16 @@ const BottomImageContainer = {
     zIndex: 1
 };
 
-
+const bottomSyle = {
+    fontFamily: 'Jost',
+}
 
 export class PinkFooter extends React.Component {
     render() {
         return(
-            <Container style={BottomImageContainer} style={{paddingTop:'15%'}}>
-                <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg" sticky='bottom'/>
-                    <Row style={{marginTop: '65%'}}>
+            <Container style={bottomSyle}>
+                <Image style = {BottomImageContainer}  src = "./assests/Footer.svg" sticky="bottom"/>
+                    <Row style={{paddingTop: '1050px'}}>
                         <Col lg={2} md={3} xs={2}>
                         <Row>
                             <Col style={{marginLeft: '5%'}}>
@@ -95,11 +98,11 @@ export class PinkFooter extends React.Component {
                                 <Col lg={4} md={2} xs={1}>
                                     
                                 </Col>
-                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'white'}}  href="/"> copyright </a>
-                                <p style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'3px'}, {color: 'white'}}  href="/"> - </p>
-                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'white'}}  href="/"> security </a>
-                                <p style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'3px'}, {color: 'white'}}  href="/"> - </p>
-                                <a style={{fontSize: '15px'}, {textAlign: 'right'}, {padding:'5px'}, {color: 'white'}}  href="/"> terms </a>
+                                <a className="footerInfo" style={{color: 'white'}}  href="/"> copyright </a>
+                                <p className="footerInfo" style={{color: 'white'}}  href="/"> - </p>
+                                <a className="footerInfo" style={{color: 'white'}}  href="/"> security </a>
+                                <p className="footerInfo" style={{color: 'white'}}  href="/"> - </p>
+                                <a className="footerInfo" style={{color: 'white'}}  href="/"> terms </a>
                                      
                             </Row>
                         </Col>

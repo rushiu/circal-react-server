@@ -75,17 +75,18 @@ export class Home extends React.Component {
               <Row className = "pl-0 ml-0 mr-0 pr-0">
                 <FeaturesSection/>
               </Row>
-              <Row style = {{marginTop: '10%'}}>
+              <Row style = {{marginTop: '20%'}}>
                 <GetStartedCard/>
               </Row>
-              
-              <Row style = {{marginTop: '50%'}}>
+              <Container>
                 <PinkFooter/>
-              </Row>
+              </Container>
             </Container>
+            
             
           </Container>
         </Container>
+        
       );
     }
 }

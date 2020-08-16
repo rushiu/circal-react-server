@@ -90,7 +90,7 @@ export class Features extends React.Component {
                 <SmartMeeting/>
               </Row>
               
-              <Row style = {{marginTop: '50%'}}>
+              <Row style = {{marginTop: '35%'}}>
                 <PinkFooter/>
               </Row>
             </Container>
