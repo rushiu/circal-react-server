@@ -10,6 +10,8 @@ import '.././App.css';
 import {GetStartedCard} from './GetStartedCard.js';
 import {ProblemStats} from './ProblemStats.js';
 import {NavigationBar} from './NavigationBar.js';
+import {PinkFooter} from './PinkFooter';
+
 
 
 
@@ -73,15 +75,18 @@ export class Home extends React.Component {
               <Row className = "pl-0 ml-0 mr-0 pr-0">
                 <FeaturesSection/>
               </Row>
-              <Row style = {{marginTop: '10%'}}>
+              <Row style = {{marginTop: '20%'}}>
                 <GetStartedCard/>
               </Row>
-              
-              <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg"></Image>
+              <Container>
+                <PinkFooter/>
+              </Container>
             </Container>
+            
             
           </Container>
         </Container>
+        
       );
     }
 }

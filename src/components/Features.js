@@ -15,6 +15,8 @@ import {TwoWaySync} from './TwoWaySync.js';
 import {MeetingAgenda} from './MeetingAgenda.js';
 import {MeetingStats} from './MeetingStats.js';
 import {SmartMeeting} from './SmartMeeting.js';
+import {PinkFooter} from './PinkFooter';
+
 
 const OtherStyle = {
   position: 'absolute',
@@ -87,9 +89,11 @@ export class Features extends React.Component {
               <Row style = {{marginTop: '40%'}}>
                 <SmartMeeting/>
               </Row>
-              <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
+              
+              <Row style = {{marginTop: '35%'}}>
+                <PinkFooter/>
+              </Row>
             </Container>
-            
           </Container>
         </Container>
       );

@@ -17,9 +17,7 @@ const BottomImageContainer = {
     minHeight: '25%',
     //minWidth:'100%',
     //width: '100%',
-    backgroundColor: '#B0B4C3',
-    zIndex:0
-
+    zIndex: 0
   };
 
   const NavBarStyle = {
@@ -28,48 +26,49 @@ const BottomImageContainer = {
     right: 0,
     marginTop: '1rem',
     width: '100%',
+    zIndex: 1
 };
 
 const bottomSyle = {
     fontFamily: 'Jost',
 }
 
-export class GrayFooter extends React.Component {
+export class PinkFooter extends React.Component {
     render() {
         return(
             <Container style={bottomSyle}>
-                <Image src="./assests/AboutBottomLogo.svg" style={BottomImageContainer} sticky='bottom'/>
-                    <Row className="colStyle">
-                        <Col lg={2} md={2} xs={1}>
+                <Image style = {BottomImageContainer}  src = "./assests/Footer.svg" sticky="bottom"/>
+                    <Row style={{paddingTop: '1050px'}}>
+                        <Col lg={2} md={3} xs={2}>
                         <Row>
-                            <Col>
+                            <Col style={{marginLeft: '5%'}}>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: '#4A4D50'}}  href="/features"> features </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/features"> features </a>
                                 </Row>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: '#4A4D50'}}  href="/pricing"> pricing </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/pricing"> pricing </a>
                                 </Row>
                                 <Row style={{marginBottom: '7px'}}>
-                                    <a style={{fontSize: '10px'}, {color: '#4A4D50'}}  href="/about"> about </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/about"> about </a>
                                 </Row>
                             </Col>
                             <Col>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: '#4A4D50'}}  href="/contact"> contact </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/contact"> contact </a>
                                 </Row>
                                 <Row style={{marginBottom: '10px'}}>
-                                    <a style={{fontSize: '15px'}, {color: '#4A4D50'}}  href="/signin"> login </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/signin"> login </a>
                                 </Row>
                                 <Row style={{marginBottom: '7px'}}>
-                                    <a style={{fontSize: '10px'}, {color: '#4A4D50'}}  href="/signup"> signup </a>
+                                    <a style={{fontSize: '15px'}, {color: 'white'}}  href="/signup"> signup </a>
                                 </Row>
                             </Col>
                         </Row>
                         </Col>
                         <Col style={{float:'right'}, {textAlign: 'right'}, {alignContent: 'right'}, {paddingLeft: '23%'}}>
                             <Row>
-                                <a className='logo' style={{marginTop: '7px'}}  href="/">o</a>
-                                <a className='logoTitle' style={{fontSize: '40px'}, {color: '#8A8D90'}}  href="/">circal</a>
+                                <p className='logoWhite' style={{marginTop: '7px'}}  href="/">o</p>
+                                <a className='logoTitle' style={{fontSize: '40px'}, {color: 'white'}}  href="/">circal</a>
                             </Row>
                                                             
 
@@ -82,16 +81,16 @@ export class GrayFooter extends React.Component {
                                 </Col>
                                 <Col style={{padding:'3px'}, {alignContent: 'center'}, {float: 'center'}, {textAlign: 'center'}}>
                                     <a href ="https://www.linkedin.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faLinkedin} size='2x' style={{color: '#8A8D90'}}/>
+                                        <FontAwesomeIcon icon={faLinkedin} style={{color: 'white'}} size='2x'/>
                                     </a>
                                     <a href = "https://instagram.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faFacebookSquare} size='2x' style={{color: '#8A8D90'}}/>
+                                        <FontAwesomeIcon icon={faFacebookSquare} style={{color: 'white'}} size='2x'/>
                                     </a>
                                     <a href = "https://facebook.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faTwitterSquare} size='2x' style={{color: '#8A8D90'}}/>
+                                        <FontAwesomeIcon icon={faTwitterSquare} style={{color: 'white'}} size='2x'/>
                                     </a>
                                     <a href = "https://twitter.com" style={{padding:'5px'}}>
-                                        <FontAwesomeIcon icon={faInstagram} size='2x' style={{color: '#8A8D90'}}/>
+                                        <FontAwesomeIcon icon={faInstagram} style={{color: 'white'}} size='2x'/>
                                     </a>
                                 </Col>
                             </Row>
@@ -99,24 +98,13 @@ export class GrayFooter extends React.Component {
                                 <Col lg={4} md={2} xs={1}>
                                     
                                 </Col>
-                                <a className="footerInfo" style={{color: '#4A4D50'}}  href="/"> copyright </a>
-                                <p className="footerInfo" style={{color: '#4A4D50'}}  href="/"> - </p>
-                                <a className="footerInfo" style={{color: '#4A4D50'}}  href="/"> security </a>
-                                <p className="footerInfo" style={{color: '#4A4D50'}}  href="/"> - </p>
-                                <a className="footerInfo" style={{color: '#4A4D50'}}  href="/"> terms </a>
-
+                                <a className="footerInfo" style={{color: 'white'}}  href="/"> copyright </a>
+                                <p className="footerInfo" style={{color: 'white'}}  href="/"> - </p>
+                                <a className="footerInfo" style={{color: 'white'}}  href="/"> security </a>
+                                <p className="footerInfo" style={{color: 'white'}}  href="/"> - </p>
+                                <a className="footerInfo" style={{color: 'white'}}  href="/"> terms </a>
+                                     
                             </Row>
-                            {/* <Row style={{float: 'right'}, {textAlign: 'right'}, {alignContent: 'right'}}>
-                                <Col lg={7} md={4} xs={1}>
-                                    
-                                </Col>
-                                <button
-                                    type="button"
-                                    className='subscriptionButton'
-                                >
-                                    Subscribe to Emails
-                                </button>
-                            </Row> */}
                         </Col>
                         
                     </Row>
@@ -126,4 +114,4 @@ export class GrayFooter extends React.Component {
     }
 }
 
-export default GrayFooter;
+export default PinkFooter;
