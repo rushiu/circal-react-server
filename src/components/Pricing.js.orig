@@ -7,10 +7,6 @@ import './../css/Pricing.css';
 import './../App.css';
 import {GrayFooter} from './GrayFooter';
 import Accordion from 'react-bootstrap/Accordion'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import {faEnvelope, faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 
 
@@ -33,15 +29,15 @@ export class Pricing extends React.Component {
   constructor() {
     super()
     this.state = {
-      arrow1:  <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
+      arrow1: 'ʌ',
       arrowState1: '',
-      arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
+      arrow2: 'ʌ',
       arrowState2: '',
-      arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
+      arrow3: 'ʌ',
       arrowState3: '',
-      arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
+      arrow4: 'ʌ',
       arrowState4: '',
-      arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>,
+      arrow5: 'ʌ',
       arrowState5: ''
     }
   }
@@ -50,22 +46,22 @@ export class Pricing extends React.Component {
       console.log ('1st acc')
       const opt = this.state.arrowState1
       if (opt.length == 0) {
-        this.setState({arrow1: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
+        this.setState({arrow1: 'v'})
         this.setState({arrowState1: 'on'})
       } else {
-        this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+        this.setState({arrow1: 'ʌ'})
         this.setState({arrowState1: ''})
       }
-      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow2: 'ʌ'})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow3: 'ʌ'})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow4: 'ʌ'})
       this.setState({arrowState4: ''})
 
-      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow5: 'ʌ'})
       this.setState({arrowState5: ''})
   }
 
@@ -73,22 +69,22 @@ export class Pricing extends React.Component {
       console.log ('2 acc')
       const opt = this.state.arrowState2
       if (opt.length == 0) {
-        this.setState({arrow2: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
+        this.setState({arrow2: 'v'})
         this.setState({arrowState2: 'on'})
       } else {
-        this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+        this.setState({arrow2: 'ʌ'})
         this.setState({arrowState2: ''})
       }
-      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow1: 'ʌ'})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow3: 'ʌ'})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow4: 'ʌ'})
       this.setState({arrowState4: ''})
 
-      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow5: 'ʌ'})
       this.setState({arrowState5: ''})
   }
 
@@ -96,22 +92,22 @@ export class Pricing extends React.Component {
       console.log ('3 acc')
       const opt = this.state.arrowState3
       if (opt.length == 0) {
-        this.setState({arrow3: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
+        this.setState({arrow3: 'v'})
         this.setState({arrowState3: 'on'})
       } else {
-        this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+        this.setState({arrow3: 'ʌ'})
         this.setState({arrowState3: ''})
       }
-      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow1: 'ʌ'})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow2: 'ʌ'})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow4: 'ʌ'})
       this.setState({arrowState4: ''})
 
-      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow5: 'ʌ'})
       this.setState({arrowState5: ''})
   }
 
@@ -119,23 +115,23 @@ export class Pricing extends React.Component {
       console.log ('4 acc')
       const opt = this.state.arrowState4
       if (opt.length == 0) {
-        this.setState({arrow4: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
+        this.setState({arrow4: 'v'})
         this.setState({arrowState4: 'on'})
       } else {
-        this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+        this.setState({arrow4: 'ʌ'})
         this.setState({arrowState4: ''})
       }
 
-      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow1: 'ʌ'})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow2: 'ʌ'})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow3: 'ʌ'})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow5: 'ʌ'})
       this.setState({arrowState5: ''})
   }
 
@@ -143,29 +139,28 @@ export class Pricing extends React.Component {
       console.log ('5 acc')
       const opt = this.state.arrowState5
       if (opt.length == 0) {
-        this.setState({arrow5: <FontAwesomeIcon icon={faAngleUp} style={{float: 'right'}}/>})
+        this.setState({arrow5: 'v'})
         this.setState({arrowState5: 'on'})
       } else {
-        this.setState({arrow5: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+        this.setState({arrow5: 'ʌ'})
         this.setState({arrowState5: ''})
       }
 
-      this.setState({arrow1: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow1: 'ʌ'})
       this.setState({arrowState1: ''})
 
-      this.setState({arrow2: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow2: 'ʌ'})
       this.setState({arrowState2: ''})
 
-      this.setState({arrow3: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow3: 'ʌ'})
       this.setState({arrowState3: ''})
 
-      this.setState({arrow4: <FontAwesomeIcon icon={faAngleDown} style={{float: 'right'}}/>})
+      this.setState({arrow4: 'ʌ'})
       this.setState({arrowState4: ''})  
   }
 
   render() {
     return (
-    <Container>
     <Container fluid>
       <NavigationBar />
       <Image src = "./assests/OrangeGradient.svg" style = {HeroImageContainer}/>
@@ -174,14 +169,25 @@ export class Pricing extends React.Component {
           <Row>
             <h1 className="title mx-auto">Pricing</h1>
           </Row>
-					<Row style={{paddingBottom: '35%'}}>
-            <p className="paragraph-header mx-auto">A plan for everyone.</p>
+<<<<<<< HEAD
+					<Row style={{paddingBottom: '10%', zIndex: '2'}}>
+            <h2>A plan for everyone.</h2>
           </Row>
 
           <Row>
           <Col>
             	<Card style = {{border: 'hidden', borderRadius: '15px'}} className = "shadow-lg">
                 <h1 className = "mx-auto text-center w-100 rounded-lg pt-3" style = {{background: 'white', color: 'orange'}} as="h2">Student</h1>
+=======
+					<Row style={{paddingBottom: '35%'}}>
+            <p className="paragraph-header mx-auto">A plan for everyone.</p>
+          </Row>
+
+          <Row>
+          <Col style={{paddingLeft: '5%'}}>
+            	<Card className = "rounded pricing card" >
+                <Card.Header className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>STUDENT</Card.Header>
+>>>>>>> eab05be74039b225ab98cd756648594e263aa693
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
 
@@ -190,6 +196,7 @@ export class Pricing extends React.Component {
 												<h1 className="mx-auto text-center font-weight-bold pb-2" style = {{color:'orange'}}>$0</h1>
 											</Col>
 										</Row>
+<<<<<<< HEAD
                     <ListGroup variant = "flush">
                       <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
                       max 5 users
@@ -204,6 +211,21 @@ export class Pricing extends React.Component {
                         meeting agenda + notes
                       </ListGroup.Item>
                     </ListGroup>
+=======
+
+										<Row>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>max 5 users </p>
+                    </Row>
+										<Row>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>meeting scheduling</p>
+										</Row>
+										<Row>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>sync with 1 external calendar</p>
+										</Row>
+                    <Row style={{marginBottom: '13px'}}>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>meeting agenda + notes</p>
+										</Row>
+>>>>>>> eab05be74039b225ab98cd756648594e263aa693
                     
 
 										<Row className = "center pt-3">
@@ -216,8 +238,13 @@ export class Pricing extends React.Component {
 
 
 			      <Col>
+<<<<<<< HEAD
             <Card style = {{border: 'hidden', borderRadius: '15px', background: 'white'}} className = "shadow-lg">
                 <h1 className = "mx-auto text-center white w-100 rounded-top pt-3" style = {{background: 'white', color: 'orange', borderTop: '25px'}} as="h2">Teams</h1>
+=======
+            	<Card className = "rounded pricing card">
+                <Card.Header className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>TEAMS</Card.Header>
+>>>>>>> eab05be74039b225ab98cd756648594e263aa693
                 <Card.Body>
                   <blockquote className="blockquote mb-0">
                   <Row>
@@ -225,6 +252,7 @@ export class Pricing extends React.Component {
 												<h1 className="text-center font-weight-bold" style = {{color:'orange'}}>$8</h1>
 											</Col>
 										</Row>
+<<<<<<< HEAD
                     <ListGroup variant = "flush">
                       <ListGroup.Item className="text-center" style = {{color:'#B0B4C3'}}>
                         max 20 users
@@ -243,6 +271,26 @@ export class Pricing extends React.Component {
                       </ListGroup.Item>
                     </ListGroup>
                     
+=======
+										
+										<Row>
+											<p className="small-white-title mx-auto" style = {{color:'#B0B4C3'}}>
+												user / month 
+                    						</p>
+										</Row>
+
+										<Row>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>max 20 users </p>
+										</Row>
+										<Row>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>meeting scheduling</p>
+										</Row>
+										<Row style={{marginBottom: '10px'}}>
+											<p className="paragraph-text-grey mx-auto" style = {{color:'#B0B4C3'}}>pre-meeting agenda</p>
+										</Row>
+
+                   
+>>>>>>> eab05be74039b225ab98cd756648594e263aa693
 
 										<Row className = "center pt-3">
               								<Button variant="warning" style = {{backgroundColor: '#FCAD55'}} className = "btn-rounded w-50" href = "/signin">sign up</Button>
@@ -252,6 +300,7 @@ export class Pricing extends React.Component {
               </Card>
 						</Col>
 
+<<<<<<< HEAD
 						<Col>
             	<Card style = {{border: 'hidden', borderRadius: '15px', background: '#FCAD55'}} className = "shadow-lg">
                 <h1 className = "white mx-auto text-center pb-3 pt-3" >Enterprise</h1>
@@ -274,6 +323,32 @@ export class Pricing extends React.Component {
 											<p className="white text-center">post meeting feedback</p>
 										</tr>
                   </Table>
+=======
+						<Col style={{paddingRight: '5%'}}>
+            	<Card className="rounded pricing card" style = {{background: '#FCAD55'}} >
+                <Card.Body >
+									<Card.Title>
+										<p className = "white-title-2 mx-auto" style = {{background: '#FCAD55', width: '100%'}}>ENTERPRISE</p>
+									</Card.Title>
+                  <blockquote className="blockquote mb-0">
+
+				  	        <Row>
+						          <p className="paragraph-text-2 mx-auto" style = {{color:'#FCAD55'}}>___________</p>
+					          </Row>
+					          <Row>
+						          <p className="paragraph-text-2 mx-auto">Unlimited users</p>
+										</Row>
+										<Row>
+											<p className="paragraph-text-2 mx-auto">meeting scheduling</p>
+										</Row>
+										<Row>
+											<p className="paragraph-text-2 mx-auto">pre meeting agenda</p>
+										</Row>
+										<Row style={{marginBottom: '55px'}}>
+											<p className="paragraph-text-2 mx-auto">post meeting feedback</p>
+										</Row>
+										
+>>>>>>> eab05be74039b225ab98cd756648594e263aa693
 
 									</blockquote>
 									<blockquote className="blockquote mb-0">
@@ -304,8 +379,7 @@ export class Pricing extends React.Component {
 					<Accordion className='faqs' style={{paddingTop:'5%'}}>
             <Card >
               <Accordion.Toggle as={Card.Header} eventKey="0" className='faqsTitle' onClick={this.accordionArrowOnChange1.bind(this)} >
-              {this.state.arrow1}
-                How many teams can I create in the 'team' package?
+                <span style = {{fontSize: '20px'}, {float: 'right'}}>{this.state.arrow1} </span>How many teams can I create in the 'team' package?
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
                 <Card.Body>
@@ -360,14 +434,14 @@ export class Pricing extends React.Component {
             </Card>
 
           </Accordion>
-				
+					
+
+		      <Container style = {{paddingTop:'4rem'}}>
+            <GrayFooter/>
+          </Container>
         </Container>
 	    </Container>
   	</Container>
-    <Container style = {{paddingTop:'4rem'}}>
-      <GrayFooter/>
-    </Container>
-    </Container>
   	);
   }
 }

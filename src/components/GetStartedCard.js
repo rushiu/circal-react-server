@@ -6,7 +6,7 @@ export class GetStartedCard extends React.Component {
     render() {
       return (
         <Container className = "text-center min-vw-50 max-vw-50">
-            <Card className = "font shadow" style = {{border: 'hidden', borderRadius: '30px', boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.08)', background: 'linear-gradient(0deg, #EEF1F5, #EEF1F5)'}}border = "light">
+            <Card className = "font" style = {{border: 'hidden', borderRadius: '30px', boxShadow: '0px 0px 30px rgba(0, 0, 0, 0.08)'}}border = "light">
                 <Card.Body className = "grey-header" fluid>
                     <Card.Title  as="h1">Get your business<br></br>started with Circal</Card.Title>
                     <Card.Text>Contact us to learn about how Circal fits your business and pricing.</Card.Text>

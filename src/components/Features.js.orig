@@ -10,12 +10,15 @@ import '.././App.css';
 import '.././css/features.css';
 import {GetStartedCard} from './GetStartedCard.js';
 import {NavigationBar} from './NavigationBar.js';
+<<<<<<< HEAD
+=======
 import {TwoWaySync} from './TwoWaySync.js';
 import {MeetingAgenda} from './MeetingAgenda.js';
 import {MeetingStats} from './MeetingStats.js';
 import {SmartMeeting} from './SmartMeeting.js';
 import {PinkFooter} from './PinkFooter';
 
+>>>>>>> 846041afb02f560b01f0ff6639ec6e05df4a8436
 
 const OtherStyle = {
   position: 'absolute',
@@ -255,8 +258,15 @@ export class Features extends React.Component {
               <Row>
                 <Button variant="primary" style = {{border: 'hidden', width: '15%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" href = "/signup" className = "btn-rounded mx-auto">sign up</Button>
               </Row>
+<<<<<<< HEAD
 
               <Image style = {BottomImageContainer} src = "./assests/Footer.svg"></Image>
+=======
+              
+              <Row style = {{marginTop: '35%'}}>
+                <PinkFooter/>
+              </Row>
+>>>>>>> 846041afb02f560b01f0ff6639ec6e05df4a8436
             </Container>
           </Container>
         </Container>

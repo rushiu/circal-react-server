@@ -2,10 +2,9 @@ import React, {useState} from 'react';
 import {Image, Button, ButtonToolbar} from 'react-bootstrap';
 import { Container, Row, Col, CardGroup, Card, Fade} from 'react-bootstrap';
 import {Jumbotron, Form, Table} from 'react-bootstrap';
-import {SimpleNav} from './SimpleNav.js';
+import {SimpleNav} from '../SimpleNav.js';
 import {Link} from 'react-router-dom';
-import '.././App.css';
-import '.././css/signup.css';
+import '../../css/signup.css';
 import axios from 'axios';
 
 
@@ -42,35 +41,36 @@ export class SignUp extends React.Component {
                 </Container>
 
                 <Container className = "right-container animate__animated animate__slideInLeft" fluid>
-                    <Table className = "animate__animated animate__fadeIn animate__delay-1s">
+                    <Table className = "animate__animated animate__fadeIn animate__delay-1s mt-n5">
                             <Row>
                                 <h1 className = "mx-auto sign-up-header">Create Account</h1>
                             </Row>
-                            <Row>
+                            <Row className = "w-50 mx-auto">
                                 <Button className = "mx-auto" variant = "light">Sign in with Google</Button>
                             </Row>
-                            <Row style = {{paddingTop: '1rem', color: 'gray'}}> 
+                            <Row style = {{color: 'gray'}} className = "pt-1 pb-3">
                             <p className = "mx-auto">or use your email for registration</p>
                             </Row>
                             <Col>
-                                <Form className = "mx-auto" style = {{width: '60%'}}>
+                                <Form className = "mx-auto w-75">
                                     <Form.Row>
-                                        <Form.Control type = "first name" placeholder = "First Name" onChange = {inputChange('firstName')} value = {values.firstName}/>
+                                        <Col>
+                                            <Form.Control type = "first name" placeholder = "First Name" className = "input-borders"  onChange = {inputChange('firstName')} value = {values.firstName}/>
+                                        </Col>
+                                        <Col>
+                                            <Form.Control type = "last name" className = "input-borders" placeholder = "Last Name" onChange = {inputChange('lastName')} value = {values.lastName}/>
+                                        </Col>
                                     </Form.Row>
                                     <Form.Row className = "pt-3">
-                                        <Form.Control type = "last name" placeholder = "Last Name" onChange = {inputChange('lastName')} value = {values.lastName}/>
+                                        <Col>
+                                            <Form.Control type = "work email" className = "input-borders" placeholder = "Work Email" onChange = {inputChange('email')} value = {values.email}/>
+                                        </Col>
                                     </Form.Row>
-                                    <Form.Row className = "pt-3">
-                                        <Form.Control type = "work email" placeholder = "Work Email" onChange = {inputChange('email')} value = {values.email}/>
+                                    <Form.Row className = "pt-4 mx-auto">
+                                        <Form.Check type="checkbox" label="Agree to Terms of Service" style = {{color: 'gray', fontSize: '0.9rem'}}/>
                                     </Form.Row>
-                                    <Form.Row className = "pt-3">
-                                        <Form.Control type = "company" placeholder = "Company Name" onChange = {inputChange('company')} value = {values.company}/>
-                                    </Form.Row>
-                                    <Form.Row className = "pt-3">
-                                        <Form.Check type="checkbox" label="Agree to Terms of Service"/>
-                                    </Form.Row>
-                                    <Form.Row className = "pt-3">
-                                        <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1.2rem'}} size = "lg" className = "btn-rounded mx-auto" onClick = {this.continue}>sign up</Button>
+                                    <Form.Row className = "pt-5 pb-4">
+                                        <Button variant="primary" style = {{border: 'hidden', width: '40%', fontWeight: 'bold', fontSize: '1rem'}} size = "lg" className = "btn-rounded mx-auto" onClick = {this.continue}>sign up</Button>
                                     </Form.Row>
                                 </Form>
                             </Col>

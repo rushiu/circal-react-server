@@ -10,13 +10,14 @@ import {Pricing} from './components/Pricing.js';
 import {Features} from './components/Features.js';
 import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
-import { SignUp } from './components/SignUp';
 import {Password} from './components/Password.js';
-import { PersonalInfo } from './components/PersonalInfo';
+import { PersonalInfo } from './components/SignUpFlow/PersonalInfo';
 import {SignIn} from './components/SignIn.js';
 import CalendarPicker from './components/CalendarPicker';
-import UserDashboard from './components/User/UserDashboard';
-import SignUpNext from './components/SignUpNext';
+import UserDashboard from './components/User/Home/UserDashboard.js';
+import SignUpNext from './components/SignUpFlow/SignUpNext';
+import TeamDashboard from './components/User/TeamDashboard.js'
+import AgendaDashboard from './components/User/AgendaDashboard';
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -56,8 +57,8 @@ class App extends React.Component {
             <Route path = '/signup' component = {SignUpNext}/>
             <Route path = '/signup-personalinfo' component = {PersonalInfo}/>
             <Route path = '/user_dashboard' component = {UserDashboard}/>
-            <Route path = '/my_team'/>
-            <Route path = '/my_messages'/>
+            <Route path = '/my_team' component = {TeamDashboard}/>
+            <Route path = '/my_agendas' component = {AgendaDashboard}/>
             <Route path = '/my_account'/>
           </Switch>
     </Container>

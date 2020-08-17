@@ -143,4 +143,47 @@
     text-decoration-color: #FCAD55
   }
 
+  @font-face {
+    font-family: 'Lovelo';
+    src: local('Lovelo'), url(../fonts/Lovelo-LineLight.ttf) format('truetype');
+  }
   
+  .logo {
+    font-family: 'Lovelo';
+    float: right;
+    font-size: 40px;
+    padding: 5px;
+    color: #4A4D50;
+  }
+  .logoTitle {
+    float: right;
+    font-size: 40px;
+    padding: 5px;
+  }
+
+  .logoWhite {
+    font-family: 'Lovelo';
+    float: right;
+    font-size: 40px;
+    padding: 5px;
+    color: white;
+  }
+
+  .colStyle {
+    padding-top: 5%;
+  }
+
+  .footerInfo {
+    font-size: 15px;
+    text-align: right;
+    float: right;
+    padding: 3px;
+    padding-bottom: 1px;
+
+  }
+  .subscriptionButton {
+    padding: 5px 20px;
+    font-size: 15px;
+    float: right;
+    margin: auto;
+  }
