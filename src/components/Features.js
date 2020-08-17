@@ -10,10 +10,6 @@ import '.././App.css';
 import '.././css/features.css';
 import {GetStartedCard} from './GetStartedCard.js';
 import {NavigationBar} from './NavigationBar.js';
-import {TwoWaySync} from './TwoWaySync.js';
-import {MeetingAgenda} from './MeetingAgenda.js';
-import {MeetingStats} from './MeetingStats.js';
-import {SmartMeeting} from './SmartMeeting.js';
 import {PinkFooter} from './PinkFooter';
 
 
