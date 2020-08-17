@@ -32,7 +32,7 @@ export class About extends React.Component {
           <Row>
             <Col lg = {7} className = "mx-auto">
             <p className = "paragraph-header font">Circal began as a simple project 
-            make anyone’s lives easier. As students in college, we had issues 
+            to make anyone’s lives easier. As students in college, we had issues 
             finding free time between schedules to do group projects. In our 
             internships, scheduling meetings took a long time. So, we pivoted 
             our idea to fit the workplace to make professionals' lives simpler, 
