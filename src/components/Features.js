@@ -3,7 +3,7 @@ import {Nav, Navbar, Image, Button, ButtonToolbar, Table} from 'react-bootstrap'
 import { Container, Row, Col, CardGroup, Card} from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import {FeaturesSection} from './FeaturesSection.js';
-import {SignUp} from './SignUp.js';
+import {SignUp} from './SignUpFlow/SignUp.js';
 import {Router, Route, Link} from 'react-router-dom';
 import SignIn from './SignIn.js';
 import '.././App.css';
