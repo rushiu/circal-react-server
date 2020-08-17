@@ -1,9 +1,7 @@
 import React, {useState}from 'react';
 import '.././App.css';
-import ModernDatepicker from 'react-modern-datepicker';
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
-import {DatePicker, Calendar} from 'react-modern-calendar-datepicker';
-import {Jumbotron, Container} from 'react-bootstrap';
+import {Calendar} from 'react-modern-calendar-datepicker';
 
 const CalendarPicker = () => {
 	const [selectedDay, setSelectedDay] = useState(null);

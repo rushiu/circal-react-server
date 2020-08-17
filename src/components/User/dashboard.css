@@ -5,12 +5,78 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background:#F1F3F8;
+    background:rgb(253, 253, 253);
   
     position: fixed;
     top: 0;
     bottom: 0;
     z-index: -1;
+}
+
+.fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+    color: #B1B6C6;
+  }
+
+  .fc .fc-timegrid-slot {
+    height: 1.5em;
+    border-bottom: 0;
+    color: #B1B6C6;
+}
+
+.fc .fc-button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0.2em 0.65em !important;
+    font-size: 1em;
+    line-height: 1.5;
+    border: hidden !important;
+    background-color: transparent !important;
+    font-weight: bold !important;
+    color: #7367F0 !important;
+}
+.fc-now-indicator.fc-now-indicator-arrow::before {
+    background-color: #ef6c00;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: -7px;
+  }
+  
+  .fc-now-indicator.fc-now-indicator-arrow {
+    left: 44px !important;
+    right: 0;
+    background-color: #ef6c00;
+    height: 2px;
+    margin: 0;
+    border: none;
+  }
+
+.fc .fc-timegrid-col.fc-day-today {
+    background-color: #F1F3F8 !important;
+    background-color: var(--fc-today-bg-color, #F1F3F8) !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: #F1F3F8 !important;
+    background-color: var(--fc-today-bg-color, #F1F3F8) !important;
+}
+
+.fc .fc-day {
+    color: #B1B6C6 !important;
+    font-weight: normal !important;
+}
+.fc .fc-toolbar-title {
+    font-size: 1.2em !important;
+    font-weight: normal !important;
+    color: #B1B6C6;
+    margin: 0;
 }
 
 .center-nav-link {
@@ -26,15 +92,15 @@
 .center-nav-link:hover {
     border-width: 15rem;
     border-left: 15rem;
-    border-color: #F1F3F8;
+    border-color: #F8F9FE;
 }
 
 .title-nav {
     position: absolute;
-    right: 0;
-    left: -1vw;
     max-width: 100%;
     min-width: 100vw;
+    left: -15px;
+    right: -15px;
     height: 8%;
     z-index: 3;
     color: #B1B6C6;
@@ -47,7 +113,7 @@
     min-width: 13.1%;
     min-height: 10%;
     height: 100%;
-    background: #FBAD97;
+    color: white !important;
 }
 
 .toggle-btn {
@@ -67,15 +133,53 @@
 
 
 .sidebar-links {
-    position: absolute;
-     left: 1.5rem;
-    right: 0;
-    justify-content: center;
-    display: flex;
+    font-size: large;
+    text-align: center !important;
+    color: lightgrey !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 13vw;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    color:  #FE838E!important;
+    border-left: solid !important;
+    border-left-width: thick !important;
+    background-color: linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%) !important;
+    background: rgba(253, 101, 133, 0.13) !important;
+    border-radius: 0px !important;
+}
+
 .grey-title {
     color: #B1B6C6;
 }
+
+.circle {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+ .circle:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+.circle:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+  }
+  
 
 .rounded-card {
     background: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%) !important;
@@ -93,5 +197,68 @@
 .todo-list-bg {
     background-color: transparent !important;
     border: hidden !important;
+}
+
+.pink-meeting-count-card {
+    border: hidden !important;
+    background: linear-gradient(148.98deg, #FFD3A5 -18.8%, #FD6585 123.3%);
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 100px;
+}
+
+.green-notifications-card {
+    border: hidden !important;
+    background: linear-gradient(158.55deg, #90F7EC 0%, #32CCBC 100%);
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 100px;
+}
+
+.purple-tasks-left-card {
+    border: hidden !important;
+    background: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%);
+    border-radius: 0.5rem;
+    width: 500px;
+    height: 100px;
+}
+.border-left-divider {
+    background-color: #F8F9FE;
+    border-color: rgb(233, 233, 235);
+}
+
+.border-right-divider {
+    border-right: 1px solid;
+    border-color: rgb(233, 233, 235);
+}
+
+.dashboard-basic-card {
+    border: hidden !important;
+    background: white;
+    border-radius: 20px !important;
+    box-shadow: 0 0 2rem 0 rgba(136,152,170,.15);
+    width: 350px !important;
+    height: 400px;
+}
+
+.dashboard-small-card {
+    border: hidden !important;
+    background: white;
+    border-radius: 20px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    width: 350px !important;
+    height: 100px;
+}
+
+.logout-button {
+    background: #F1F3F8 !important;
+    border: 0px !important;
+    border-radius: 0% !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+}
+
+.dropdown-item:active {
+    color: white;
 }
 

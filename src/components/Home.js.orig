@@ -79,12 +79,21 @@ export class Home extends React.Component {
               <Row className = "pb-5">
                 <FeaturesSection/>
               </Row>
+<<<<<<< HEAD
               <Row className = "pt-5">
+                <GetStartedCard/>
+              </Row>
+              <Row>
+              <Image style = {BottomImageContainer} className = "sticky-bottom" src = "./assests/Footer.svg"></Image>
+              </Row>
+=======
+              <Row style = {{marginTop: '20%'}}>
                 <GetStartedCard/>
               </Row>
               <Container>
                 <PinkFooter/>
               </Container>
+>>>>>>> e98f8ca83523e84f009072aceed6f5b4c3ff2815
             </Container>
             
             
