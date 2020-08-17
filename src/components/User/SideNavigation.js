@@ -16,7 +16,7 @@ const SideBarStyle = {
     position: 'fixed',
     minHeight: '100vh',
     background: 'white',
-    boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.10)',
+    boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.02)',
     zIndex: '0'
 }
 

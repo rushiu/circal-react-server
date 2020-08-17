@@ -4,27 +4,28 @@ import { faBars, faBell, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import ProfileNav from './ProfileNav';
+import './dashboard.css';
 
 library.add(faBars, faBell, faSignOutAlt)
 
 function TopNav({pageActive}) {
 
         return(
-                <Navbar variant = "dark" className = "title-nav shadow-sm min-vw-100 mb-0 pb-0">
-                            <Container className = "logo-bg mr-0" style = {{width: '13.1%'}}>
+                <Navbar variant = "dark" className = "title-nav min-vw-100 mb-0 pb-0" style = {{boxShadow: '0px 4px 50px rgba(0, 0, 0, 0.033)'}}>
+                            <Container className = "logo-bg" style = {{width: '13.1%'}}>
                                 <ResponsiveEmbed aspectRatio="1by1">
-                                    <Image src = "./assests/GradientLogo.svg"  className="d-inline-block align-top mt-2 ml-3 pl-2 pb-3"/>
+                                    <Image src = "./assests/GradientLogo.svg"  className="d-inline-block align-top my-auto ml-4 mr-3"/>
                                 </ResponsiveEmbed>
                             </Container>
                             <Container className = "min-vw-100" style = {{width: '100%', left: '14%', position: 'fixed'}}>
                                 <Row className = "w-100">
-                                    <Col lg = {8}>
+                                    <Col lg = {8} md={6} sm = {6}>
                                         <Row>
-                                            <h5 className = "my-auto pt-2 mt-1 pl-3">{pageActive}</h5>
+                                            <h6 className = "my-auto pt-lg-3 pl-lg-2 mt-lg-0 pt-md-2 mt-md-5 ml-md-4 pt-sm-5 mt-sm-2 pl-sm-4 text-uppercase">{pageActive}</h6>
                                         </Row>
                                     </Col>
-                                    <Col lg = {4}>
-                                        <Row className="justify-content-end">
+                                    <Col lg = {4} md={6} sm = {6}>
+                                        <Row>
                                             <ProfileNav/>
                                         </Row>
                                     </Col>

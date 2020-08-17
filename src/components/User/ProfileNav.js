@@ -14,8 +14,6 @@ function ProfileNav({userFirstName}) {
                 return "firstName"
             }
         }
-
-        let title = <FontAwesomeIcon icon = "angle-down"/>
         return(
         <Container className = "pl-0 pr-0 mr-0 w-100">
             <Media className = "pl-5 w-100">

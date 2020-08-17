@@ -26,7 +26,7 @@ function SummaryCard({meetingCount, tasksCount, agendasCount}) {
                             <p className = "center mx-auto">tasks</p>
                         </Col>
                         <Col lg = {4}>
-                            <Button variant="link" className = "center mx-auto pt-0" style = {{color: 'grey'}}><p>agendas</p></Button>
+                            <Button variant="link" className = "center mx-auto pt-0" style = {{color: 'grey'}} href="/my_agendas"><p>agendas</p></Button>
                         </Col>
                     </Row>
                 </Row>
