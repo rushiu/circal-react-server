@@ -1,136 +1,84 @@
 import React from 'react'
-import {Container, Button, Form, Row, Col, ProgressBar, Image, CardDeck, Card, ToggleButtonGroup, ResponsiveEmbed, Pagination} from 'react-bootstrap'
-import '../../css/signup.css'
+import {Container, Button, Form, Image, Table, Row, Col, ButtonGroup, ToggleButton, Card, ToggleButtonGroup, ResponsiveEmbed, Pagination} from 'react-bootstrap'
+import '../../css/signup.css';
+import {useState} from 'react';
+import SimpleNav from '.././SimpleNav';
 
-const WhiteBackground = {
-    minHeight: '100vh',
-    minWidth: '100vw',
-    width: '100vw',
-    backgroundColor: 'white'
-}
-export class BillingInfo extends React.Component {
-    continue = e => {
-        e.preventDefault();
-        this.props.nextStep();
-    };
+function BillingInfo({values, inputChange, nextStep, prevStep}) {
 
-    back = e => {
-        e.preventDefault();
-        this.props.prevStep();
-    };
-    render() {
-        const {values, inputChange} = this.props;
-        return(
-            <Container className = "sign-up-full-bg animate__animated animate__fadeInUp font" fluid>
-                <Container className = "min-vw-100 pl-0 ml-0" style = {WhiteBackground} fluid>
-                 <Row className = "justify-content-center min-vw-100 ml-0  pl-0">
-                    <img
-                    alt=""
-                    src="/assests/GradientLogo.svg"
-                    className="align-top center pl-5 ml-5"
-                    width="400"
-                    height="200"
-                    />
-                </Row>
-                <Row className = "grey-header pb-1">
-                    <h2 className = "mx-auto text-center w-25">Pricing Plan</h2>
-                </Row>
-                <Row className = "grey-header pb-3">
-                    <p className = "mx-auto text-center w-25">Choose a plan that fits your needs.</p>
-                </Row>
-                <Row className = "w-100">
-                    <CardDeck className = "mx-auto w-75">
-                        <Row className = "w-100 h-25">
-                            <Col lg={4} md={12} sm = {12} xs={12} className = "pt-2">
-                                <Card className = "min-vw-25 h-100 shadow" style = {{ border: 'hidden'}}>
-                                    <Button type = "radio" variant = "transparent" style = {{height: '100%'}}>
-                                    <Card.Body className = "mx-auto mt-n3 grey-header w-75">
-                                        <Row>
-                                            <ResponsiveEmbed aspectRatio = "16by9">
-                                                <Image className = "mx-auto" src = "./assests/innovation_.svg"></Image>
-                                            </ResponsiveEmbed>
-                                        </Row>
-                                        <Row className = "pt-4">
-                                            <h6 className = "mx-auto text-warning">STUDENT</h6>
-                                        </Row>
-                                        <Row className = "pt-1">
-                                            <h5 className = "mx-auto">Free</h5>
-                                        </Row>
-                                        <Row>
-                                            <p>Made for college and high school students! No billing info required.</p>
-                                        </Row>
-                                    </Card.Body>
-                                   
-                                    </Button>
-                                </Card>
-                            </Col>
+  const [checked, setChecked] = useState(false);
+  const [planChoice, setPlanChoice] = useState('');
 
-                            <Col lg={4} md={12} sm = {12} xs={12} className = "pt-2">
-                                <Card className = "min-vw-25 h-100 shadow" style = {{ border: 'hidden'}}>
-                                    <Button type = "radio" variant = "transparent" style = {{height: '100%'}}>
-                                    <Card.Body className = "mx-auto mt-n3 grey-header w-75">
-                                        <Row>
-                                            <ResponsiveEmbed aspectRatio = "16by9">
-                                                <Image className = "mx-auto" src = "./assests/team_work.svg"></Image>
-                                            </ResponsiveEmbed>
-                                        </Row>
-                                        <Row className = "pt-4">
-                                            <h6 className = "mx-auto text-primary">TEAMS</h6>
-                                        </Row>
-                                        <Row className = "pt-1">
-                                            <h5 className = "mx-auto">$8/user/month</h5>
-                                        </Row>
-                                        <Row>
-                                            <p>Sign up your team with Circal. Billing information required</p>
-                                        </Row>
-                                    </Card.Body>
-                                    </Button>
-                                </Card>
-                            </Col>
-                                
+  const radios = [
+    { name: 'college', value: '1', description: 'if you\'re in college', imgUrl: '../assests/innovation_.svg'},
+    { name: 'teams', value: '2' , description: 'for your team', imgUrl: '../assests/team_work.svg'},
+    { name: 'enterprise', value: '3', description: 'for your company', imgUrl: '../assests/achievement_.svg'},
+  ];
 
-                            <Col lg={4} md={12} sm = {12} xs={12} className = "pt-2">
-                                <Card className = "min-vw-25 h-100 shadow" style = {{ border: 'hidden'}}>
-                                    <Button type = "radio" variant = "transparent" style = {{height: '100%'}}>
-                                    <Card.Body className = "mx-auto mt-n3 grey-header w-75">
-                                        <Row>
-                                            <ResponsiveEmbed aspectRatio = "16by9">
-                                                <Image className = "mx-auto" src = "./assests/achievement_.svg"></Image>
-                                            </ResponsiveEmbed>
-                                        </Row>
-                                        <Row className = "pt-4">
-                                            <h6 className = "mx-auto text-primary">ENTERPRISE</h6>
-                                        </Row>
-                                        <Row className = "pt-1">
-                                            <h5 className = "mx-auto">contact us</h5>
-                                        </Row>
-                                        <Row>
-                                            <p>Get your entire company on Circal today. Billing information required</p>
-                                        </Row>
-                                    </Card.Body>
-                                    </Button>
-                                </Card>
-                            </Col>
-                        </Row>
-                    </CardDeck>
-                    
-                </Row>
-                <Row className = "pt-5">
-                    <Col className = "w-25 px-0">
-                        <Pagination>
-                            <Pagination.Prev className = "font-weight-bold mx-auto" onClick = {this.back}>Previous</Pagination.Prev>
-                        </Pagination>
-                    </Col>
-                    <Col className = "w-25 px-0">
-                        <Pagination>
-                            <Pagination.Next className = "font-weight-bold mx-auto" onClick = {this.continue}>Next</Pagination.Next>
-                        </Pagination>
-                    </Col>
-                </Row>
+    function handleNext() {
+        nextStep();
+    }
+
+    function handlePrev() {
+        prevStep();
+    }
+
+    return(
+            <Container className="font" fluid>
+                <SimpleNav/>
+                <Container className = "sign-up-bg" fluid>
+                    <Table className = "animate__animated animate__fadeInUpBig animate__slow">
+                            <Row>
+                                <h2 className = "header mx-auto text-center px-md-3 px-sm-3" style = {{color: 'white'}}>Choose a plan</h2>
+                            </Row>
+                    </Table>
+                </Container>
+
+                <Container className = "right-container animate__animated animate__fadeInUpBig animate__slow min-vh-100" fluid>
+                     <Row className = "min-vh-100 mb-n5" style = {{minWidth: '50vw'}}>
+                         <Col className = "mx-auto w-50 my-auto">
+                            <Row className = "center w-100"> 
+                                <ButtonGroup toggle>
+                                    {radios.map((radio, idx) => (
+                                    <ToggleButton
+                                        key={idx}
+                                        className = "w-100 pr-1 pl-1"
+                                        style = {{minWidth: '40%'}}
+                                        type="radio"
+                                        variant="transparent"
+                                        name="radio"
+                                        value={radio.name}
+                                        checked={planChoice === radios.name}
+                                        onChange={inputChange('plan')}>
+                                            <Card className = "w-100 h-100 mr-5 ml-n3">
+                                                <Card.Header>
+                                                    {radio.name}
+                                                </Card.Header>
+                                                <ResponsiveEmbed aspectRatio="16by9">
+                                                    <Image src={radio.imgUrl}/>
+                                                </ResponsiveEmbed>
+                                                <Card.Body>
+                                                    {radio.description}
+                                                </Card.Body>
+                                            </Card>
+                                    </ToggleButton>
+                                    ))}
+                                </ButtonGroup>
+                            </Row>
+                            <Row className = "mt-5">
+                                <Col lg={6} md={6} sm={6}>
+                                    <Button className = "mr-5 mt-5 float-left" onClick={handlePrev}>back</Button>
+                                </Col>
+                                <Col lg={6} md={6} sm={6}>
+                                    <Button className = "ml-5 mt-5 float-right" onClick={handleNext}>next</Button>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </Container>
             </Container>
-        );
-    }
+    );
 }
+
 
 export default BillingInfo;

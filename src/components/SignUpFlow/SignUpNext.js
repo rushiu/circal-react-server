@@ -10,6 +10,8 @@ export class SignUpNext extends React.Component {
         step: 1,
         firstName: '',
         pricePlan: '',
+        company: '',
+        timeZone: '',
         lastName: '',
         email: '',
         company: '',
@@ -35,8 +37,8 @@ export class SignUpNext extends React.Component {
 
     render() {
         const {step} = this.state;
-        const {firstName, lastName, company, role, email, password} = this.state;
-        const values = {firstName, lastName, company, role, email, password}
+        const {firstName, lastName, accessCode, plan, company, role, timeZone, email, password} = this.state;
+        const values = {firstName, lastName, accessCode, plan, company, timeZone, role, email, password}
 
         switch(step) {
             case 1:
@@ -44,19 +46,29 @@ export class SignUpNext extends React.Component {
                     <SignUp nextStep = {this.nextStep} inputChange = {this.inputChange} values = {values}/>
                 );
             case 2:
+                console.log("plan");
+                console.log(plan);
                     return(
                         <ChooseFlow nextStep = {this.nextStep} prevStep = {this.prevStep}  inputChange = {this.inputChange} values = {values}/>
                     );
             case 3:
+                if (company && !accessCode && step === 3) {
                 return(
-                    <PersonalInfo nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
+                    <BillingInfo nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
                     );
+                } else {
+                    return(
+                        <Container>
+                            <p>validation for access code then skip billing to personal info</p>
+                        </Container>
+                    );
+                }
             case 4:
                 return (
-                <BillingInfo nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
+                    <PersonalInfo nextStep = {this.nextStep} prevStep = {this.prevStep} inputChange = {this.inputChange} values = {values}/>
                 );
         }
     }
 }
 
-export default SignUpNext
+export default SignUpNext;
