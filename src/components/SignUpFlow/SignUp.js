@@ -9,6 +9,7 @@ import axios from 'axios';
 
 
 export class SignUp extends React.Component {
+
     continue = async e => {
         e.preventDefault();
         this.props.nextStep();
@@ -19,11 +20,17 @@ export class SignUp extends React.Component {
             console.log(`creating company failed: ${e}`);
         }
     };
+
+    handleConfirmPass({password, confirmPassword}) {
+        if (password !== confirmPassword) {
+            // alert('passwords don\'t match!');
+        }
+    }
+
     render() {
-
         const {values, inputChange} = this.props;
-
         return(
+          
             <Container className = "font" fluid>
                 <SimpleNav/>
                 <Container className = "sign-up-bg animate__animated animate__slideInRight" fluid>
@@ -35,7 +42,7 @@ export class SignUp extends React.Component {
                             <p className = "mx-auto white">Already have an account?</p>
                         </Row>
                         <Row>
-                            <Button href="/signin" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in">sign in</Button>
+                            <Button href="/signup" variant = "outline-light" size = "lg" className = "btn-rounded mx-auto btn-sign-in">sign in</Button>
                         </Row>
                     </Table>
                 </Container>
@@ -46,24 +53,34 @@ export class SignUp extends React.Component {
                                 <h1 className = "mx-auto sign-up-header">Create Account</h1>
                             </Row>
                             <Row className = "w-50 mx-auto">
-                                <Button className = "mx-auto" variant = "light">Sign in with Google</Button>
+                                <Button className = "mx-auto" variant = "light">Sign up with Google</Button>
                             </Row>
                             <Row style = {{color: 'gray'}} className = "pt-1 pb-3">
                             <p className = "mx-auto">or use your email for registration</p>
                             </Row>
                             <Col>
                                 <Form className = "mx-auto w-75">
-                                    <Form.Row>
+                                    {/* <Form.Row>
                                         <Col>
-                                            <Form.Control type = "first name" placeholder = "First Name" className = "input-borders"  onChange = {inputChange('firstName')} value = {values.firstName}/>
+                                            <Form.Control type = "first name" placeholder = "First Name"  onChange = {inputChange('firstName')} value = {values.firstName}/>
                                         </Col>
                                         <Col>
-                                            <Form.Control type = "last name" className = "input-borders" placeholder = "Last Name" onChange = {inputChange('lastName')} value = {values.lastName}/>
+                                            <Form.Control type = "last name"  placeholder = "Last Name" onChange = {inputChange('lastName')} value = {values.lastName}/>
+                                        </Col>
+                                    </Form.Row> */}
+                                    <Form.Row className = "pt-3">
+                                        <Col>
+                                            <Form.Control type = "workEmail" className = "input-borders" placeholder = "Work Email" onChange = {inputChange('email')} value = {values.email}/>
                                         </Col>
                                     </Form.Row>
                                     <Form.Row className = "pt-3">
                                         <Col>
-                                            <Form.Control type = "work email" className = "input-borders" placeholder = "Work Email" onChange = {inputChange('email')} value = {values.email}/>
+                                            <Form.Control type="password" placeholder="Password" onChange={inputChange('password')} value = {values.password}/>
+                                        </Col>
+                                    </Form.Row>
+                                    <Form.Row className = "pt-3">
+                                        <Col>
+                                            <Form.Control type="password" placeholder="Confirm Password" />
                                         </Col>
                                     </Form.Row>
                                     <Form.Row className = "pt-4 mx-auto">

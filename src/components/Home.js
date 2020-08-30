@@ -26,7 +26,7 @@ const OtherStyle = {
 
 const HeroImageContainer = {
   position: 'absolute',
-  left:0,
+  left: 0,
   right: 0,
   zIndex:0,
 };
