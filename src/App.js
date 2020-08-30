@@ -18,6 +18,8 @@ import UserDashboard from './components/User/Home/UserDashboard.js';
 import SignUpNext from './components/SignUpFlow/SignUpNext';
 import TeamDashboard from './components/User/TeamDashboard.js'
 import AgendaDashboard from './components/User/AgendaDashboard';
+import PrivacyPolicy from './components/PrivacyPolicy';
+
 
 const HeroImageContainer = {
   position: 'absolute',
@@ -60,6 +62,7 @@ class App extends React.Component {
             <Route path = '/my_team' component = {TeamDashboard}/>
             <Route path = '/my_agendas' component = {AgendaDashboard}/>
             <Route path = '/my_account'/>
+            <Route path = '/privacy_policy' component = {PrivacyPolicy}/>
           </Switch>
     </Container>
   </BrowserRouter>
