@@ -100,7 +100,7 @@ export class PinkFooter extends React.Component {
                                 </Col>
                                 <a className="footerInfo" style={{color: 'white'}}  href="/"> copyright </a>
                                 <p className="footerInfo" style={{color: 'white'}}  href="/"> - </p>
-                                <a className="footerInfo" style={{color: 'white'}}  href="/"> security </a>
+                                <a className="footerInfo" style={{color: 'white'}}  href="/privacy_policy"> privacy </a>
                                 <p className="footerInfo" style={{color: 'white'}}  href="/"> - </p>
                                 <a className="footerInfo" style={{color: 'white'}}  href="/"> terms </a>
                                      

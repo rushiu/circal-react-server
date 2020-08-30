@@ -101,7 +101,7 @@ export class GrayFooter extends React.Component {
                                 </Col>
                                 <a className="footerInfo" style={{color: '#4A4D50'}}  href="/"> copyright </a>
                                 <p className="footerInfo" style={{color: '#4A4D50'}}  href="/"> - </p>
-                                <a className="footerInfo" style={{color: '#4A4D50'}}  href="/"> security </a>
+                                <a className="footerInfo" style={{color: '#4A4D50'}}  href="/privacy_policy"> privacy </a>
                                 <p className="footerInfo" style={{color: '#4A4D50'}}  href="/"> - </p>
                                 <a className="footerInfo" style={{color: '#4A4D50'}}  href="/"> terms </a>
 

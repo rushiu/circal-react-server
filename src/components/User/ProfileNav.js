@@ -3,6 +3,8 @@ import {Container, Media, Row, Col, Button, ResponsiveEmbed, DropdownButton, Dro
 import { faBars, faBell, faSignOutAlt, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import {Nav, Navbar} from 'react-bootstrap';
+
 
 library.add(faBars, faBell, faSignOutAlt, faAngleDown)
 
@@ -36,7 +38,7 @@ function ProfileNav({userFirstName}) {
                                     <h6>{checkName()}</h6>
                                 </Col>
                                 <Col className = "pl-0 mt-n2 ml-n3">
-                                <DropdownButton variant = "link" size = "sm" id="profile-nav-dropdown-menu" className = "mt-1" alignRight>
+                                <DropdownButton expand='lg' variant = "link" size = "sm" id="profile-nav-dropdown-menu" className = "mt-1" alignRight>
                                     <Dropdown.Item id="profile-nav-item" style = {{color: 'gray', fontSize: '0.9rem'}}>Account</Dropdown.Item>
                                     <Dropdown.Item id="profile-nav-item" style = {{color: 'gray', fontSize: '0.9rem'}}>Settings</Dropdown.Item>
                                     <Dropdown.Divider />
@@ -47,9 +49,6 @@ function ProfileNav({userFirstName}) {
                             </Row>
                         </Media.Body>
                     </Col>
-
-
-                  
                 </Row>
             </Media>
         </Container>
@@ -57,3 +56,7 @@ function ProfileNav({userFirstName}) {
 }
 
 export default ProfileNav
+
+/*
+
+            */
