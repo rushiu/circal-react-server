@@ -12,12 +12,13 @@ import {NavigationBar} from './components/NavigationBar.js';
 import { BrowserRouter, Router, Route, Switch} from 'react-router-dom';
 import {Password} from './components/Password.js';
 import {SignIn} from './components/SignIn.js';
-import CalendarPicker from './components/CalendarPicker';
+import CalendarPicker from './components/User/CalendarPicker';
 import UserDashboard from './components/User/Home/UserDashboard.js';
 import SignUpNext from './components/SignUpFlow/SignUpNext';
 import TeamDashboard from './components/User/TeamDashboard.js'
 import AgendaDashboard from './components/User/AgendaDashboard';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import CreateMeetingForm from './components/User/CreateMeetingForm';
 
 
 const HeroImageContainer = {
@@ -57,6 +58,7 @@ class App extends React.Component {
             <Route path = '/signin' component = {SignIn}/>
             <Route path = '/signup' component = {SignUpNext}/>
             <Route path = '/user_dashboard' component = {UserDashboard}/>
+            <Route path = '/create_meeting' component = {CreateMeetingForm}/>
             <Route path = '/my_team' component = {TeamDashboard}/>
             <Route path = '/my_agendas' component = {AgendaDashboard}/>
             <Route path = '/my_account'/>
