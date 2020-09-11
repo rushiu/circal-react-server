@@ -17,7 +17,7 @@ function TopNav({pageActive}) {
                                     <Image src = "./assests/GradientLogo.svg"  className="d-inline-block align-top my-auto ml-4 mr-3"/>
                                 </ResponsiveEmbed>
                             </Container>
-                            <Container className = "min-vw-100" style = {{width: '100%', left: '14%', position: 'fixed'}}>
+                            <Container className = "min-vw-100" style = {{width: '100%', paddingLeft: '14%'}}>
                                 <Row className = "w-100">
                                     <Col lg = {8} md={6} sm = {6}>
                                         <Row>

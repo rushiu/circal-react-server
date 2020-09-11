@@ -1,8 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Container, Card, Form, Row, Col, Button} from 'react-bootstrap';
 import CalendarPicker from './CalendarPicker.js';
+import Multiselect from 'react-widgets/lib/Multiselect';
 
 function CreateMeetingForm() {
+    let people = [
+        {team: 'circal-dev', name: 'Natasha Rao'},
+        {team: 'circal-dev', name: 'Miranda Chai'},
+        {team: 'circal-dev', name: 'Aarushi Upadhayaya'},
+        {team: 'circal-biz', name: 'Sachi Tolani'},
+        {team: 'circal-biz', name: 'Anisha Bhat'}
+    ];
+
+    function filterLastName(person, value) {
+    let lastname = person.lastName.toLowerCase()
+    let search  = value.toLowerCase();
+
+    return lastname.indexOf(search) === 0
+    }
+
     return(
         <Container fluid>
             <Form variant="secondary" className = "font">
@@ -15,7 +31,7 @@ function CreateMeetingForm() {
                             <CalendarPicker/>
                         </Row>
                     </Col>
-                    <Col lg={8} className = "w-75 pl-0 ml-0">
+                    <Col lg={8} className = "w-75 pl-0 ml-0 pl-sm-5 pt-sm-5">
                         <Form.Group>
                             <Form.Label>Meeting Title</Form.Label>
                             <Form.Control type="text" className="w-50"/>
@@ -40,8 +56,19 @@ function CreateMeetingForm() {
                             </Form.Group>
                         </Form.Group>
                         <Form.Group>
-
+                            <Form.Label>Choose Attendees</Form.Label>
+                            <Multiselect
+                            className = "w-50"
+                             data={people}
+                             textField='name'
+                             groupBy='team'
+                             />
                         </Form.Group>
+                        <Form.Row className = "w-25 pt-4">
+                            <Button variant = "secondary" className = "btn-rounded w-100">
+                                Sync!
+                            </Button>
+                        </Form.Row>
                     </Col>
                 </Form.Row>
             </Form>

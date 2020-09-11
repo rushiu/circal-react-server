@@ -17,7 +17,7 @@ library.add(faSquareFull);
 export class UserDashboard extends React.Component {
     render() {
         return(
-            <Container className = "dashboard-bg font" fluid>
+            <Container className = "dashboard-bg overflow-auto font" fluid>
                         <TopNav pageActive = "Dashboard"/>
                         <SideNavigation style = {{position: 'fixed'}} activeURL = "/user_dashboard"/>
                         <Container className = "pr-0 mr-0" style = {{marginLeft: '12%', minWidth: '85vw'}}>

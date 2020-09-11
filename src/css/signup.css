@@ -65,7 +65,3 @@
     font-weight: bold;
     color: DimGrey;
 }
-
-.input-borders:focus {
-    color: #FD6585 !important;
-}

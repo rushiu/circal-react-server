@@ -15,7 +15,7 @@ import {SignIn} from './components/SignIn.js';
 import CalendarPicker from './components/User/CalendarPicker';
 import UserDashboard from './components/User/Home/UserDashboard.js';
 import SignUpNext from './components/SignUpFlow/SignUpNext';
-import TeamDashboard from './components/User/TeamDashboard.js'
+import TeamDashboard from './components/User/Team/TeamDashboard.js'
 import AgendaDashboard from './components/User/AgendaDashboard';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import CreateMeetingForm from './components/User/CreateMeetingForm';
