@@ -19,6 +19,7 @@ import TeamDashboard from './components/User/Team/TeamDashboard.js'
 import AgendaDashboard from './components/User/AgendaDashboard';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import CreateMeetingForm from './components/User/CreateMeetingForm';
+import CalendarDashboard from './components/User/Calendar/CalendarDashboard';
 
 
 const HeroImageContainer = {
@@ -61,6 +62,7 @@ class App extends React.Component {
             <Route path = '/create_meeting' component = {CreateMeetingForm}/>
             <Route path = '/my_team' component = {TeamDashboard}/>
             <Route path = '/my_agendas' component = {AgendaDashboard}/>
+            <Route path = "/my_calendar" component = {CalendarDashboard}/>
             <Route path = '/my_account'/>
             <Route path = '/privacy_policy' component = {PrivacyPolicy}/>
           </Switch>

@@ -1,5 +1,11 @@
 import React, {useState} from 'react';
-import {Container, Card, Button, ResponsiveEmbed, Image} from 'react-bootstrap';
+import {Container, Card, Button, Row, Col, ResponsiveEmbed, Image} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faEllipsisH);
 
 function CompanyMemberCards({getAll}) {
     const teamInformation =[
@@ -26,12 +32,13 @@ function CompanyMemberCards({getAll}) {
 
     const renderCard = (card, index) => {
         return(
-            <Card key = {index} className="box" className="member-card mx-2 my-2">
-                <Card.Header className = "h-50 mx-auto" style = {{backgroundColor: 'transparent', border: '0px'}}>
+            <Card key = {index} className="box member-card mx-2 my-2">
+                <Card.Header className = "h-50 mx-auto mt-4 mb-n1" style = {{backgroundColor: 'transparent', border: '0px'}}>
                     <Image variant = "top" className = "h-100 mx-auto" src={card.image} roundedCircle></Image>
                 </Card.Header>
                 <Card.Title className = "center text-primary">{card.name}</Card.Title>
-                <p className = "text-muted center">{card.role}</p>
+                <p className = "text-muted center mt-n2">{card.role}</p>
+                <Button variant="link" className = "w-25 center mx-auto font-weight-bolder mt-n4" style={{fontSize: '20px'}}>+</Button>
             </Card>
         );
     }
