@@ -262,7 +262,7 @@
     color: white;
 }
 
-.modal {
+/* .modal {
     overflow: hidden !important;
   }
   
@@ -282,7 +282,7 @@
     width: 100vw !important;
     border-radius: 0 !important;
     box-shadow: none !important;
-  }
+  } */
 
   .form-control:focus {
     /* border-color: #9F82F6 !important;

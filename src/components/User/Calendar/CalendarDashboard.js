@@ -3,6 +3,7 @@ import {Container, Row, Col, Button, Card} from 'react-bootstrap';
 import TopNav from '../TopNav.js';
 import SideNavigation from '../SideNavigation.js';
 import CalendarHome from '../Home/CalendarHome.js';
+import AddKey from './AddKey.js';
 
 export default class CalendarDashboard extends React.Component {
     render() {
@@ -22,12 +23,13 @@ export default class CalendarDashboard extends React.Component {
                                                 <h6 className="mt-2 pt-1">Keys</h6>
                                                 </Col>
                                                 <Col lg={4} md={4} sm={4} xs={4}>
-                                                    <Button
+                                                    <AddKey/>
+                                                    {/* <Button
                                                     variant="transparent" 
                                                     size="md" 
                                                     className = "btn-rounded font-weight-bold float-right"
                                                     style = {{color: '#9F82F6'}}
-                                                    >+</Button>
+                                                    >+</Button> */}
                                                 </Col>
                                             </Row>
                                         </Card.Body>

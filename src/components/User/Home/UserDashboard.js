@@ -10,7 +10,6 @@ import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 import CalendarHome from './CalendarHome.js';
 import Todo from './Todo.js';
 import SummaryCard from './SummaryCard.js';
-import CreateMeetingModal from '.././CreateMeetingModal.js';
 
 library.add(faSquareFull);
 
@@ -29,8 +28,8 @@ export class UserDashboard extends React.Component {
                                 <Col className = "border-left-divider mr-n5 pr-0 pt-5 min-vh-100" lg = {5} md = {12} sm = {12}>
                                     <Container className = "mr-n5 pt-2 pl-5 w-100 mx-auto" >
                                         <Row className = "mx-auto">
-                                            <CreateMeetingModal/>
-                                            {/* <Button variant="success" style = {{border: 'hidden', color: 'white', width: '40%'}} href = "/create_meeting" className = "btn-rounded mx-auto">create meeting +</Button> */}
+                                            <Button variant="success" style = {{border: 'hidden', color: 'white', width: '40%'}}
+                                             href = "/create_meeting" className = "btn-rounded mx-auto">create meeting +</Button>
                                         </Row>
                                         <Row className = "mx-auto pt-5 center">
                                             <h5 className = "grey-header">This Week</h5>
