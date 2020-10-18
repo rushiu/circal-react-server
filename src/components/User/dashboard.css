@@ -262,3 +262,58 @@
     color: white;
 }
 
+/* .modal {
+    overflow: hidden !important;
+  }
+  
+  .modal-dialog {
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+  }
+  
+  .modal-content {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  } */
+
+  .form-control:focus {
+    /* border-color: #9F82F6 !important;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0) inset, 0px 0px 5px #9F82F6 !important; */
+    border: 1px solid #9F82F6 !important;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+.box {
+    margin: 20px;
+  }
+  
+.grid {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid > div {
+    flex-basis: calc(45% - 0.4px);
+}
+
+.member-card {
+    width: 8vw;
+    height: 28vh;
+    padding-right: 5px !important;
+    box-shadow: 0px 0px 50px #E6E9F0 !important;
+    border-color: transparent !important;
+    border-radius: 35px !important;
+}

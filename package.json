@@ -41,6 +41,7 @@
     "react-scripts": "3.4.1",
     "react-timezone-select": "^0.8.4",
     "react-transition-group": "^4.4.1",
+    "react-widgets": "^4.5.0",
     "startbootstrap-simple-sidebar": "^5.1.2",
     "styled-components": "^5.1.0",
     "sweetalert2": "^9.13.1",

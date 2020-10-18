@@ -16,7 +16,7 @@ library.add(faSquareFull);
 export class UserDashboard extends React.Component {
     render() {
         return(
-            <Container className = "dashboard-bg font" fluid>
+            <Container className = "dashboard-bg overflow-auto font" fluid>
                         <TopNav pageActive = "Dashboard"/>
                         <SideNavigation style = {{position: 'fixed'}} activeURL = "/user_dashboard"/>
                         <Container className = "pr-0 mr-0" style = {{marginLeft: '12%', minWidth: '85vw'}}>
@@ -28,7 +28,8 @@ export class UserDashboard extends React.Component {
                                 <Col className = "border-left-divider mr-n5 pr-0 pt-5 min-vh-100" lg = {5} md = {12} sm = {12}>
                                     <Container className = "mr-n5 pt-2 pl-5 w-100 mx-auto" >
                                         <Row className = "mx-auto">
-                                            <Button variant="success" style = {{border: 'hidden', color: 'white', width: '40%'}} href = "/create_meeting" className = "btn-rounded mx-auto">create meeting +</Button>
+                                            <Button variant="success" style = {{border: 'hidden', color: 'white', width: '40%'}}
+                                             href = "/create_meeting" className = "btn-rounded mx-auto">create meeting +</Button>
                                         </Row>
                                         <Row className = "mx-auto pt-5 center">
                                             <h5 className = "grey-header">This Week</h5>
