@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import {faPlus, faUserFriends} from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import ChooseFlowButtons from './ChooseFlowButtons.js';
-import ErrorSuccessDisplay from './ErrorSuccessDisplay.js';
 
 library.add(faPlus, faUserFriends)
 export class ChooseFlow extends React.Component {
