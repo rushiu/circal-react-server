@@ -10,7 +10,7 @@ export default class CalendarDashboard extends React.Component {
         return(
             <Container className = "dashboard-bg overflow-auto font" fluid>
                 <TopNav pageActive = "Calendar"/>
-                <SideNavigation activeURL = "/my_team"/>
+                <SideNavigation activeURL = "/my_calendar"/>
                 <Container className = "pr-0 mr-0" style = {{marginLeft: '12%', minWidth: '85vw'}}>
                     <Row>
                         <Col>
@@ -24,12 +24,6 @@ export default class CalendarDashboard extends React.Component {
                                                 </Col>
                                                 <Col lg={4} md={4} sm={4} xs={4}>
                                                     <AddKey/>
-                                                    {/* <Button
-                                                    variant="transparent" 
-                                                    size="md" 
-                                                    className = "btn-rounded font-weight-bold float-right"
-                                                    style = {{color: '#9F82F6'}}
-                                                    >+</Button> */}
                                                 </Col>
                                             </Row>
                                         </Card.Body>
