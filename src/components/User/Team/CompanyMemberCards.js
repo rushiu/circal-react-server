@@ -30,6 +30,7 @@ function CompanyMemberCards({getAll}) {
         }
     }
 
+
     const renderCard = (card, index) => {
         return(
             <Card key = {index} className="box member-card mx-2 my-2">

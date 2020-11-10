@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Container, Button, Row, Col, Modal} from 'react-bootstrap';
-
+import KeyForm from './KeyForm.js';
 
 function AddKey() {
     const [show, setShow] = useState(false);
@@ -18,11 +18,11 @@ function AddKey() {
             style = {{color: '#9F82F6'}}
             >+</Button>
             <Modal className = "modal-md ml-5" show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <p>text</p>
+                <Modal.Header className = "w-100" style={{paddingLeft:'42%'}} closeButton>
+                    Add a Key
                 </Modal.Header>
                 <Modal.Body>
-                    <p>sup earth</p>
+                    <KeyForm/>
                 </Modal.Body>
             </Modal>
        </Container>

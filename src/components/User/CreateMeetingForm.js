@@ -75,6 +75,10 @@ function CreateMeetingForm() {
                                 groupBy='team'
                                 />
                             </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Agenda Items</Form.Label>
+                                <Form.Control as = "textarea" rows="3" className = "w-50"/>
+                            </Form.Group>
                             <Form.Row className = "w-25 pt-4">
                                 <Button variant = "secondary" className = "btn-rounded w-100">
                                     Sync!

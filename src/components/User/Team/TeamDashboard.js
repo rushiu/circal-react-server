@@ -5,13 +5,14 @@ import {Container, Card, Tab, Row, Col, Nav, Button} from 'react-bootstrap';
 import CompanyMemberCards from './CompanyMemberCards';
 
 export default class TeamDashboard extends React.Component {
+
     render() {
         return(
             <Container className = "dashboard-bg overflow-auto font" fluid>
                 <TopNav pageActive = "Team"/>
                 <SideNavigation activeURL = "/my_team"/>
                 <Container className = "pr-0 mr-0" style = {{marginLeft: '12%', minWidth: '85vw'}}>
-                    <Tab.Container>
+                    <Tab.Container defaultActiveKey="first">
                         <Row lg={12} className = "mt-4">
                                 <Col lg={4} className = "pl-5">
                                     <Row>
