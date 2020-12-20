@@ -55,7 +55,7 @@ function ProfileNav({userFirstName}) {
         );
 }
 
-export default ProfileNav
+export default ProfileNav;
 
 /*
 

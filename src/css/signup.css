@@ -13,6 +13,26 @@
     top: 0;
     z-index: -1;
 }
+.right-container {
+    right: 0;
+    max-width: 50%;
+    min-height: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+
+    top: 0;
+    z-index: -1;
+}
+
+.bottom-divider {
+    border-bottom: 0.1px solid !important;
+    opacity: 30%;
+    color: lightgrey !important;
+    padding-top: 5% !important;
+}
+
 .btn-fix {
     padding: 0;
     border: none;
@@ -22,7 +42,7 @@
 .sign-up-full-bg {
     height: 100vh;
     width: 100vw !important;
-    background-image: linear-gradient(167.78deg, #CE9FFC 0%, #9F82F6 51.56%, #7367F0 100%);
+    background-image: linear-gradient(141.68deg, #FAD7A1 -27.76%, #FD6585 103.99%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,28 +60,8 @@
 .padding {
     padding-top: 1rem;
 }
-
-.right-container {
-    right: 0;
-    max-width: 50%;
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    position: fixed;
-}
-
 .sign-up-header {
     z-index: 2;
     font-weight: bold;
     color: DimGrey;
-}
-
-.input-borders:focus {
-    color: #FD6585 !important;
-}
-
-.input-borders {
-    border: 0px !important;
-    border-radius: 0px !important;
-    border-bottom: 0.01em solid #B1B6C6 !important;
 }

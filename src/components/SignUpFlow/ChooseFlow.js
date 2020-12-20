@@ -1,5 +1,5 @@
-import React from 'react';
-import {Container, Card, CardDeck, Button, Row, Image, Col, Navbar, Form} from 'react-bootstrap';
+import React, {useState} from 'react';
+import {Container, Card, CardDeck, Button, Row, Image, Col, Alert, Form, Table, ResponsiveEmbed, ListGroup} from 'react-bootstrap';
 import {SimpleNav} from '../SimpleNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -7,9 +7,13 @@ import {faPlus, faUserFriends} from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faPlus, faUserFriends)
-
-
 export class ChooseFlow extends React.Component {
+
+    back = e => {
+        e.preventDefault();
+        this.props.prevStep();
+    };
+
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -18,57 +22,68 @@ export class ChooseFlow extends React.Component {
     render() {
         const {values, inputChange} = this.props;
         return(
-            <Container className = "sign-up-full-bg ml-n3 animate__animated animate__fadeInUp font overflow-auto" fluid>
-                <Row className = "w-100">
-                    <img
-                    alt=""
-                    src="/assests/WhiteLogo.svg"
-                    className="align-top pt-5 mt-5 mx-auto"
-                    width="500"
-                    height="200"
-                    />
-                </Row>
-                <Row className = "w-100 min-vw-100 justify-content-center">
-                        <Col lg = {4} md = {4}>
-                            <Card className = "min-vw-25 h-100 shadow" style = {{border: 'hidden', borderRadius: '25px'}}>
-                                <Card.Body className = "mx-auto pb-0 pt-5">
-                                    <FontAwesomeIcon className = "grey-header" size = "2x" icon = "plus"/>
-                                </Card.Body>
-                                <Card.Header as = "h2" className = "mx-auto pt-1" style = {{border: 'hidden', backgroundColor: 'transparent'}}>Create a Company</Card.Header>
-                                <Card.Body className = "mx-auto mt-n3 grey-header w-75">
-                                    <Row className = " pb-1">
-                                        <p className="text-center mx-auto">Billing information will be required.</p>
+            <Container className="font" fluid>
+                <SimpleNav/>
+                <Container className = "sign-up-bg" fluid>
+                    <Table className = "animate__animated animate__fadeInUpBig animate__slow">
+                            <Row>
+                                <h2 className = "header mx-auto text-center px-md-3 px-sm-3" style = {{color: 'white'}}>Are you creating a company or joining one?</h2>
+                            </Row>
+                    </Table>
+                </Container>
+
+                <Container className = "right-container animate__animated animate__fadeInUpBig animate__slow min-vh-100" fluid>
+                     <Row className = "min-vh-100 mt-5 mb-n5" style = {{minWidth: '50vw'}}>
+                         <Col className = "mx-auto w-50">
+                          <ListGroup variant="flush" className = "mx-auto d-flex justify-content-center">
+                              <ListGroup.Item className = "w-100">
+                                    <Card className="w-100">
+                                        <ResponsiveEmbed aspectRatio="25by5">
+                                            <img 
+                                            src = "../assests/CreateCompany.svg"
+                                            className="mx-auto py-3"
+                                            width="100"
+                                            height="100"
+                                            />
+                                        </ResponsiveEmbed>
+                                        <h5 className="mx-auto mt-2">Create a Company</h5>
+                                        <p className="mx-auto text-center pl-4 pr-4">Create a new company and invite your teammates</p>
+                                        <Form.Control className = "w-50 mx-auto mb-3" placeholder="Company Name" type="company" value={values.company} onChange={inputChange('company')}/>
+                                    </Card>
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                    <h6 className = "text-center">or</h6>
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                    <Card className="mx-auto w-100">
+                                        <ResponsiveEmbed aspectRatio="25by5">
+                                            <img 
+                                            src = "../assests/JoinCompany.svg"
+                                            className="mx-auto py-3"
+                                            width="100"
+                                            height="100"
+                                            />
+                                        </ResponsiveEmbed>
+                                        <h5 className="mx-auto mt-n2">Join a Company</h5>
+                                        <p className="mx-auto text-center pl-4 pr-4">This requires an access code. Please ask your admin for one.</p>
+                                        <Form.Control className = "w-50 mx-auto mb-3" placeholder="Access Code" type="code" onChange = {inputChange('accessCode')} value={values.accessCode}/>
+                                    </Card>
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                    <Row>
+                                        <Col lg={6} md={6} sm={6}>
+                                            <Button className = "mr-5 float-left" onClick={this.back}>back</Button>
+                                        </Col>
+                                        <Col lg={6} md={6} sm={6}>
+                                            <Button className = "ml-5 float-right" onClick={this.continue}>next</Button>
+                                        </Col>
                                     </Row>
-                                    <Row className = "pt-0">
-                                        <Form.Control type = "company" placeholder = "Company Name" onChange = {inputChange('company')} value = {values.company}/>
-                                    </Row>
-                                    <Row className = "pt-3">
-                                        <Button variant = "primary" className = " mx-auto btn-rounded w-50 font-weight-bold" onClick = {this.continue}>Get Started</Button>
-                                    </Row>
-                                </Card.Body>
-                            </Card>
+                                </ListGroup.Item>
+                            
+                        </ListGroup>
                         </Col>
-                        <Col lg = {4} md = {4}>
-                            <Card className = "min-vw-25 h-100 shadow" style = {{border: 'hidden', borderRadius: '25px'}}>
-                                <Card.Body className = "mx-auto pb-0 pt-5">
-                                    <FontAwesomeIcon className = "grey-header" size = "2x" icon = "user-friends"/>
-                                </Card.Body>
-                                <Card.Header as = "h2" className = "mx-auto pt-1" style = {{border: 'hidden', backgroundColor: 'transparent'}}>Join a Company</Card.Header>
-                                <Card.Body className = "mx-auto mt-n3 grey-header w-100">
-                                    <Row className = "pb-1">
-                                        <p className="text-center mx-auto">If you don't have an access code,<br></br> please request your admin for one.</p>
-                                    </Row>
-                                    <Row className = "pt-0 w-75 mx-auto">
-                                        <Form.Control placeholder = "Access Code"></Form.Control>
-                                    </Row>
-                                    <Row className = "pt-3">
-                                        <Button variant = "primary" className = " mx-auto btn-rounded w-50 font-weight-bold">Join Company</Button>
-                                    </Row>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                </Row>
-                
+                    </Row>
+                </Container>
             </Container>
         );
     }
